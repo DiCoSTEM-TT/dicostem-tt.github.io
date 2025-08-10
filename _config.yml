@@ -15,7 +15,7 @@ just_the_docs:
     - title: Español
       url: /es/
     - title: GitHub
-      url: https://github.com/DiCoSTEM-TT/DiCoSTEM-TT
+      url: https://github.com/DiCoSTEM-TT/dicostem-tt.github.io
 
 plugins:
   - jekyll-sitemap
