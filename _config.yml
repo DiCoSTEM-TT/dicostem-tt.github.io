@@ -6,16 +6,6 @@ lang: en
 permalink: pretty
 
 theme: jekyll-theme-minimal
-remote_theme: just-the-docs/just-the-docs
-
-just_the_docs:
-  logo: "/assets/img/logo_dicostem.svg"
-  search_enabled: true
-  nav_external_links:
-    - title: Español
-      url: /es/
-    - title: GitHub
-      url: https://github.com/DiCoSTEM-TT/dicostem-tt.github.io
 
 plugins:
   - jekyll-sitemap
