@@ -5,7 +5,7 @@ baseurl: ""
 lang: en
 permalink: pretty
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-sitemap
