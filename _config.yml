@@ -5,7 +5,7 @@ baseurl: ""
 lang: en
 permalink: pretty
 
-theme: null
+theme: jekyll-theme-minimal
 remote_theme: just-the-docs/just-the-docs
 
 just_the_docs:
