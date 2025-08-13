@@ -1,6 +1,8 @@
 ---
 title: Results
 has_children: true
+layout: page
+permalink: /resultados/
 ---
 
 # Results

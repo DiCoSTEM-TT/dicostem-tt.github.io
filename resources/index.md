@@ -1,6 +1,8 @@
 ---
 title: Resources
 has_children: true
+layout: page
+permalink: /recursos/
 ---
 
 # Resources

@@ -1,6 +1,8 @@
 ---
 title: Contacto
 nav_order: 90
+layout: page
+permalink: /contacto/
 ---
 
 # Contacto

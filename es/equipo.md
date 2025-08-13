@@ -1,5 +1,7 @@
 ---
 title: Equipo
+layout: page
+permalink: /equipo/
 ---
 
 # Equipo

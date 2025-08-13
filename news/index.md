@@ -1,5 +1,7 @@
 ---
 title: News
+layout: page
+permalink: /noticias/
 ---
 
 # News

@@ -1,5 +1,7 @@
 ---
 title: Objetivos
+layout: page
+permalink: /objetivos/
 ---
 
 # Objetivos
