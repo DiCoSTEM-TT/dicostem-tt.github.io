@@ -1,0 +1,15 @@
+main:
+  - title: Inicio
+    url: /
+  - title: Equipo
+    url: /es/equipo/
+  - title: Objetivos y Métodos
+    url: /es/objetivos/
+  - title: Resultados
+    url: /es/resultados/
+  - title: Recursos
+    url: /es/recursos/
+  - title: Noticias
+    url: /es/noticias/
+  - title: Contacto
+    url: /es/contacto/
