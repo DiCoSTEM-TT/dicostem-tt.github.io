@@ -10,6 +10,16 @@
     --text-gray: #475569;
     --border-color: #e2e8f0;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0f12;
+    --fg: #eaeaea;
+    --muted: #aaa;
+    --link: #8ab4f8;
+    --border: #262933;
+    --card: #16181d;
+  }
+}
 
 * {
     margin: 0;
@@ -363,8 +373,7 @@ body {
   --card: #fafafa;
 }
 
-html[data-theme="dark"], @media (prefers-color-scheme: dark) {
-}
+
 
 [data-theme="dark"] {
   --bg: #0e0f12;

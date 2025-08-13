@@ -3,8 +3,8 @@ lang: es
 layout: default
 title: Inicio
 description: Proyecto DiCoSTEM-TT - Competencia Digital y Educación STEM en Formación del Profesorado
+permalink: /
 ---
-
 <section class="goals-section">
     <h2 class="section-title">
         <span class="icon-search"></span>
@@ -56,4 +56,3 @@ description: Proyecto DiCoSTEM-TT - Competencia Digital y Educación STEM en For
     </a>
 </div>
 
-permalink: /

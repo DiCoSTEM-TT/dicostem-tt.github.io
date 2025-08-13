@@ -2,6 +2,6 @@
 layout: page
 title: Inicio
 lang: es
-permalink: /
+permalink: /es/
 ---
 
