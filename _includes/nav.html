@@ -10,10 +10,9 @@
         <span class="claim">{{ site.claim[page.lang] | default: site.description }}</span>
       </div>
     </a>
-
     <div class="spacer"></div>
     {% include lang_switcher.html %}
-    <button id="theme-toggle" title="Tema claro/oscuro" style="margin-left:.6rem;">🌓</button>
+    <button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema" style="margin-left:.6rem;">🌓</button>
   </div>
 
   <nav class="site-nav subnav">
@@ -25,3 +24,4 @@
     </div>
   </nav>
 </header>
+
