@@ -168,3 +168,24 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
 @media (max-width: 640px){
   .search-link .label{ display: none; } /* en móvil sólo icono */
 }
+
+/* Buscador (ES/EN) */
+.search-box{
+  display: flex;
+  margin: 1rem 0 1.5rem;
+}
+.search-box input[type="search"],
+.search-box .search-input{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: .8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccd3db;
+}
+.search-results .item{
+  padding: .6rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--muted) 12%, transparent);
+}
+
