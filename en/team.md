@@ -5,7 +5,7 @@ permalink: /en/team/
 ---
 {% assign team = site.data.team %}
 {% assign lead = team | where: 'lead', true | first %}
-{% assign others = team | where_exp: 'm','m.lead != true' | sort: 'name' %}
+{% assign others = team | where_exp: 'm','m.lead != true' | sort: 'sort_key' %}
 
 <div class="team">
 
