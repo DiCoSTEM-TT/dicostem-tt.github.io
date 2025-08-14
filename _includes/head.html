@@ -1,15 +1,58 @@
 {% seo %}
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Aplicar tema (claro/oscuro) antes de pintar para evitar parpadeo -->
+<script>
+  (function () {
+    var KEY="theme";
+    var saved = localStorage.getItem(KEY);
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+  })();
+</script>
+
+<!-- (Opcional) mejor rendimiento de fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 <link rel="icon" href="{{ '/assets/img/logos/favicon.png' | relative_url }}" type="image/png" />
-<link rel="alternate" hreflang="es" href="{{ site.url }}/es/" />
-<link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
 
-<!-- Analytics (choose ONE; both are privacy-friendly and cookie-less) -->
-<!-- GoatCounter (free) -->
+<!-- Canonical + hreflang (dinámicos con translation_map) -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+{% assign current_lang = page.lang | default: site.lang | default: 'es' %}
+{% if current_lang == 'es' %}
+  {% assign other_lang = 'en' %}
+{% else %}
+  {% assign other_lang = 'es' %}
+{% endif %}
+{% assign cur_url = page.url | default: page.permalink %}
+{% assign alt_url = '/' | append: other_lang | append: '/' %}
+{% assign pairs = site.data.translation_map %}
+{% if pairs %}
+  {% for p in pairs %}
+    {% assign from_url = p[current_lang] %}
+    {% assign to_url   = p[other_lang] %}
+    {% if from_url and to_url and cur_url == from_url %}
+      {% assign alt_url = to_url %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+<link rel="alternate" hreflang="{{ current_lang }}" href="{{ site.url }}{{ cur_url }}" />
+<link rel="alternate" hreflang="{{ other_lang }}" href="{{ site.url }}{{ alt_url }}" />
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+
+<!-- Theme color para barras del navegador -->
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
+
+<!-- Analytics (elige SOLO uno) -->
+<!-- GoatCounter (gratuito, sin cookies): cambia YOUR.goatcounter.com por tu subdominio o elimina esta línea -->
 <script data-goatcounter="https://YOUR.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<!-- Plausible (paid SaaS; cookie-less). Uncomment & set domain if you prefer -->
+<!-- Plausible (SaaS sin cookies). Descomenta y ajusta el dominio si lo prefieres -->
 <!-- <script defer data-domain="dicostem-tt.github.io" src="https://plausible.io/js/plausible.js"></script> -->
 
-<!-- Altmetric badge (shows donut when DOI present) -->
-<script type="text/javascript" async src="//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<!-- Altmetric badge (donut cuando hay DOI) -->
+<script async src="//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
