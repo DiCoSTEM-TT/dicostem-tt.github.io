@@ -85,6 +85,7 @@ img { max-width: 100%; height: auto; }
 .subnav a{
   display: inline-block; padding: .4rem .2rem;
   font-weight: 600; white-space: nowrap;
+  color: var(--subnav-link);
 }
 .subnav a.active{
   text-decoration: underline; text-underline-offset: .25em;
