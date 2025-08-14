@@ -1,16 +1,25 @@
 {% assign nav = site.data['navigation_' | append: page.lang ] %}
-<div class="site-header">
-  <div class="container nav">
+<header class="site-header">
+  <div class="container topbar">
     <a class="logo" href="/{{ page.lang }}/">
-      <img src="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" alt="DiCoSTEM-TT logo" />
-      <span>DiCoSTEM‑TT</span>
+      <img src="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" alt="DiCoSTEM-TT" />
+      <div class="brand">
+        <span class="project">DiCoSTEM-TT</span>
+        <span class="claim">{{ site.claim[page.lang] | default: site.description }}</span>
+      </div>
     </a>
+
     <div class="spacer"></div>
-    {% for item in nav %}
-      <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
-    {% endfor %}
-    <span class="spacer"></span>
     {% include lang_switcher.html %}
     <button id="theme-toggle" title="Tema claro/oscuro" style="margin-left:.6rem;">🌓</button>
   </div>
-</div>
+
+  <nav class="subnav">
+    <div class="container">
+      {% for item in nav %}
+        <a href="{{ item.url | relative_url }}"
+           class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>
