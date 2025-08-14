@@ -1,34 +1,50 @@
 ---
 ---
-// Fuente similar a Grandview (legible, geométrica).
+/* Tipografías (Grandview-like) */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600&display=swap');
 
+/* =========================
+   Variables
+   ========================= */
 :root {
   --bg: #ffffff;
   --text: #101418;
   --muted: #5b6570;
-  --brand: #2EC4B6;       // turquesa del logo
-  --brand-2: #6C5BD7;     // violeta
-  --brand-3: #F28C28;     // naranja
-  --brand-4: #27AE60;     // verde
-  --brand-5: #D64C7F;     // magenta
+  --brand: #2EC4B6;   /* turquesa del logo */
+  --brand-2: #6C5BD7; /* violeta */
+  --brand-3: #F28C28; /* naranja */
+  --brand-4: #27AE60; /* verde */
+  --brand-5: #D64C7F; /* magenta */
   --link: #0a7ac8;
+
   --header-h: 68px;
   --radius: 16px;
   --shadow: 0 8px 24px rgba(0,0,0,.08);
-  --subnav-bg: #A8C9ED;   /* fondo barra en claro */
+
+  /* Logo (alto en cabecera) */
+  --logo-h-expanded: 150px;
+  --logo-h-collapsed: 75px;
+
+  /* Subnav (claro) */
+  --subnav-bg: #A8C9ED;
   --subnav-link: var(--link);
 }
+
 [data-theme="dark"] {
   --bg: #0e1116;
   --text: #eaeef3;
   --muted: #a7b0ba;
   --link: #7cc0ff;
   --shadow: 0 8px 24px rgba(0,0,0,.35);
-  --subnav-bg: color-mix(in srgb, #0a7ac8 18%, #0b0f14); /* azul profundo */
-  --subnav-link: #9fd0ff;
+
+  /* Subnav (oscuro) — colores explícitos para máxima compatibilidad */
+  --subnav-bg: #0f253a;   /* azul muy oscuro */
+  --subnav-link: #d6e8ff; /* texto claro sobre fondo oscuro */
 }
 
+/* =========================
+   Base
+   ========================= */
 * { box-sizing: border-box; }
 html, body {
   padding: 0; margin: 0;
@@ -40,17 +56,11 @@ html, body {
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { max-width: 100%; height: auto; }
-
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
 
-/* Header */
-/* Header (2 alturas + logo que reduce al hacer scroll) */
-:root{
-  --logo-h-expanded: 150px;   /* alto del logo al cargar */
-  --logo-h-collapsed: 75px;   /* alto del logo con scroll */
-  --subnav-bg: #A8C9ED;       /* ajusta al azul de tu mockup */
-}
-
+/* =========================
+   Header
+   ========================= */
 .site-header{
   position: sticky; top: 0; z-index: 999;
   backdrop-filter: saturate(180%) blur(6px);
@@ -72,7 +82,27 @@ img { max-width: 100%; height: auto; }
 
 .site-header .spacer{ flex: 1; }
 
-/* Subnavegación azul */
+/* Mostrar/ocultar logo según tema */
+.logo .logo-dark { display: none; }
+.logo .logo-img { height: var(--logo-h-expanded); }
+[data-theme="dark"] .logo .logo-light { display: none; }
+[data-theme="dark"] .logo .logo-dark  { display: block; }
+
+/* Estado encogido al hacer scroll */
+.site-header.scrolled .topbar{ padding: .2rem 0; }
+.site-header.scrolled .logo img{ height: var(--logo-h-collapsed); }
+
+/* Responsive header */
+@media (max-width: 640px){
+  .topbar{ align-items: flex-start; }
+  .logo{ align-items: flex-start; }
+  .logo img{ height: calc(var(--logo-h-expanded) * .6); }
+  .site-header.scrolled .logo img{ height: var(--logo-h-collapsed); }
+}
+
+/* =========================
+   Subnavegación
+   ========================= */
 .subnav{
   background: var(--subnav-bg);
   border-top: 1px solid color-mix(in srgb, var(--muted) 10%, transparent);
@@ -92,23 +122,10 @@ img { max-width: 100%; height: auto; }
   color: currentColor;
 }
 
-/* Estado encogido al hacer scroll */
-.site-header.scrolled .topbar{ padding: .2rem 0; }
-.site-header.scrolled .logo img{ height: var(--logo-h-collapsed); }
-
-/* Móvil: aseguramos que el claim siga visible */
-@media (max-width: 640px){
-  .topbar{ align-items: flex-start; }
-  .logo{ align-items: flex-start; }
-  .logo img{ height: calc(var(--logo-h-expanded) * .6); } /* un poco más pequeño en móvil pero visible */
-  .site-header.scrolled .logo img{ height: var(--logo-h-collapsed); }
-}
-
-
-/* Hero */
-.hero {
-  padding: 3rem 0 2rem;
-}
+/* =========================
+   Hero
+   ========================= */
+.hero { padding: 3rem 0 2rem; }
 .hero h1 {
   font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -120,7 +137,9 @@ img { max-width: 100%; height: auto; }
   max-width: 900px;
 }
 
-/* Cards */
+/* =========================
+   Cards
+   ========================= */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 .card {
   background: color-mix(in srgb, var(--bg) 97%, white);
@@ -131,7 +150,9 @@ img { max-width: 100%; height: auto; }
 }
 .card h3 { margin-top: 0; }
 
-/* Footer + wave */
+/* =========================
+   Footer
+   ========================= */
 .footer-wave { margin-top: 4rem; }
 .site-footer {
   background: color-mix(in srgb, var(--brand-2) 8%, var(--bg));
@@ -147,22 +168,21 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 1rem;
 }
 .sponsors img { max-height: 54px; opacity: .96; }
-
 .fineprint { font-size: .9rem; color: var(--muted); }
 
-/* Timeline table */
+/* =========================
+   Timeline table
+   ========================= */
 table.timeline { width: 100%; border-collapse: collapse; font-size: .95rem; }
 table.timeline th, table.timeline td { border: 1px solid color-mix(in srgb, var(--muted) 15%, transparent); padding: .5rem .4rem; text-align: center; }
 table.timeline th.task, table.timeline td.task { text-align: left; min-width: 260px; }
 .x { background: color-mix(in srgb, var(--brand-4) 18%, transparent); font-weight: 700; }
 .phase { background: color-mix(in srgb, var(--brand-2) 12%, transparent); font-weight: 700; text-align: left; }
 
-/* Search */
-.search-box { margin: 1rem 0; }
-.search-results .item { padding: .6rem 0; border-bottom: 1px solid color-mix(in srgb, var(--muted) 12%, transparent); }
-.lang-switch { font-size: .95rem; }
-
-.lang-switch { margin-right: .6rem; }
+/* =========================
+   Search + Lang switch
+   ========================= */
+.lang-switch { font-size: .95rem; margin-right: .6rem; }
 
 .search-link{
   display: inline-flex; align-items: center; gap: .3rem;
@@ -171,14 +191,11 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
 .search-link:hover{ text-decoration: underline; }
 
 @media (max-width: 640px){
-  .search-link .label{ display: none; } /* en móvil sólo icono */
+  .search-link .label{ display: none; }
 }
 
 /* Buscador (ES/EN) */
-.search-box{
-  display: flex;
-  margin: 1rem 0 1.5rem;
-}
+.search-box{ display: flex; margin: 1rem 0 1.5rem; }
 .search-box input[type="search"],
 .search-box .search-input{
   width: 100%;
@@ -193,14 +210,3 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
   padding: .6rem 0;
   border-bottom: 1px solid color-mix(in srgb, var(--muted) 12%, transparent);
 }
-
-/* Mostrar/ocultar logo según tema */
-.logo .logo-dark { display: none; }
-.logo .logo-img { height: var(--logo-h-expanded); }
-
-/* Al hacer scroll ya tienes reglas que ajustan la altura:
-   .site-header.scrolled .logo img { height: var(--logo-h-collapsed); } */
-
-[data-theme="dark"] .logo .logo-light { display: none; }
-[data-theme="dark"] .logo .logo-dark  { display: block; }
-
