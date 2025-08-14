@@ -1,4 +1,6 @@
-{% assign nav = site.data['navigation_' | append: page.lang ] %}
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign nav = site.data['navigation_' | append: current_lang ] %}
+
 <header class="site-header">
   <div class="container topbar">
     <a class="logo" href="/{{ page.lang }}/">
