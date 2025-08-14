@@ -14,6 +14,16 @@
     <div class="spacer"></div>
     {% include lang_switcher.html %}
     <button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema" style="margin-left:.6rem;">🌓</button>
+    {% if current_lang == 'es' %}
+  {% assign search_url = '/es/buscar/' %}
+  {% assign search_label = 'Buscar' %}
+{% else %}
+  {% assign search_url = '/en/search/' %}
+  {% assign search_label = 'Search' %}
+{% endif %}
+<a class="search-link" href="{{ search_url | relative_url }}"
+   aria-label="{{ search_label }}" title="{{ search_label }}">🔍 <span class="label">{{ search_label }}</span></a>
+
   </div>
 
   <nav class="site-nav subnav">
