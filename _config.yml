@@ -1,5 +1,8 @@
 title: "DiCoSTEM-TT"
 description: "Competencia Digital y Educación STEM en la Formación del Profesorado"
+claim:
+  es: "Competencia Digital y Educación STEM en la Formación del Profesorado"
+  en: "Digital Competence and STEM Education in Teacher Training"
 url: "https://dicostem-tt.github.io"
 baseurl: ""  # keep empty for organization/user pages
 lang: es
