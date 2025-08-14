@@ -19,33 +19,44 @@
   orcid: ""
   photo: "/assets/img/team/placeholder.png"
   bio: "Doctora en Física e Ingeniería de Materiales. TIC aplicadas a la docencia."
+  sort_key: "martinez borreguero maria guadalupe"
+
 
 - name: Milagros Mateos Núñez
   role: Investigadora
   affiliation: Universidad de Extremadura · DCE
   photo: "/assets/img/team/placeholder.png"
   bio: "Graduada en Educación Primaria."
+  sort_key: "mateos nunez milagros"
+
 
 - name: Ana Belén Borrachero Cortés
   role: Investigadora
   affiliation: Universidad de Extremadura · DPA
   photo: "/assets/img/team/placeholder.png"
   bio: "Psicopedagogía y formación del profesorado."
+  sort_key: "borrachero cortes ana belen"
+
 
 - name: Ana Caballero Carrasco
   role: Investigadora
   affiliation: Universidad de Extremadura · DM
   photo: "/assets/img/team/placeholder.png"
   bio: "Psicopedagogía. Metodologías activas."
+  sort_key: "caballero carrasco ana"
+
 
 - name: María Antonia Dávila Acedo
   role: Investigadora
   affiliation: Universidad de Extremadura · DCE
   photo: "/assets/img/team/placeholder.png"
   bio: "Ingeniera Química. Educación STEM."
+  sort_key: "davila acedo maria antonia"
+
 
 - name: Lina Viviana Melo Niño
   role: Investigadora
   affiliation: Universidad de Extremadura · DM
   photo: "/assets/img/team/placeholder.png"
   bio: "Licenciada en Física. Docencia de las Matemáticas."
+  sort_key: "melo nino lina viviana"
