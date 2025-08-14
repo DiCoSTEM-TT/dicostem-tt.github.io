@@ -17,5 +17,15 @@
   en: "/en/dissemination/"
 - es: "/es/contacto/"
   en: "/en/contact/"
+
+# Buscar ↔ Search
 - es: "/es/buscar/"
   en: "/en/search/"
+
+# Páginas legales
+- es: "/es/legal/accesibilidad/"
+  en: "/en/legal/accessibility/"
+- es: "/es/legal/aviso-legal/"
+  en: "/en/legal/legal-notice/"
+- es: "/es/legal/privacidad/"
+  en: "/en/legal/privacy/"
