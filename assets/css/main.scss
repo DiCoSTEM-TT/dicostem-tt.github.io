@@ -43,7 +43,7 @@ img { max-width: 100%; height: auto; }
 /* Header (2 alturas + logo que reduce al hacer scroll) */
 :root{
   --logo-h-expanded: 150px;   /* alto del logo al cargar */
-  --logo-h-collapsed: 50px;   /* alto del logo con scroll */
+  --logo-h-collapsed: 75px;   /* alto del logo con scroll */
   --subnav-bg: #A8C9ED;       /* ajusta al azul de tu mockup */
 }
 
@@ -188,4 +188,14 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
   padding: .6rem 0;
   border-bottom: 1px solid color-mix(in srgb, var(--muted) 12%, transparent);
 }
+
+/* Mostrar/ocultar logo según tema */
+.logo .logo-dark { display: none; }
+.logo .logo-img { height: var(--logo-h-expanded); }
+
+/* Al hacer scroll ya tienes reglas que ajustan la altura:
+   .site-header.scrolled .logo img { height: var(--logo-h-collapsed); } */
+
+[data-theme="dark"] .logo .logo-light { display: none; }
+[data-theme="dark"] .logo .logo-dark  { display: block; }
 
