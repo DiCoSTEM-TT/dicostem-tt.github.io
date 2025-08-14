@@ -226,16 +226,18 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
    ========================= */
 .team { display: grid; gap: 1.2rem; }
 
-/* IP centrado en su propia fila */
+/* Fila del IP: mismo grid que abajo, y colocamos la tarjeta en la columna central */
 .team-lead{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 1rem;
 }
 .team-lead .card{
-  width: min(720px, 100%); /* destácala algo más ancha; ajusta a tu gusto */
+  grid-column: 2;          /* columna central */
+  /* sin width fijo: usará el ancho de una columna */
 }
 
-/* Resto en 3 columnas responsivas */
+/* Resto del equipo en 3 columnas */
 .team-grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(260px, 1fr));
@@ -244,10 +246,13 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
 
 /* Responsive: 2 columnas en tablet, 1 en móvil */
 @media (max-width: 980px){
+  .team-lead{ grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+  .team-lead .card{ grid-column: 1 / -1; } /* centrada ocupando la fila (no hay columna central en 2c) */
+
   .team-grid{ grid-template-columns: repeat(2, minmax(240px, 1fr)); }
 }
-@media (max-width: 640px){
-  .team-grid{ grid-template-columns: 1fr; }
-  .team-lead .card{ width: 100%; }
-}
 
+@media (max-width: 640px){
+  .team-lead{ grid-template-columns: 1fr; }
+  .team-grid{ grid-template-columns: 1fr; }
+}
