@@ -220,3 +220,34 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
   padding: .6rem 0;
   border-bottom: 1px solid color-mix(in srgb, var(--muted) 12%, transparent);
 }
+
+/* =========================
+   Team layout (IP arriba + grid)
+   ========================= */
+.team { display: grid; gap: 1.2rem; }
+
+/* IP centrado en su propia fila */
+.team-lead{
+  display: flex;
+  justify-content: center;
+}
+.team-lead .card{
+  width: min(720px, 100%); /* destácala algo más ancha; ajusta a tu gusto */
+}
+
+/* Resto en 3 columnas responsivas */
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsive: 2 columnas en tablet, 1 en móvil */
+@media (max-width: 980px){
+  .team-grid{ grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+}
+@media (max-width: 640px){
+  .team-grid{ grid-template-columns: 1fr; }
+  .team-lead .card{ width: 100%; }
+}
+
