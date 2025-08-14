@@ -22,19 +22,15 @@ collections:
     output: true
 
 defaults:
-  - scope:
-      path: ""
-    values:
-      layout: page
-      image: /assets/img/social-card.png
-  - scope:
-      path: "en"
-    values:
-      lang: en
-  - scope:
-      path: "es"
-    values:
-      lang: es
+  - scope: { path: "" }
+    values: { layout: "page", image: "/assets/img/social-card.png" }
+  - scope: { path: "en" }
+    values: { lang: "en" }
+  - scope: { path: "es" }
+    values: { lang: "es" }
+lang: es
+languages: ["es","en"]
+
 
 exclude:
   - "README.md"
