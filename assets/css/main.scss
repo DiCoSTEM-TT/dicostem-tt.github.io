@@ -156,3 +156,15 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
 .search-box { margin: 1rem 0; }
 .search-results .item { padding: .6rem 0; border-bottom: 1px solid color-mix(in srgb, var(--muted) 12%, transparent); }
 .lang-switch { font-size: .95rem; }
+
+.lang-switch { margin-right: .6rem; }
+
+.search-link{
+  display: inline-flex; align-items: center; gap: .3rem;
+  padding: .2rem .5rem; border-radius: 8px; text-decoration: none;
+}
+.search-link:hover{ text-decoration: underline; }
+
+@media (max-width: 640px){
+  .search-link .label{ display: none; } /* en móvil sólo icono */
+}
