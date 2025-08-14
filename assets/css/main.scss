@@ -43,7 +43,7 @@ img { max-width: 100%; height: auto; }
 /* Header (2 alturas + logo que reduce al hacer scroll) */
 :root{
   --logo-h-expanded: 150px;   /* alto del logo al cargar */
-  --logo-h-collapsed: 36px;   /* alto del logo con scroll */
+  --logo-h-collapsed: 50px;   /* alto del logo con scroll */
   --subnav-bg: #A8C9ED;       /* ajusta al azul de tu mockup */
 }
 
