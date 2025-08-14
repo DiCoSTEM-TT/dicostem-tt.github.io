@@ -1,14 +1,47 @@
-(function() {
-  const key = "theme";
+(function () {
+  const KEY = "theme"; // valores posibles: 'light' | 'dark' | null (auto)
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const getSystem = () => (media.matches ? "dark" : "light");
+  const apply = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+  };
+
+  // Inicialización: si no hay preferencia guardada, seguir sistema
+  const saved = localStorage.getItem(KEY); // null => automático
+  apply(saved || getSystem());
+
+  // Botón de cambio
   const btn = document.getElementById("theme-toggle");
-  const pref = localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
-  document.documentElement.setAttribute('data-theme', pref);
   if (btn) {
-    btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
+    // Clic normal: alterna y guarda preferencia (override manual)
+    btn.addEventListener('click', (e) => {
+      if (e.altKey) return; // lo gestiona el handler de abajo
+      const current = localStorage.getItem(KEY) || getSystem();
       const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem(key, next);
+      localStorage.setItem(KEY, next);
+      apply(next);
     });
+
+    // Alt + clic: volver a AUTOMÁTICO (sin preferencia guardada)
+    btn.addEventListener('click', (e) => {
+      if (!e.altKey) return;
+      e.preventDefault();
+      localStorage.removeItem(KEY);
+      apply(getSystem());
+    });
+
+    btn.title = "Cambiar tema (Alt+clic: automático)";
+    btn.setAttribute("aria-label", "Cambiar tema (Alt+clic: automático)");
+  }
+
+  // Seguir cambios del sistema SOLO si no hay preferencia guardada
+  const followSystemIfAuto = () => {
+    if (!localStorage.getItem(KEY)) apply(getSystem());
+  };
+  if (media.addEventListener) {
+    media.addEventListener('change', followSystemIfAuto);
+  } else if (media.addListener) {
+    media.addListener(followSystemIfAuto); // Safari antiguo
   }
 })();
