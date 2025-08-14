@@ -1,14 +1,25 @@
 <span class="lang-switch">
   {% assign current_lang = page.lang | default: site.lang | default: 'es' %}
-  {% assign target_lang = current_lang == 'es' ? 'en' : 'es' %}
+
+  {% if current_lang == 'es' %}
+    {% assign target_lang = 'en' %}
+  {% else %}
+    {% assign target_lang = 'es' %}
+  {% endif %}
+
   {% assign pairs = site.data.translation_map %}
-  {% assign target_url = '/' | append: target_lang | append: '/' %} {# fallback por defecto: home del otro idioma #}
+  {% assign target_url = '/' | append: target_lang | append: '/' %}
+  {% assign cur_url = page.url | default: page.permalink %}
 
   {% if pairs %}
     {% for p in pairs %}
-      {% if p[current_lang] and p[target_lang] and p[current_lang] == page.url %}
-        {% assign target_url = p[target_lang] %}
-        {% break %}
+      {% assign from_url = p[current_lang] %}
+      {% assign to_url   = p[target_lang] %}
+      {% if from_url and to_url %}
+        {% if cur_url == from_url or page.permalink == from_url %}
+          {% assign target_url = to_url %}
+          {% break %}
+        {% endif %}
       {% endif %}
     {% endfor %}
   {% endif %}
