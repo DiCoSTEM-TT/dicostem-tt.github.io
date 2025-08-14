@@ -30,6 +30,10 @@
   --subnav-link: var(--link);
 }
 
+/* Preferencias del sistema (UI nativa) */
+:root { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
 [data-theme="dark"] {
   --bg: #0e1116;
   --text: #eaeef3;
@@ -117,8 +121,14 @@ img { max-width: 100%; height: auto; }
   font-weight: 600; white-space: nowrap;
   color: var(--subnav-link);
 }
+.subnav a:hover,
+.subnav a:focus-visible{
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
 .subnav a.active{
-  text-decoration: underline; text-underline-offset: .25em;
+  text-decoration: underline;
+  text-underline-offset: .25em;
   color: currentColor;
 }
 
