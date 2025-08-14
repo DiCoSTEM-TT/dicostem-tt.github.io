@@ -1,6 +1,0 @@
-<nav class="subnav">
-  {% assign nav = site.data['navigation_' | append: page.lang ] %}
-  {% for item in nav %}
-    <a href="{{ item.url | relative_url }}" class="pill {% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
-  {% endfor %}
-</nav>
