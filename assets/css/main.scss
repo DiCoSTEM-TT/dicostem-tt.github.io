@@ -40,22 +40,65 @@ img { max-width: 100%; height: auto; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
 
 /* Header */
-.site-header {
+/* Header (2 alturas + logo que reduce al hacer scroll) */
+:root{
+  --logo-h-expanded: 150px;   /* alto del logo al cargar */
+  --logo-h-collapsed: 36px;   /* alto del logo con scroll */
+  --subnav-bg: #A8C9ED;       /* ajusta al azul de tu mockup */
+}
+
+.site-header{
   position: sticky; top: 0; z-index: 999;
-  height: var(--header-h);
   backdrop-filter: saturate(180%) blur(6px);
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  background: var(--bg);
   border-bottom: 1px solid color-mix(in srgb, var(--muted) 15%, transparent);
 }
-.nav {
+
+.topbar{
   display: flex; align-items: center; gap: 1rem;
-  height: var(--header-h);
+  padding: .4rem 0;
+  transition: padding .2s ease;
 }
-.nav .logo { display: flex; align-items: center; gap: .6rem; font-weight: 700; }
-.nav .logo img { height: 36px; }
-.nav .spacer { flex: 1; }
-.nav a { font-weight: 600; }
-.nav .active { color: var(--brand-2); }
+
+.logo{ display: flex; gap: .6rem; align-items: center; text-decoration: none; }
+.logo img{ height: var(--logo-h-expanded); transition: height .25s ease; }
+.logo .brand{ display: flex; flex-direction: column; gap: .15rem; }
+.logo .brand .project{ font-weight: 700; }
+.logo .brand .claim{ font-size: clamp(.85rem, 2.4vw, 1.05rem); line-height: 1.15; }
+
+.site-header .spacer{ flex: 1; }
+
+/* Subnavegación azul */
+.subnav{
+  background: var(--subnav-bg);
+  border-top: 1px solid color-mix(in srgb, var(--muted) 10%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--muted) 20%, transparent);
+}
+.subnav .container{
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: .4rem .8rem; min-height: 44px;
+}
+.subnav a{
+  display: inline-block; padding: .4rem .2rem;
+  font-weight: 600; white-space: nowrap;
+}
+.subnav a.active{
+  text-decoration: underline; text-underline-offset: .25em;
+  color: currentColor;
+}
+
+/* Estado encogido al hacer scroll */
+.site-header.scrolled .topbar{ padding: .2rem 0; }
+.site-header.scrolled .logo img{ height: var(--logo-h-collapsed); }
+
+/* Móvil: aseguramos que el claim siga visible */
+@media (max-width: 640px){
+  .topbar{ align-items: flex-start; }
+  .logo{ align-items: flex-start; }
+  .logo img{ height: calc(var(--logo-h-expanded) * .6); } /* un poco más pequeño en móvil pero visible */
+  .site-header.scrolled .logo img{ height: var(--logo-h-collapsed); }
+}
+
 
 /* Hero */
 .hero {
