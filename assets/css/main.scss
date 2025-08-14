@@ -16,6 +16,8 @@
   --header-h: 68px;
   --radius: 16px;
   --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --subnav-bg: #A8C9ED;   /* fondo barra en claro */
+  --subnav-link: var(--link);
 }
 [data-theme="dark"] {
   --bg: #0e1116;
@@ -23,6 +25,8 @@
   --muted: #a7b0ba;
   --link: #7cc0ff;
   --shadow: 0 8px 24px rgba(0,0,0,.35);
+  --subnav-bg: color-mix(in srgb, #0a7ac8 18%, #0b0f14); /* azul profundo */
+  --subnav-link: #9fd0ff;
 }
 
 * { box-sizing: border-box; }
