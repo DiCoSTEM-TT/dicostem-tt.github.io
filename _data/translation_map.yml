@@ -1,0 +1,19 @@
+# Home
+- es: "/es/"
+  en: "/en/"
+
+# Menú principal
+- es: "/es/proyecto/"
+  en: "/en/project/"
+- es: "/es/equipo/"
+  en: "/en/team/"
+- es: "/es/objetivos/"
+  en: "/en/goals/"
+- es: "/es/resultados/"
+  en: "/en/outputs/"
+- es: "/es/recursos/"
+  en: "/en/resources/"
+- es: "/es/difusion/"
+  en: "/en/dissemination/"
+- es: "/es/contacto/"
+  en: "/en/contact/"
