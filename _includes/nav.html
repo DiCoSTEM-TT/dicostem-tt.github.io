@@ -1,0 +1,24 @@
+
+{% assign nav = site.data['navigation_' | append: page.lang ] %}
+<div class="site-header">
+  <div class="container brand-row">
+    <a class="logo" href="/{{ page.lang }}/">
+      <img src="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" alt="DiCoSTEM-TT logo" />
+      <div class="brand-text">
+        <div class="name">DiCoSTEM-TT</div>
+        <div class="claim">Competencia Digital y Educación STEM en la Formación del Profesorado</div>
+      </div>
+    </a>
+    <div class="spacer"></div>
+    {% include lang_switcher.html %}
+    <button id="theme-toggle" title="Tema claro/oscuro" class="theme-btn">🌓</button>
+  </div>
+  <div class="menu-row">
+    <div class="container menu">
+      {% for item in nav %}
+        <a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a>
+      {% endfor %}
+      <a href="/{{ page.lang }}/buscar/" class="search-link">{% if page.lang=='es' %}Buscar{% else %}Search{% endif %}</a>
+    </div>
+  </div>
+</div>

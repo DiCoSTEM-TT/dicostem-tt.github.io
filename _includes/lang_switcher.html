@@ -1,0 +1,5 @@
+
+<span class="lang-switch">
+{% if page.lang == 'es' %}<strong>Español</strong> | <a href="{{ page.url | replace_first:'/es/','/en/' | relative_url }}">English</a>
+{% else %}<a href="{{ page.url | replace_first:'/en/','/es/' | relative_url }}">Español</a> | <strong>English</strong>{% endif %}
+</span>
