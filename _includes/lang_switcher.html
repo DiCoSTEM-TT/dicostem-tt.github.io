@@ -1,8 +1,21 @@
 <span class="lang-switch">
-  {% assign current_lang = page.lang | default: site.lang %}
+  {% assign current_lang = page.lang | default: site.lang | default: 'es' %}
+  {% assign target_lang = current_lang == 'es' ? 'en' : 'es' %}
+  {% assign pairs = site.data.translation_map %}
+  {% assign target_url = '/' | append: target_lang | append: '/' %} {# fallback por defecto: home del otro idioma #}
+
+  {% if pairs %}
+    {% for p in pairs %}
+      {% if p[current_lang] and p[target_lang] and p[current_lang] == page.url %}
+        {% assign target_url = p[target_lang] %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
   {% if current_lang == 'es' %}
-    <strong>Español</strong> | <a href="{{ page.url | replace_first:'/es/','/en/' | relative_url }}">English</a>
+    <strong>Español</strong> | <a href="{{ target_url | relative_url }}">English</a>
   {% else %}
-    <a href="{{ page.url | replace_first:'/en/','/es/' | relative_url }}">Español</a> | <strong>English</strong>
+    <a href="{{ target_url | relative_url }}">Español</a> | <strong>English</strong>
   {% endif %}
 </span>
