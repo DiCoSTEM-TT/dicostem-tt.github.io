@@ -163,6 +163,21 @@ img { max-width: 100%; height: auto; }
 /* =========================
    Footer
    ========================= */
+
+/* Onda del footer: 50% de ancho, proporcional, centrada */
+.footer-wave-wrap.centered{
+  margin-top: 4rem;       /* separa del contenido de arriba */
+  text-align: center;     /* centrado para el inline-block de abajo */
+  overflow: hidden;       /* por si algún trazo sobresale del viewBox */
+}
+
+.footer-wave-wrap.centered svg.footer-wave{
+  display: inline-block;  /* hace caso al text-align:center del contenedor */
+  width: 50%;             /* aquí fijas el 50% */
+  height: auto;           /* mantiene proporción del viewBox */
+  max-width: 100%;
+}
+
 .footer-wave { margin-top: 4rem; }
 .site-footer {
   background: color-mix(in srgb, var(--brand-2) 8%, var(--bg));
