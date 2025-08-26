@@ -184,16 +184,37 @@ img { max-width: 100%; height: auto; }
   border-top: 1px solid color-mix(in srgb, var(--muted) 15%, transparent);
   padding: 1.5rem 0;
 }
-.sponsors {
+
+.sponsors{
   display: grid;
-  grid-template-columns: repeat(5, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
   align-items: center;
-  justify-items: center;
+  justify-items: center;  /* centra cada logo en su celda */
   margin-bottom: 1rem;
 }
-.sponsors img { max-height: 54px; opacity: .96; }
-.fineprint { font-size: .9rem; color: var(--muted); }
+
+.sponsors img{
+  display: block;
+  max-width: 100%;
+  height: auto;      /* mantiene proporción */
+  max-height: 54px;  /* misma altura visual aproximada */
+  opacity: .96;
+}
+
+/* (Opcional) si el PNG conjunto es muy horizontal, puedes permitirle algo más de ancho alto */
+.sponsors img.trio{
+  max-height: 54px;  /* ajusta a 50–60px si lo ves mejor */
+}
+
+/* Texto final centrado */
+.fineprint{
+  font-size: .9rem;
+  color: var(--muted);
+  text-align: center;    /* <-- centrado */
+  line-height: 1.4;
+}
+
 
 /* =========================
    Timeline table
