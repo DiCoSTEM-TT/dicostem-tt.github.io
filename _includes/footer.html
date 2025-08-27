@@ -1,11 +1,16 @@
-<!-- Pre-footer: logos laterales + onda centrada -->
+<!-- Pre-footer: logos laterales + onda (clara/oscura) centrada -->
 <div class="prefooter">
   <img class="pf-logo uex"
        src="{{ '/assets/img/logos/uex.png' | relative_url }}"
        alt="Universidad de Extremadura" />
 
   <div class="pf-wave" aria-hidden="true">
-    {% include footer-wave.svg %}
+    <span class="wave wave-light">
+      {% include footer-wave.svg %}
+    </span>
+    <span class="wave wave-dark">
+      {% include footer-wave-dark.svg %}
+    </span>
   </div>
 
   <img class="pf-logo faculty"
