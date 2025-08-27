@@ -169,7 +169,10 @@ img { max-width: 100%; height: auto; }
 [data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave en dark */
 
 /* =============== Pre-footer: logos laterales + onda centrada =============== */
-.prefooter{ margin-top: 2rem; }
+.prefooter{ 
+   margin-top: 2rem; 
+   margin-bottom: clamp(8px, 1.5vw, 24px);
+}
 
 /* Rejilla dentro de .container para alinear con el contenido */
 .pf-grid{
@@ -202,6 +205,7 @@ img { max-width: 100%; height: auto; }
   display: flex;
   align-items: flex-end;
   justify-content: center;   /* centrados dentro de su columna */
+  margin-bottom: clamp(4px, 0.8vw, 12px);
 }
 .pf-logo .logo-dark{ display: none; }
 [data-theme="dark"] .pf-logo .logo-light{ display: none; }
