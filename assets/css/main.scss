@@ -164,6 +164,10 @@ img { max-width: 100%; height: auto; }
    Footer
    ========================= */
 
+/* Fondo del logo institucional: blanco (claro) / gris (oscuro) */
+:root{ --footer-brand-bg: #ffffff; }
+[data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave para mejorar legibilidad en dark */
+
 /* =============== Pre-footer: logos laterales + onda centrada =============== */
 .prefooter{
   display: grid;
@@ -196,25 +200,24 @@ img { max-width: 100%; height: auto; }
 
 .footer-bar{
   display: grid;
-  /* la primera columna se ajusta al contenido (logo), la segunda ocupa el resto */
+  /* 1ª col al tamaño del logo; 2ª ocupa el resto */
   grid-template-columns: max-content 1fr;
   align-items: center;
   gap: 1rem 1.25rem;
 }
 
-/* Logo institucional (SVG) con fondo y marco blanco */
+/* Logo institucional (SVG) con solo relleno de fondo */
 .footer-brand{
   display: block;
-
   /* tamaño responsive por ancho; altura proporcional */
   width: clamp(180px, 28vw, 360px);
   height: auto;
 
-  /* marco/fondo blanco bajo las transparencias del SVG */
-  background: #ffffff;
-  padding: clamp(1px, 0.1vw, 2px);  /* antes: clamp(6px, 0.8vw, 12px) */
-  border-radius: 0;                  /* esquinas rectas */
-  box-shadow: 0 0 0 1px rgba(16,20,24,.08); /* contorno sutil; sin sombra de caída */
+  /* solo relleno bajo la transparencia (sin marco ni sombra) */
+  background: var(--footer-brand-bg);
+  padding: 0;
+  border: 0;
+  box-shadow: none;
 }
 
 .fineprint{
@@ -240,6 +243,7 @@ img { max-width: 100%; height: auto; }
     text-align: center;
   }
 }
+
 
 /* =========================
    Timeline table
