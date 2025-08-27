@@ -1,9 +1,17 @@
 <!-- Pre-footer: logos laterales + onda (clara/oscura) centrada -->
 <div class="prefooter">
-  <img class="pf-logo uex"
-       src="{{ '/assets/img/logos/uex.svg' | relative_url }}"
-       alt="Universidad de Extremadura" />
+  <!-- Logo UEx: claro/oscuro -->
+  <span class="pf-logo uex">
+    <img class="logo-light"
+         src="{{ '/assets/img/logos/uex.png' | relative_url }}"
+         alt="Universidad de Extremadura" />
+    <img class="logo-dark"
+         src="{{ '/assets/img/logos/uex-dark.svg' | relative_url }}"
+         alt=""
+         aria-hidden="true" />
+  </span>
 
+  <!-- Onda claro/oscuro -->
   <div class="pf-wave" aria-hidden="true">
     <span class="wave wave-light">
       {% include footer-wave.svg %}
@@ -13,9 +21,16 @@
     </span>
   </div>
 
-  <img class="pf-logo faculty"
-       src="{{ '/assets/img/logos/facultad.svg' | relative_url }}"
-       alt="Facultad de Educación y Psicología" />
+  <!-- Logo Facultad: claro/oscuro -->
+  <span class="pf-logo faculty">
+    <img class="logo-light"
+         src="{{ '/assets/img/logos/facultad.png' | relative_url }}"
+         alt="Facultad de Educación y Psicología" />
+    <img class="logo-dark"
+         src="{{ '/assets/img/logos/facultad-dark.svg' | relative_url }}"
+         alt=""
+         aria-hidden="true" />
+  </span>
 </div>
 
 <!-- Footer: logo institucional (SVG) a la izquierda + texto a la derecha -->
