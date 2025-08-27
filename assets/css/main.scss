@@ -166,7 +166,7 @@ img { max-width: 100%; height: auto; }
 
 /* Fondo del logo institucional: blanco (claro) / gris (oscuro) */
 :root{ --footer-brand-bg: #ffffff; }
-[data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave para mejorar legibilidad en dark */
+[data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave en dark */
 
 /* =============== Pre-footer: logos laterales + onda centrada =============== */
 .prefooter{
@@ -177,7 +177,13 @@ img { max-width: 100%; height: auto; }
   margin-top: 2rem;
 }
 
-.pf-wave svg.footer-wave{
+/* Mostrar onda clara por defecto; en dark, la versión oscura */
+.pf-wave .wave-dark{ display: none; }
+[data-theme="dark"] .pf-wave .wave-light{ display: none; }
+[data-theme="dark"] .pf-wave .wave-dark{ display: block; }
+
+/* Escalado correcto de los SVG incluidos */
+.pf-wave .wave > svg{
   display: block;
   width: 100%;
   height: auto; /* respeta el viewBox sin deformar */
@@ -200,8 +206,7 @@ img { max-width: 100%; height: auto; }
 
 .footer-bar{
   display: grid;
-  /* 1ª col al tamaño del logo; 2ª ocupa el resto */
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content 1fr; /* 1ª col = logo; 2ª = texto */
   align-items: center;
   gap: 1rem 1.25rem;
 }
@@ -209,12 +214,9 @@ img { max-width: 100%; height: auto; }
 /* Logo institucional (SVG) con solo relleno de fondo */
 .footer-brand{
   display: block;
-  /* tamaño responsive por ancho; altura proporcional */
-  width: clamp(180px, 28vw, 360px);
+  width: clamp(180px, 28vw, 360px); /* tamaño responsive por ancho */
   height: auto;
-
-  /* solo relleno bajo la transparencia (sin marco ni sombra) */
-  background: var(--footer-brand-bg);
+  background: var(--footer-brand-bg); /* relleno bajo la transparencia */
   padding: 0;
   border: 0;
   box-shadow: none;
@@ -243,7 +245,6 @@ img { max-width: 100%; height: auto; }
     text-align: center;
   }
 }
-
 
 /* =========================
    Timeline table
