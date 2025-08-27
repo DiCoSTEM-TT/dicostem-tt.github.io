@@ -215,6 +215,24 @@ img { max-width: 100%; height: auto; }
   line-height: 1.4;
 }
 
+
+/* ===== Footer: logo SVG a la izquierda + texto a la derecha ===== */
+/* Responsive: en móvil, apila y centra */
+@media (max-width: 640px){
+  .footer-bar{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-brand{
+    width: min(320px, 80vw);
+    margin: 0 auto;
+  }
+  .fineprint{
+    text-align: center;
+  }
+}
+
+
 /* ========================= Responsive ========================= */
 @media (max-width: 640px){
   /* Footer: apilar logo y texto, centrados */
