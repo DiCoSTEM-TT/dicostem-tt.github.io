@@ -169,12 +169,14 @@ img { max-width: 100%; height: auto; }
 [data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave en dark */
 
 /* =============== Pre-footer: logos laterales + onda centrada =============== */
-.prefooter{
+.prefooter{ margin-top: 2rem; }
+
+/* Rejilla dentro de .container para alinear con el contenido */
+.pf-grid{
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto; /* logo izq · onda · logo dcha */
   align-items: end;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 1rem 2rem; /* un poco más de separación horizontal */
 }
 
 /* Mostrar onda clara por defecto; en dark, la versión oscura */
@@ -190,8 +192,8 @@ img { max-width: 100%; height: auto; }
 }
 .pf-wave .wave > svg{
   display: block;
-  height: clamp(64px, 12vw, 140px); /* reduce presencia visual de la onda */
-  width: auto;                      /* mantiene proporción del viewBox */
+  height: clamp(64px, 12vw, 140px);
+  width: auto;
   max-width: 100%;
 }
 
@@ -199,17 +201,18 @@ img { max-width: 100%; height: auto; }
 .pf-logo{
   display: flex;
   align-items: flex-end;
+  justify-content: center;   /* centrados dentro de su columna */
 }
-.pf-logo .logo-dark{ display: none; }                /* por defecto, claro */
+.pf-logo .logo-dark{ display: none; }
 [data-theme="dark"] .pf-logo .logo-light{ display: none; }
 [data-theme="dark"] .pf-logo .logo-dark{ display: block; }
 
-/* Tamaño de los logos (aplica a ambas versiones) */
+/* Tamaño de los logos (más grandes y responsivos) */
 .pf-logo img{
   display: block;
   width: auto;
   height: auto;
-  max-height: clamp(48px, 8vw, 84px); /* ↑ más grandes que antes */
+  max-height: clamp(48px, 8vw, 84px);
   object-fit: contain;
 }
 
@@ -235,16 +238,16 @@ img { max-width: 100%; height: auto; }
 /* Logo institucional (SVG) con solo relleno de fondo */
 .footer-brand{
   display: block;
-  width: clamp(180px, 28vw, 360px); /* tamaño responsive por ancho */
+  width: clamp(180px, 28vw, 360px);
   height: auto;
-  background: var(--footer-brand-bg); /* relleno bajo la transparencia */
+  background: var(--footer-brand-bg);
   padding: 0;
   border: 0;
   box-shadow: none;
 }
 
 .fineprint{
-  min-width: 0;           /* permite quebrar líneas dentro del grid */
+  min-width: 0;
   font-size: .9rem;
   color: var(--muted);
   text-align: left;
