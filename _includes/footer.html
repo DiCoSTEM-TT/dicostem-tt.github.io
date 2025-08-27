@@ -1,36 +1,38 @@
 <!-- Pre-footer: logos laterales + onda (clara/oscura) centrada -->
 <div class="prefooter">
-  <!-- Logo UEx: claro/oscuro -->
-  <span class="pf-logo uex">
-    <img class="logo-light"
-         src="{{ '/assets/img/logos/uex.png' | relative_url }}"
-         alt="Universidad de Extremadura" />
-    <img class="logo-dark"
-         src="{{ '/assets/img/logos/uex-dark.svg' | relative_url }}"
-         alt=""
-         aria-hidden="true" />
-  </span>
-
-  <!-- Onda claro/oscuro -->
-  <div class="pf-wave" aria-hidden="true">
-    <span class="wave wave-light">
-      {% include footer-wave.svg %}
+  <div class="container pf-grid">
+    <!-- Logo UEx: claro/oscuro -->
+    <span class="pf-logo uex">
+      <img class="logo-light"
+           src="{{ '/assets/img/logos/uex.png' | relative_url }}"
+           alt="Universidad de Extremadura" />
+      <img class="logo-dark"
+           src="{{ '/assets/img/logos/uex-dark.svg' | relative_url }}"
+           alt=""
+           aria-hidden="true" />
     </span>
-    <span class="wave wave-dark">
-      {% include footer-wave-dark.svg %}
+
+    <!-- Onda claro/oscuro -->
+    <div class="pf-wave" aria-hidden="true">
+      <span class="wave wave-light">
+        {% include footer-wave.svg %}
+      </span>
+      <span class="wave wave-dark">
+        {% include footer-wave-dark.svg %}
+      </span>
+    </div>
+
+    <!-- Logo Facultad: claro/oscuro -->
+    <span class="pf-logo faculty">
+      <img class="logo-light"
+           src="{{ '/assets/img/logos/facultad.png' | relative_url }}"
+           alt="Facultad de Educación y Psicología" />
+      <img class="logo-dark"
+           src="{{ '/assets/img/logos/facultad-dark.svg' | relative_url }}"
+           alt=""
+           aria-hidden="true" />
     </span>
   </div>
-
-  <!-- Logo Facultad: claro/oscuro -->
-  <span class="pf-logo faculty">
-    <img class="logo-light"
-         src="{{ '/assets/img/logos/facultad.png' | relative_url }}"
-         alt="Facultad de Educación y Psicología" />
-    <img class="logo-dark"
-         src="{{ '/assets/img/logos/facultad-dark.svg' | relative_url }}"
-         alt=""
-         aria-hidden="true" />
-  </span>
 </div>
 
 <!-- Footer: logo institucional (SVG) a la izquierda + texto a la derecha -->
