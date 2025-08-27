@@ -182,19 +182,31 @@ img { max-width: 100%; height: auto; }
 [data-theme="dark"] .pf-wave .wave-light{ display: none; }
 [data-theme="dark"] .pf-wave .wave-dark{ display: block; }
 
-/* Escalado correcto de los SVG incluidos */
+/* Onda más contenida (altura limitada, centrada, proporciones intactas) */
+.pf-wave{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 .pf-wave .wave > svg{
   display: block;
-  width: 100%;
-  height: auto; /* respeta el viewBox sin deformar */
+  height: clamp(64px, 12vw, 140px); /* ↓ reduce presencia visual de la onda */
+  width: auto;                      /* mantiene proporción del viewBox */
+  max-width: 100%;
 }
 
+/* Logos laterales más grandes (y responsivos) */
 .pf-logo{
   display: block;
   width: auto;
   height: auto;
-  max-height: clamp(28px, 6vw, 54px); /* se encogen en pantallas pequeñas */
+  max-height: clamp(48px, 8vw, 84px); /* ↑ antes 28–54px */
   object-fit: contain;
+}
+
+/* Boost extra en pantallas muy anchas */
+@media (min-width: 1400px){
+  .pf-logo{ max-height: 96px; }
 }
 
 /* =============== Footer: logo institucional izq + texto der =============== */
@@ -243,6 +255,14 @@ img { max-width: 100%; height: auto; }
   }
   .fineprint{
     text-align: center;
+  }
+
+  /* Pre-footer en móvil: ajustes suaves */
+  .pf-wave .wave > svg{
+    height: clamp(56px, 14vw, 120px);
+  }
+  .pf-logo{
+    max-height: clamp(40px, 10vw, 72px);
   }
 }
 
