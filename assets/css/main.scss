@@ -212,10 +212,9 @@ img { max-width: 100%; height: auto; }
 
   /* marco/fondo blanco bajo las transparencias del SVG */
   background: #ffffff;
-  padding: clamp(6px, 0.8vw, 12px);
-  border-radius: 10px; /* opcional: esquinas suaves */
-  box-shadow: 0 1px 3px rgba(0,0,0,.06),
-              0 0 0 1px rgba(16,20,24,.06);
+  padding: clamp(2px, 0.35vw, 6px);  /* antes: clamp(6px, 0.8vw, 12px) */
+  border-radius: 0;                  /* esquinas rectas */
+  box-shadow: 0 0 0 1px rgba(16,20,24,.08); /* contorno sutil; sin sombra de caída */
 }
 
 .fineprint{
