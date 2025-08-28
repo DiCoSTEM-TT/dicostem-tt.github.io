@@ -16,5 +16,5 @@ permalink: /en/contact/
 
 <p class="form-fallback">
   If you can’t see the form, open it in a new tab:
-  <a href="https://forms.office.com/e/nVUB7a5hdX" target="_blank" rel="noopener">Open form</a>.
+  <a href="https://forms.office.com/e/nVUB7a5hdX?lang=en" target="_blank" rel="noopener">Open form</a>.
 </p>
