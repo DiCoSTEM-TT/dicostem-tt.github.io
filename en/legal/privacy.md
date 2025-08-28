@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Privacy policy
-permalink: /en/privacy/
+permalink: /en/legal/privacy/
 lang: en
+redirect_from:
+  - /en/privacy/
 ---
 
 _Last updated: 28 August 2025_
