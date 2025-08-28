@@ -28,8 +28,12 @@
 <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 
 <!-- Canonical + hreflang (dinámicos con translation_map) -->
-{%- assign this = page.url | default: page.permalink -%}
-{%- unless this endswith '/' -%}{%- assign this = this | append: '/' -%}{%- endunless -%}
+{%- assign this = page.url | default: page.permalink | default: '/' -%}
+{%- if this == '' -%}{%- assign this = '/' -%}{%- endif -%}
+{%- assign chars = this | split: '' -%}
+{%- assign lastchar = chars | last -%}
+{%- unless lastchar == '/' -%}{%- assign this = this | append: '/' -%}{%- endunless -%}
+
 <link rel="canonical" href="{{ site.url }}{{ this }}" />
 
 {%- assign es_to_en = site.data.translation_map.es_to_en -%}
