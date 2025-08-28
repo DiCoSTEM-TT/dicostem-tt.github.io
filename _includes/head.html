@@ -1,6 +1,7 @@
 {% seo %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
 
 <!-- Aplicar tema (claro/oscuro) antes de pintar para evitar parpadeo -->
 <script>
@@ -17,6 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+<!-- Favicons -->
 <link rel="icon" href="{{ '/assets/img/logos/favicon-dark.svg' | relative_url }}" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="{{ '/assets/img/logos/favicon.svg' | relative_url }}"       type="image/svg+xml" media="(prefers-color-scheme: light)">
 <link rel="icon" href="{{ '/assets/img/logos/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
@@ -24,32 +27,23 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/logos/apple-touch-icon.png' | relative_url }}">
 <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 
-
-
 <!-- Canonical + hreflang (dinámicos con translation_map) -->
-<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-{% assign current_lang = page.lang | default: site.lang | default: 'es' %}
-{% if current_lang == 'es' %}
-  {% assign other_lang = 'en' %}
-{% else %}
-  {% assign other_lang = 'es' %}
-{% endif %}
-{% assign cur_url = page.url | default: page.permalink %}
-{% assign alt_url = '/' | append: other_lang | append: '/' %}
-{% assign pairs = site.data.translation_map %}
-{% if pairs %}
-  {% for p in pairs %}
-    {% assign from_url = p[current_lang] %}
-    {% assign to_url   = p[other_lang] %}
-    {% if from_url and to_url and cur_url == from_url %}
-      {% assign alt_url = to_url %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-<link rel="alternate" hreflang="{{ current_lang }}" href="{{ site.url }}{{ cur_url }}" />
-<link rel="alternate" hreflang="{{ other_lang }}" href="{{ site.url }}{{ alt_url }}" />
-<link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+{%- assign this = page.url | default: page.permalink -%}
+{%- unless this endswith '/' -%}{%- assign this = this | append: '/' -%}{%- endunless -%}
+<link rel="canonical" href="{{ site.url }}{{ this }}" />
+
+{%- assign es_to_en = site.data.translation_map.es_to_en -%}
+{%- assign en_to_es = site.data.translation_map.en_to_es -%}
+
+{%- if this contains '/es/' and es_to_en and es_to_en[this] -%}
+  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ this }}" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ es_to_en[this] }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+{%- elsif this contains '/en/' and en_to_es and en_to_es[this] -%}
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ this }}" />
+  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ en_to_es[this] }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+{%- endif -%}
 
 <!-- Theme color para barras del navegador -->
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
@@ -57,9 +51,9 @@
 
 <!-- Analytics (elige SOLO uno) -->
 <!-- GoatCounter (gratuito, sin cookies): cambia YOUR.goatcounter.com por tu subdominio o elimina esta línea -->
-<script data-goatcounter="https://YOUR.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://YOUR.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <!-- Plausible (SaaS sin cookies). Descomenta y ajusta el dominio si lo prefieres -->
 <!-- <script defer data-domain="dicostem-tt.github.io" src="https://plausible.io/js/plausible.js"></script> -->
 
 <!-- Altmetric badge (donut cuando hay DOI) -->
-<script async src="//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
