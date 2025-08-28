@@ -359,3 +359,22 @@ table.timeline th.task, table.timeline td.task { text-align: left; min-width: 26
   .team-lead{ grid-template-columns: 1fr; }
   .team-grid{ grid-template-columns: 1fr; }
 }
+
+/* Microsoft Forms embed */
+.form-embed{
+  margin: 1rem 0 2rem;
+}
+.form-embed iframe{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid color-mix(in srgb, var(--muted) 12%, transparent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--bg); /* por si el iframe tiene transparencias */
+  /* la altura inicial se fija inline; aquí solo ajustes responsivos si quieres */
+}
+.form-fallback{
+  font-size: .95rem;
+  color: var(--muted);
+}
