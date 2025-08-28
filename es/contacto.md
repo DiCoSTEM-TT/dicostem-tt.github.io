@@ -3,5 +3,18 @@ layout: page
 title: Contacto
 permalink: /es/contacto/
 ---
-<p>Para evitar el spam, usamos un formulario externo.</p>
-<iframe width="100%" height="800" src="https://forms.office.com/Pages/ResponsePage.aspx?id=EJEMPLO" style="border:1px solid #ddd; border-radius:12px;"></iframe>
+
+<div class="form-embed">
+  <iframe
+    src="https://forms.office.com/e/AND1HiThUx"
+    frameborder="0" marginwidth="0" marginheight="0"
+    style="border:0; width:100%; height:900px;"
+    allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen>
+  </iframe>
+  <script src="https://forms.office.com/FormsEmbed.js"></script>
+</div>
+
+<p class="form-fallback">
+  Si no ve el formulario, puede abrirlo en una pestaña nueva:
+  <a href="https://forms.office.com/e/AND1HiThUx" target="_blank" rel="noopener">Abrir formulario</a>.
+</p>
