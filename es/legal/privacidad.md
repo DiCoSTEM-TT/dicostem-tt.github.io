@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Política de privacidad
-permalink: /es/privacidad/
+permalink: /es/legal/privacidad/
 lang: es
+redirect_from:
+  - /es/privacidad/
 ---
 
 _Última actualización: 28 de agosto de 2025_
