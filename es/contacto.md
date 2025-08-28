@@ -16,5 +16,5 @@ permalink: /es/contacto/
 
 <p class="form-fallback">
   Si no ve el formulario, puede abrirlo en una pestaña nueva:
-  <a href="https://forms.office.com/e/AND1HiThUx" target="_blank" rel="noopener">Abrir formulario</a>.
+  <a href="https://forms.office.com/e/AND1HiThUx?lang=es" target="_blank" rel="noopener">Abrir formulario</a>.
 </p>
