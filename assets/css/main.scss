@@ -169,9 +169,9 @@ img { max-width: 100%; height: auto; }
 [data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave en dark */
 
 /* =============== Pre-footer: logos laterales + onda centrada =============== */
-.prefooter{ 
-   margin-top: 2rem; 
-   margin-bottom: clamp(8px, 1.5vw, 24px);
+.prefooter{
+  margin-top: 2rem;
+  margin-bottom: 0; /* la onda queda pegada al footer */
 }
 
 /* Rejilla dentro de .container para alinear con el contenido */
@@ -179,7 +179,7 @@ img { max-width: 100%; height: auto; }
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto; /* logo izq · onda · logo dcha */
   align-items: end;
-  gap: 1rem 2rem; /* un poco más de separación horizontal */
+  gap: 1rem 2rem;
 }
 
 /* Mostrar onda clara por defecto; en dark, la versión oscura */
@@ -187,31 +187,32 @@ img { max-width: 100%; height: auto; }
 [data-theme="dark"] .pf-wave .wave-light{ display: none; }
 [data-theme="dark"] .pf-wave .wave-dark{ display: block; }
 
-/* Onda más contenida (altura limitada, centrada, proporciones intactas) */
+/* Onda contenida y sin huecos “tipográficos” */
 .pf-wave{
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  line-height: 0; /* evita espacio bajo el SVG inline */
 }
 .pf-wave .wave > svg{
   display: block;
-  height: clamp(64px, 12vw, 140px);
-  width: auto;
+  height: clamp(64px, 12vw, 140px); /* reduce presencia visual de la onda */
+  width: auto;                      /* mantiene proporción del viewBox */
   max-width: 100%;
 }
 
-/* Logos laterales: wrapper y versiones claro/oscuro */
+/* Logos laterales: wrapper con variantes claro/oscuro */
 .pf-logo{
   display: flex;
   align-items: flex-end;
-  justify-content: center;   /* centrados dentro de su columna */
-  margin-bottom: clamp(4px, 0.8vw, 12px);
+  justify-content: center;
+  margin-bottom: clamp(4px, 0.8vw, 12px); /* un pelín más altos que la onda */
 }
 .pf-logo .logo-dark{ display: none; }
 [data-theme="dark"] .pf-logo .logo-light{ display: none; }
 [data-theme="dark"] .pf-logo .logo-dark{ display: block; }
 
-/* Tamaño de los logos (más grandes y responsivos) */
+/* Tamaño de los logos laterales (más grandes y responsivos) */
 .pf-logo img{
   display: block;
   width: auto;
@@ -220,7 +221,7 @@ img { max-width: 100%; height: auto; }
   object-fit: contain;
 }
 
-/* Boost extra en pantallas muy anchas */
+/* Extra en pantallas muy anchas */
 @media (min-width: 1400px){
   .pf-logo img{ max-height: 96px; }
 }
@@ -242,16 +243,16 @@ img { max-width: 100%; height: auto; }
 /* Logo institucional (SVG) con solo relleno de fondo */
 .footer-brand{
   display: block;
-  width: clamp(180px, 28vw, 360px);
+  width: clamp(180px, 28vw, 360px); /* tamaño responsive por ancho */
   height: auto;
-  background: var(--footer-brand-bg);
+  background: var(--footer-brand-bg); /* relleno bajo la transparencia */
   padding: 0;
   border: 0;
   box-shadow: none;
 }
 
 .fineprint{
-  min-width: 0;
+  min-width: 0;  /* permite quebrar líneas dentro del grid */
   font-size: .9rem;
   color: var(--muted);
   text-align: left;
