@@ -1,31 +1,41 @@
-# Home
-- es: "/es/"
-  en: "/en/"
+es_to_en:
+  # Home
+  "/es/": "/en/"
 
-# Menú principal
-- es: "/es/proyecto/"
-  en: "/en/project/"
-- es: "/es/equipo/"
-  en: "/en/team/"
-- es: "/es/objetivos/"
-  en: "/en/goals/"
-- es: "/es/resultados/"
-  en: "/en/outputs/"
-- es: "/es/recursos/"
-  en: "/en/resources/"
-- es: "/es/difusion/"
-  en: "/en/dissemination/"
-- es: "/es/contacto/"
-  en: "/en/contact/"
+  # Menú principal
+  "/es/proyecto/":   "/en/project/"
+  "/es/equipo/":     "/en/team/"
+  "/es/objetivos/":  "/en/goals/"
+  "/es/resultados/": "/en/outputs/"
+  "/es/recursos/":   "/en/resources/"
+  "/es/difusion/":   "/en/dissemination/"
+  "/es/contacto/":   "/en/contact/"
 
-# Buscar ↔ Search
-- es: "/es/buscar/"
-  en: "/en/search/"
+  # Buscar ↔ Search
+  "/es/buscar/": "/en/search/"
 
-# Páginas legales
-- es: "/es/legal/accesibilidad/"
-  en: "/en/legal/accessibility/"
-- es: "/es/legal/aviso-legal/"
-  en: "/en/legal/legal-notice/"
-- es: "/es/legal/privacidad/"
-  en: "/en/legal/privacy/"
+  # Páginas legales
+  "/es/legal/accesibilidad/": "/en/legal/accessibility/"
+  "/es/legal/aviso-legal/":   "/en/legal/legal-notice/"
+  "/es/legal/privacidad/":    "/en/legal/privacy/"
+
+en_to_es:
+  # Home
+  "/en/": "/es/"
+
+  # Main menu
+  "/en/project/":       "/es/proyecto/"
+  "/en/team/":          "/es/equipo/"
+  "/en/goals/":         "/es/objetivos/"
+  "/en/outputs/":       "/es/resultados/"
+  "/en/resources/":     "/es/recursos/"
+  "/en/dissemination/": "/es/difusion/"
+  "/en/contact/":       "/es/contacto/"
+
+  # Search ↔ Buscar
+  "/en/search/": "/es/buscar/"
+
+  # Legal pages
+  "/en/legal/accessibility/": "/es/legal/accesibilidad/"
+  "/en/legal/legal-notice/":  "/es/legal/aviso-legal/"
+  "/en/legal/privacy/":       "/es/legal/privacidad/"
