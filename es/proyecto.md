@@ -7,7 +7,90 @@ permalink: /es/proyecto/
 **Fases:** F1 (2023–2024), F2 (2024–2026), F3 (2026–2027).
 
 #### Descripción
-(Texto largo del proyecto — *placeholder*. Extraído de la memoria: motivación, contexto europeo y español, ejes digitales y STEM, enfoque metacognitivo y multidimensional, e integración de IA).
+DiCoSTEM‑TT es un proyecto de investigación centrado en la formación inicial del profesorado y orientado al desarrollo de la competencia digital y STEM en futuros docentes de Educación Primaria y Secundaria. La propuesta se sitúa en el ámbito de la Didáctica de las Ciencias Experimentales y responde a dos retos prioritarios de los sistemas educativos actuales: la digitalización de la educación y el fortalecimiento de la alfabetización científica, tecnológica y pedagógica del profesorado.
+
+El proyecto analiza, diseña, implementa y evalúa propuestas formativas basadas en laboratorios virtuales, materiales didácticos digitales y metodologías activas, con el objetivo de generar evidencia empírica sobre modelos eficaces de integración tecnológica en la enseñanza y el aprendizaje de las áreas STEM. Desde esta perspectiva, adopta un enfoque metacognitivo y multidimensional que atiende no solo a los procesos cognitivos, sino también a dimensiones afectivas, motivacionales, competenciales y digitales implicadas en la futura práctica profesional del profesorado.
+
+Asimismo, DiCoSTEM‑TT contempla el desarrollo de contenidos digitales de calidad y la incorporación educativa de la Inteligencia Artificial como apoyo a la formación docente, con especial atención a su uso en entornos híbridos de aprendizaje. De este modo, el proyecto aspira a generar conocimiento, recursos y propuestas transferibles que contribuyan a mejorar la educación STEM digital en contextos educativos reales.
+
+Desde el punto de vista metodológico, el proyecto combina diseños exploratorios y cuasiexperimentales, junto con análisis cualitativos y cuantitativos, para estudiar variables relacionadas con la competencia digital, la educación STEM y el uso educativo de la Inteligencia Artificial. Esta estrategia permite avanzar desde el diagnóstico inicial hasta la validación empírica de propuestas didácticas aplicables en contextos reales de formación docente.
+
+<section class="project-roadmap" aria-label="Infografía de fases y tareas del proyecto">
+  <div class="project-years" aria-hidden="true">
+    <span>Año 1</span>
+    <span>Año 2</span>
+    <span>Año 3</span>
+    <span>Año 4</span>
+  </div>
+
+  <div class="project-phases">
+    <article class="project-phase">
+      <header>
+        <p class="phase-kicker">Fase 1</p>
+        <h3>Análisis inicial y diseño</h3>
+        <p class="phase-oe">OE1 · OE2</p>
+      </header>
+      <div class="phase-body">
+        <p class="phase-range">Tareas T1.1 – T1.9</p>
+        <ul>
+          <li>T1.1 Planificación y revisión bibliográfica</li>
+          <li>T1.2 Análisis bibliométrico STEM e IA</li>
+          <li>T1.3 Diseño y validación de instrumentos</li>
+          <li>T1.4 Diagnóstico inicial y recogida de datos</li>
+          <li>T1.5 Análisis inicial de datos</li>
+          <li>T1.6 Estudio comparativo de variables</li>
+          <li>T1.7 Diseño del plan formativo</li>
+          <li>T1.8–T1.9 Encuestas, entrevistas y contraste</li>
+        </ul>
+      </div>
+      <p class="phase-outcome">Diagnóstico y plan formativo validados</p>
+    </article>
+
+    <article class="project-phase">
+      <header>
+        <p class="phase-kicker">Fase 2</p>
+        <h3>Desarrollo de materiales digitales</h3>
+        <p class="phase-oe">OE3 · OE4 · OE5</p>
+      </header>
+      <div class="phase-body">
+        <p class="phase-range">Tareas T2.1 – T2.11</p>
+        <ul>
+          <li>T2.1 Continuidad y revisión de la fase previa</li>
+          <li>T2.2 Metodologías activas e IA</li>
+          <li>T2.3 Diseño de laboratorios virtuales STEM</li>
+          <li>T2.4 Recogida de información y contraste</li>
+          <li>T2.5 Desarrollo de materiales H5P</li>
+          <li>T2.6 Diseño de instrumentos de evaluación</li>
+          <li>T2.7 Talleres y seminarios formativos</li>
+          <li>T2.8–T2.11 Análisis, validación y reajustes</li>
+        </ul>
+      </div>
+      <p class="phase-outcome">Laboratorios virtuales y materiales validados</p>
+    </article>
+
+    <article class="project-phase">
+      <header>
+        <p class="phase-kicker">Fase 3</p>
+        <h3>Implementación y evaluación</h3>
+        <p class="phase-oe">OE6 · OE7</p>
+      </header>
+      <div class="phase-body">
+        <p class="phase-range">Tareas T3.1 – T3.8</p>
+        <ul>
+          <li>T3.1 Integración de tareas pendientes</li>
+          <li>T3.2 Implementación piloto y diseño</li>
+          <li>T3.3 Instrumentos y recogida de datos</li>
+          <li>T3.4 Análisis multidimensional</li>
+          <li>T3.5 Validación de propuestas</li>
+          <li>T3.6 Ajustes y consolidación</li>
+          <li>T3.7 Conclusiones y propuestas finales</li>
+          <li>T3.8 Memoria final, difusión y transferencia</li>
+        </ul>
+      </div>
+      <p class="phase-outcome">Resultados, difusión y transferencia</p>
+    </article>
+  </div>
+</section>
 
 #### Cronograma (por semestres)
 > Responsable en primer lugar. Marca “X” = actividad prevista.

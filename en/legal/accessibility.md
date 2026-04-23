@@ -3,5 +3,4 @@ layout: page
 title: Accessibility
 permalink: /en/legal/accessibility/
 ---
-*Draft.* We are committed to improving accessibility and usability of this website for all users.
-If you encounter accessibility barriers or need content in an alternative format, please let us know.
+*Draft.* Commitment to WCAG 2.1 AA. Keyboard navigation, sufficient colour contrast, keyboard operability and alternative text are being considered throughout the site. If you encounter accessibility barriers, please contact us through the contact form.

@@ -3,7 +3,7 @@ layout: page
 title: Resultados
 permalink: /es/resultados/
 ---
-<p>Listado de publicaciones, datasets, software, comunicaciones, entregables, informes, posters, TFG/TFM/tesis, etc. Filtra por tipo o año.</p>
+<p>Hasta la fecha, el proyecto ha generado <strong>2 publicaciones científicas</strong>, <strong>8 manuscritos en evaluación</strong> y <strong>22 comunicaciones científicas</strong>, además del desarrollo progresivo de recursos educativos digitales y materiales de transferencia.</p>
 
 <div class="grid">
   {% assign items = site.data.results | where: 'lang', 'es' %}

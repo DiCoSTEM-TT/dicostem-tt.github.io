@@ -2,7 +2,11 @@
 <div class="prefooter">
   <div class="container pf-grid">
     <!-- Logo UEx: claro/oscuro -->
-    <span class="pf-logo uex">
+    <a class="pf-logo uex"
+       href="https://www.unex.es/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Universidad de Extremadura">
       <img class="logo-light"
            src="{{ '/assets/img/logos/uex.svg' | relative_url }}"
            alt="Universidad de Extremadura" />
@@ -10,7 +14,7 @@
            src="{{ '/assets/img/logos/uex-dark.svg' | relative_url }}"
            alt=""
            aria-hidden="true" />
-    </span>
+    </a>
 
     <!-- Onda claro/oscuro -->
     <div class="pf-wave" aria-hidden="true">
@@ -23,7 +27,11 @@
     </div>
 
     <!-- Logo Facultad: claro/oscuro -->
-    <span class="pf-logo faculty">
+    <a class="pf-logo faculty"
+       href="https://educacion.unex.es/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facultad de Educación y Psicología">
       <img class="logo-light"
            src="{{ '/assets/img/logos/facultad.svg' | relative_url }}"
            alt="Facultad de Educación y Psicología" />
@@ -31,7 +39,7 @@
            src="{{ '/assets/img/logos/facultad-dark.svg' | relative_url }}"
            alt=""
            aria-hidden="true" />
-    </span>
+    </a>
   </div>
 </div>
 
@@ -46,3 +54,5 @@
     </div>
   </div>
 </footer>
+
+<script src="{{ '/assets/js/team-email.js' | relative_url }}"></script>
