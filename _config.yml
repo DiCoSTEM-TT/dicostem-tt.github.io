@@ -24,7 +24,7 @@ collections:
 
 defaults:
   - scope: { path: "" }
-    values: { layout: "page", image: "/assets/img/social-card.png" }
+    values: { layout: "page", image: "/assets/img/social-card-v7.png" }
   - scope: { path: "en" }
     values: { lang: "en" }
   - scope: { path: "es" }
