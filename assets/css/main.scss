@@ -284,11 +284,14 @@ img { max-width: 100%; height: auto; }
   align-items: flex-end;
   line-height: 0; /* evita espacio bajo el SVG inline */
 }
+.pf-wave .wave{
+  width: min(100%, 23rem);
+}
+
 .pf-wave .wave > svg{
   display: block;
-  height: clamp(64px, 12vw, 140px); /* reduce presencia visual de la onda */
-  width: auto;                      /* mantiene proporción del viewBox */
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 /* Logos laterales: wrapper con variantes claro/oscuro */
@@ -374,9 +377,6 @@ img { max-width: 100%; height: auto; }
   }
 
   /* Pre-footer en móvil: ajustes suaves */
-  .pf-wave .wave > svg{
-    height: clamp(56px, 14vw, 120px);
-  }
   .pf-logo img{
     max-height: clamp(40px, 10vw, 72px);
   }
