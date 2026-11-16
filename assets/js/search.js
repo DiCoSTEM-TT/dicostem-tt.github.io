@@ -1,6 +1,11 @@
 // Requires lunr from CDN
 async function initSearch() {
-  const lang = document.documentElement.lang || 'es';
+  const lang = (document.documentElement.lang || 'es').split('-')[0];
+  const emptyMessage = {
+    es: 'No se han encontrado resultados.',
+    en: 'No results found.',
+    pt: 'Não foram encontrados resultados.'
+  }[lang];
   const idxData = await fetch('/search.json').then(r => r.json());
   const docs = idxData.docs.filter(d => d.lang === lang);
   const idx = lunr(function () {
@@ -15,7 +20,7 @@ async function initSearch() {
   if (!input || !out) return;
   function render(res) {
     out.innerHTML = '';
-    if (!res.length) { out.innerHTML = '<p>No se han encontrado resultados.</p>'; return; }
+    if (!res.length) { out.textContent = emptyMessage; return; }
     res.slice(0, 40).forEach(hit => {
       const doc = docs.find(d => d.url === hit.ref);
       const el = document.createElement('div');

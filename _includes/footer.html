@@ -1,3 +1,12 @@
+{% if page.lang == 'pt' %}
+  {% assign university_label = 'Universidade da Extremadura' %}
+  {% assign faculty_label = 'Faculdade de Educação e Psicologia' %}
+  {% assign funding_label = 'Ministério da Ciência, Inovação e Universidades · Agência Estatal de Investigação · Cofinanciado pela União Europeia' %}
+{% else %}
+  {% assign university_label = 'Universidad de Extremadura' %}
+  {% assign faculty_label = 'Facultad de Educación y Psicología' %}
+  {% assign funding_label = 'Ministerio de Ciencia, Innovación y Universidades · Agencia Estatal de Investigación · Cofinanciado por la Unión Europea' %}
+{% endif %}
 <!-- Pre-footer: logos laterales + onda (clara/oscura) centrada -->
 <div class="prefooter">
   <div class="container pf-grid">
@@ -6,10 +15,10 @@
        href="https://www.unex.es/"
        target="_blank"
        rel="noopener noreferrer"
-       aria-label="Universidad de Extremadura">
+       aria-label="{{ university_label }}">
       <img class="logo-light uex-horizontal"
            src="{{ '/assets/img/logos/uex-horizontal-color.svg' | relative_url }}"
-           alt="Universidad de Extremadura" />
+           alt="{{ university_label }}" />
       <img class="logo-dark uex-horizontal"
            src="{{ '/assets/img/logos/uex-horizontal-blanco.svg' | relative_url }}"
            alt=""
@@ -39,10 +48,10 @@
        href="https://educacion.unex.es/"
        target="_blank"
        rel="noopener noreferrer"
-       aria-label="Facultad de Educación y Psicología">
+       aria-label="{{ faculty_label }}">
       <img class="logo-light"
            src="{{ '/assets/img/logos/facultad.svg' | relative_url }}"
-           alt="Facultad de Educación y Psicología" />
+           alt="{{ faculty_label }}" />
       <img class="logo-dark"
            src="{{ '/assets/img/logos/facultad-dark.svg' | relative_url }}"
            alt=""
@@ -56,9 +65,13 @@
   <div class="container footer-bar">
     <img class="footer-brand"
          src="{{ '/assets/img/logos/MICIU-Cofinanciado-AEI.svg' | relative_url }}"
-         alt="Ministerio de Ciencia, Innovación y Universidades · Agencia Estatal de Investigación · Cofinanciado por la Unión Europea" />
+         alt="{{ funding_label }}" />
     <div class="fineprint">
+      {% if page.lang == 'pt' %}
+        Projeto de I&amp;D&amp;I PID2022-140601OA-I00, financiado pelo MCIN/AEI/10.13039/501100011033/ e pelo FEDER «Uma maneira de fazer a Europa».
+      {% else %}
       Proyecto de I+D+i PID2022-140601OA-I00, financiado por MCIN/AEI/10.13039/501100011033/ y por FEDER «Una manera de hacer Europa».
+      {% endif %}
     </div>
   </div>
 </footer>

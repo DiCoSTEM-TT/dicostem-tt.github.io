@@ -1,0 +1,32 @@
+{%- assign translation_language = page.lang | default: site.lang -%}
+{%- for translation in site.data.translation_map -%}
+  {%- if translation[translation_language] == page.url or translation[translation_language] == page.permalink -%}
+    {%- assign page_translation = translation -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{% if include.mode == 'navigation' %}
+<span class="lang-switch">
+  {% assign language_names = 'Español,English,Português' | split: ',' %}
+  {% for language in site.languages %}
+    {% assign tag = language %}
+    {% if language == 'pt' %}{% assign tag = 'pt-PT' %}{% endif %}
+    {% assign home = '/' | append: language | append: '/' %}
+    {% assign target = page_translation[language] | default: home %}
+    {% if language == translation_language %}
+      <strong lang="{{ tag }}" aria-current="true">{{ language_names[forloop.index0] }}</strong>
+    {% else %}
+      <a href="{{ target | relative_url }}" lang="{{ tag }}" hreflang="{{ tag }}">{{ language_names[forloop.index0] }}</a>
+    {% endif %}{% unless forloop.last %} | {% endunless %}
+  {% endfor %}
+</span>
+{% else %}
+{% if page_translation %}
+  {% for language in site.languages %}
+    {% assign tag = language %}
+    {% if language == 'pt' %}{% assign tag = 'pt-PT' %}{% endif %}
+    <link rel="alternate" hreflang="{{ tag }}" href="{{ page_translation[language] | absolute_url }}" />
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ page_translation.es | absolute_url }}" />
+{% endif %}
+{% endif %}

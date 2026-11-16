@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}">
+<html lang="{% if page.lang == 'pt' %}pt-PT{% else %}{{ page.lang | default: site.lang }}{% endif %}">
   <head>
     <meta charset="utf-8">
     {% include head.html %}
@@ -11,7 +11,7 @@
     </main>
     {% include footer.html %}
     <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
-    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}?v=pt"></script>
     <script src="{{ '/assets/js/header.js' | relative_url }}"></script>
   </body>
 </html>

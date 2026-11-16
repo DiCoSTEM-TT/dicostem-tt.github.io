@@ -13,6 +13,9 @@
   photo: "/assets/img/team/flnc.webp"
   bio: "Coordina el proyecto DiCoSTEM-TT y es Profesor Contratado Doctor en Didáctica de las Ciencias Experimentales. Su investigación se centra en enseñanza y aprendizaje de las áreas STEM, sostenibilidad, dominio afectivo y cognitivo en educación y desarrollo de materiales didácticos."
   bio_en: "He coordinates the DiCoSTEM-TT project and is a Senior Lecturer in Experimental Science Education. His research focuses on STEM teaching and learning, sustainability, the affective and cognitive domains in education, and the development of teaching materials."
+  role_pt: "Investigador principal"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Didática das Ciências Experimentais e da Matemática · INPEx"
+  bio_pt: "Coordena o projeto DiCoSTEM-TT e é professor contratado doutorado em Didática das Ciências Experimentais. Investiga o ensino e a aprendizagem nas áreas STEM, a sustentabilidade, as dimensões afetiva e cognitiva da educação e o desenvolvimento de materiais didáticos."
   lead: true
   sort_key: "naranjo correa francisco luis"
 
@@ -27,6 +30,9 @@
   photo: "/assets/img/team/gmb.webp"
   bio: "Profesora Titular de Universidad e investigadora en Didáctica de las Ciencias Experimentales. Su investigación se centra en educación STEM, sostenibilidad, educación digital y análisis de variables cognitivas y emocionales en la formación del profesorado."
   bio_en: "She is a Professor in Experimental Science Education. Her research focuses on STEM education, sustainability, digital education, and the analysis of cognitive and emotional variables in teacher education."
+  role_pt: "Professora titular"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Didática das Ciências Experimentais e da Matemática · INPEx"
+  bio_pt: "É professora titular em Didática das Ciências Experimentais. Investiga a educação STEM, a sustentabilidade, a educação digital e as variáveis cognitivas e emocionais na formação de professores."
   sort_key: "martinez borreguero maria guadalupe"
 
 
@@ -41,6 +47,9 @@
   photo: "/assets/img/team/mmn.webp"
   bio: "Profesora Contratada Doctora en Didáctica de las Ciencias Experimentales. Su investigación se centra en educación STEM, sostenibilidad y análisis cognitivo y emocional del aprendizaje científico en la formación inicial del profesorado."
   bio_en: "She is a Senior Lecturer in Experimental Science Education. Her research focuses on STEM education, sustainability, and the cognitive and emotional analysis of science learning in initial teacher education."
+  role_pt: "Professora contratada doutorada"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Didática das Ciências Experimentais e da Matemática · INPEx"
+  bio_pt: "É professora contratada doutorada em Didática das Ciências Experimentais. Investiga a educação STEM, a sustentabilidade e as dimensões cognitiva e emocional da aprendizagem das ciências na formação inicial de professores."
   sort_key: "mateos nunez milagros"
 
 
@@ -55,6 +64,9 @@
   photo: "/assets/img/team/abbc.webp"
   bio: "Profesora Contratada Doctora en Psicología y Antropología. Su investigación conecta educación y psicología, con especial atención a emociones, autoeficacia, aprendizaje de las ciencias, psicopatología y bienestar emocional."
   bio_en: "She is a Senior Lecturer in Psychology and Anthropology. Her research connects education and psychology, with particular attention to emotions, self-efficacy, science learning, psychopathology, and emotional well-being."
+  role_pt: "Professora contratada doutorada"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Psicologia e Antropologia"
+  bio_pt: "É professora contratada doutorada em Psicologia e Antropologia. A sua investigação cruza a educação e a psicologia e incide nas emoções, na autoeficácia, na aprendizagem das ciências, na psicopatologia e no bem-estar emocional."
   sort_key: "borrachero cortes ana belen"
 
 
@@ -69,6 +81,9 @@
   photo: "/assets/img/team/acc.webp"
   bio: "Profesora Titular de Universidad e investigadora del grupo CIBERDIDACT. Su investigación se centra en educación matemática, dominio afectivo hacia las matemáticas, resolución de problemas y formación del profesorado."
   bio_en: "She is a Professor and researcher in the CIBERDIDACT group. Her research focuses on mathematics education, the affective domain in mathematics, problem solving, and teacher education."
+  role_pt: "Professora titular"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Didática das Ciências Experimentais e da Matemática · INPEx"
+  bio_pt: "É professora titular e investigadora no grupo CIBERDIDACT. Investiga a educação matemática, a dimensão afetiva da aprendizagem da matemática, a resolução de problemas e a formação de professores."
   sort_key: "caballero carrasco ana"
 
 
@@ -83,6 +98,9 @@
   photo: "/assets/img/team/mada.webp"
   bio: "Profesora Titular de Universidad en Didáctica de las Ciencias Experimentales. Su investigación se centra en educación científica, sostenibilidad y análisis de variables cognitivas, emocionales y de autoeficacia vinculadas al aprendizaje de las ciencias."
   bio_en: "She is a Professor in Experimental Science Education. Her research focuses on science education, sustainability, and the analysis of cognitive, emotional, and self-efficacy variables related to science learning."
+  role_pt: "Professora titular"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Didática das Ciências Experimentais e da Matemática · INPEx"
+  bio_pt: "É professora titular em Didática das Ciências Experimentais. Investiga a educação científica, a sustentabilidade e as variáveis cognitivas, emocionais e de autoeficácia ligadas à aprendizagem das ciências."
   sort_key: "davila acedo maria antonia"
 
 
@@ -97,4 +115,7 @@
   photo: "/assets/img/team/lvmn.webp"
   bio: "Profesora Titular de Universidad con formación de base en Física. Su investigación se centra en formación del profesorado, conocimiento didáctico del contenido y diseño de propuestas innovadoras en didáctica de las ciencias y las matemáticas, con especial atención a robótica educativa y alfabetización científica."
   bio_en: "She is a Professor with a background in Physics. Her research focuses on teacher education, pedagogical content knowledge, and the design of innovative proposals in science and mathematics education, with particular attention to educational robotics and scientific literacy."
+  role_pt: "Professora titular"
+  affiliation_pt: "Universidade da Extremadura · Faculdade de Educação e Psicologia · Departamento de Didática das Ciências Experimentais e da Matemática · INPEx"
+  bio_pt: "É professora titular com formação de base em Física. Investiga a formação de professores, o conhecimento didático do conteúdo e a conceção de propostas inovadoras em Didática das Ciências e da Matemática, com particular atenção à robótica educativa e à literacia científica."
   sort_key: "melo nino lina viviana"

@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20261116-pie-r2" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20261116-pt" />
 {% if page.project_plan %}{% include project-plan-styles.html %}{% endif %}
 
 <!-- Favicons -->
@@ -28,27 +28,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/logos/apple-touch-icon.png' | relative_url }}?v=v7">
 <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}?v=v7">
 
-<!-- Canonical + hreflang (dinámicos con translation_map) -->
-{%- assign this = page.url | default: page.permalink | default: '/' -%}
-{%- if this == '' -%}{%- assign this = '/' -%}{%- endif -%}
-{%- assign chars = this | split: '' -%}
-{%- assign lastchar = chars | last -%}
-{%- unless lastchar == '/' -%}{%- assign this = this | append: '/' -%}{%- endunless -%}
-
-<link rel="canonical" href="{{ site.url }}{{ this }}" />
-
-{%- assign es_to_en = site.data.translation_map.es_to_en -%}
-{%- assign en_to_es = site.data.translation_map.en_to_es -%}
-
-{%- if this contains '/es/' and es_to_en and es_to_en[this] -%}
-  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ this }}" />
-  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ es_to_en[this] }}" />
-  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
-{%- elsif this contains '/en/' and en_to_es and en_to_es[this] -%}
-  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ this }}" />
-  <link rel="alternate" hreflang="es" href="{{ site.url }}{{ en_to_es[this] }}" />
-  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
-{%- endif -%}
+{% include page_translation.html mode="metadata" %}
 
 <!-- Theme color para barras del navegador -->
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />

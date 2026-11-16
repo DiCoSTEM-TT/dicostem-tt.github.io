@@ -3,10 +3,11 @@ description: "Competencia Digital y Educación STEM en la Formación del Profeso
 claim:
   es: "Competencia Digital y Educación STEM en la Formación del Profesorado"
   en: "Digital Competence and STEM Education in Teacher Training"
+  pt: "Competência Digital e Educação STEM na Formação de Professores"
 url: "https://dicostem-tt.github.io"
 baseurl: ""  # keep empty for organization/user pages
 lang: es
-languages: ["es","en"]
+languages: ["es","en","pt"]
 timezone: Europe/Madrid
 
 theme: null
@@ -29,8 +30,8 @@ defaults:
     values: { lang: "en" }
   - scope: { path: "es" }
     values: { lang: "es" }
-lang: es
-languages: ["es","en"]
+  - scope: { path: "pt" }
+    values: { lang: "pt", locale: "pt_PT", description: "Competência Digital e Educação STEM na Formação de Professores" }
 
 
 exclude:

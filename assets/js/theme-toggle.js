@@ -31,8 +31,6 @@
       apply(getSystem());
     });
 
-    btn.title = "Cambiar tema (Alt+clic: automático)";
-    btn.setAttribute("aria-label", "Cambiar tema (Alt+clic: automático)");
   }
 
   // Seguir cambios del sistema SOLO si no hay preferencia guardada

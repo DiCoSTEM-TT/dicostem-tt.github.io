@@ -1,31 +1,43 @@
 # Home
 - es: "/es/"
   en: "/en/"
+  pt: "/pt/"
 
 # Menú principal
 - es: "/es/proyecto/"
   en: "/en/project/"
+  pt: "/pt/projeto/"
 - es: "/es/equipo/"
   en: "/en/team/"
+  pt: "/pt/equipa/"
 - es: "/es/objetivos/"
   en: "/en/goals/"
+  pt: "/pt/objetivos/"
 - es: "/es/resultados/"
   en: "/en/outputs/"
+  pt: "/pt/resultados/"
 - es: "/es/recursos/"
   en: "/en/resources/"
+  pt: "/pt/recursos/"
 - es: "/es/difusion/"
   en: "/en/dissemination/"
+  pt: "/pt/divulgacao/"
 - es: "/es/contacto/"
   en: "/en/contact/"
+  pt: "/pt/contacto/"
 
 # Buscar ↔ Search
 - es: "/es/buscar/"
   en: "/en/search/"
+  pt: "/pt/pesquisa/"
 
 # Páginas legales
 - es: "/es/legal/accesibilidad/"
   en: "/en/legal/accessibility/"
+  pt: "/pt/legal/acessibilidade/"
 - es: "/es/legal/aviso-legal/"
   en: "/en/legal/legal-notice/"
+  pt: "/pt/legal/aviso-legal/"
 - es: "/es/legal/privacidad/"
   en: "/en/legal/privacy/"
+  pt: "/pt/legal/privacidade/"
