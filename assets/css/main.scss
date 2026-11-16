@@ -376,229 +376,95 @@ img { max-width: 100%; height: auto; }
 /* =========================
    Timeline table
    ========================= */
-.project-roadmap{
-  margin: 2rem 0 1.5rem;
-}
+.project-plan {
+  --line: #cbdbe4;
+  --year-1: #e2eefb;
+  --year-2: #cce3f6;
+  --year-3: #b3dfdf;
+  --year-4: #227c85;
+  --year-ink: #163b50;
+  --phase-1: #254a68;
+  --phase-2: #245d72;
+  --phase-3: #1d6570;
+  --phase-ink: #fff;
+  --chip: #edf4fb;
+  --chip-ink: #2a4c67;
+  --tint: #f6f9fc;
+  --outcome: #e3f4f1;
+  --outcome-ink: #145f58;
+  --active: #c2e9e4;
+  --active-ink: #114c46;
 
-.project-years{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: .8rem;
-  margin-bottom: .9rem;
-}
+  margin-block: 2rem 1.5rem;
 
-.project-years span{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.1rem;
-  padding: .35rem .9rem;
-  color: #fff;
-  font-weight: 800;
-  border-radius: 10px 0 0 10px;
-  overflow: hidden;
-  box-shadow: 0 8px 18px rgba(0,0,0,.1);
-}
-
-.project-years span:nth-child(1){
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand) 72%, white) 0%, var(--brand) 100%);
-}
-
-.project-years span:nth-child(2){
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand-2) 72%, white) 0%, var(--brand-2) 100%);
-}
-
-.project-years span:nth-child(3){
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand-3) 72%, white) 0%, var(--brand-3) 100%);
-}
-
-.project-years span:nth-child(4){
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand-4) 72%, white) 0%, var(--brand-4) 100%);
-}
-
-.project-years span::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -1rem;
-  width: 2rem;
-  height: 100%;
-  background: inherit;
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-.project-years span:last-child{
-  border-radius: 10px;
-}
-
-.project-years span:last-child::after{
-  display: none;
-}
-
-.project-phases{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.project-phase{
-  border: 1px solid color-mix(in srgb, var(--muted) 16%, transparent);
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--bg) 98%, white);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.project-phase > header{
-  padding: 1rem 1rem .7rem;
-  color: #fff;
-  text-align: center;
-}
-
-.project-phase:nth-child(1){
-  border-color: color-mix(in srgb, var(--brand) 30%, transparent);
-}
-
-.project-phase:nth-child(1) > header{
-  background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 58%, black) 0%, var(--brand) 100%);
-}
-
-.project-phase:nth-child(1) .phase-outcome{
-  color: color-mix(in srgb, var(--brand) 42%, black);
-  background: color-mix(in srgb, var(--brand) 14%, transparent);
-  border-top-color: color-mix(in srgb, var(--brand) 20%, transparent);
-}
-
-.project-phase:nth-child(2){
-  border-color: color-mix(in srgb, var(--brand-2) 30%, transparent);
-}
-
-.project-phase:nth-child(2) > header{
-  background: linear-gradient(180deg, color-mix(in srgb, var(--brand-2) 60%, black) 0%, var(--brand-2) 100%);
-}
-
-.project-phase:nth-child(2) .phase-outcome{
-  color: color-mix(in srgb, var(--brand-2) 35%, black);
-  background: color-mix(in srgb, var(--brand-2) 14%, transparent);
-  border-top-color: color-mix(in srgb, var(--brand-2) 20%, transparent);
-}
-
-.project-phase:nth-child(3){
-  border-color: color-mix(in srgb, var(--brand-3) 30%, transparent);
-}
-
-.project-phase:nth-child(3) > header{
-  background: linear-gradient(180deg, color-mix(in srgb, var(--brand-3) 58%, black) 0%, var(--brand-3) 100%);
-}
-
-.project-phase:nth-child(3) .phase-outcome{
-  color: color-mix(in srgb, var(--brand-3) 45%, black);
-  background: color-mix(in srgb, var(--brand-3) 12%, transparent);
-  border-top-color: color-mix(in srgb, var(--brand-3) 20%, transparent);
-}
-
-.phase-kicker{
-  margin: 0 0 .18rem;
-  font-size: .82rem;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.project-phase > header h3{
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
-.phase-oe{
-  display: inline-block;
-  margin: .55rem 0 0;
-  padding: .24rem .65rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .16);
-  font-size: .82rem;
-  font-weight: 700;
-}
-
-.phase-body{
-  padding: 1rem 1rem .8rem;
-}
-
-.phase-range{
-  margin: 0 0 .8rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.phase-body ul{
-  margin: 0;
-  padding-left: 1.15rem;
-}
-
-.phase-body li{
-  margin: 0 0 .45rem;
-}
-
-.phase-outcome{
-  margin: 0;
-  padding: .8rem 1rem 1rem;
-  font-weight: 700;
-}
-
-table.timeline {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .95rem;
-  background: color-mix(in srgb, var(--bg) 98%, white);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-table.timeline th, table.timeline td { border: 1px solid color-mix(in srgb, var(--muted) 15%, transparent); padding: .5rem .4rem; text-align: center; }
-table.timeline thead th{
-  background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 50%, black) 0%, var(--brand) 100%);
-  color: #fff;
-  font-weight: 800;
-}
-table.timeline th.task, table.timeline td.task { text-align: left; min-width: 260px; }
-table.timeline tbody tr:nth-child(even):not(.phase) td{
-  background: color-mix(in srgb, var(--brand) 3.5%, white);
-}
-.x {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--brand-4) 22%, white) 0%, color-mix(in srgb, var(--brand-4) 30%, white) 100%) !important;
-  color: color-mix(in srgb, var(--brand-4) 45%, black);
-  font-weight: 800;
-}
-.phase {
-  font-weight: 800;
-  text-align: left;
-  color: #fff;
-}
-
-table.timeline tbody .phase:nth-of-type(3n + 1) td{
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand) 30%, black) 0%, var(--brand) 100%);
-}
-
-table.timeline tbody .phase:nth-of-type(3n + 2) td{
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand-2) 30%, black) 0%, var(--brand-2) 100%);
-}
-
-table.timeline tbody .phase:nth-of-type(3n) td{
-  background: linear-gradient(90deg, color-mix(in srgb, var(--brand-3) 25%, black) 0%, var(--brand-3) 100%);
-}
-
-@media (max-width: 900px){
-  .project-phases{
-    grid-template-columns: 1fr;
+  .years { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 .75rem; padding: 0; list-style: none; border-radius: .4rem; overflow: hidden; }
+  .years li { position: relative; isolation: isolate; text-align: center; padding: .32rem .05rem; font-weight: 700; color: var(--year-ink); }
+  .years li::before { position: absolute; content: ""; inset: 0 -.75rem 0 0; z-index: -1; background: var(--fill); clip-path: polygon(0 0, calc(100% - .75rem) 0, 100% 50%, calc(100% - .75rem) 100%, 0 100%); }
+  .years li:nth-child(1) { --fill: var(--year-1); z-index: 4; }
+  .years li:nth-child(2) { --fill: var(--year-2); z-index: 3; }
+  .years li:nth-child(3) { --fill: var(--year-3); z-index: 2; }
+  .years li:nth-child(4) { --fill: var(--year-4); color: #fff; }
+  .years li:last-child::before { inset-inline-end: 0; clip-path: none; }
+  .phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+  .phase-card { display: flex; flex-direction: column; min-width: 0; --phase: var(--phase-1); }
+  .phase-card:nth-child(2) { --phase: var(--phase-2); }
+  .phase-card:nth-child(3) { --phase: var(--phase-3); }
+  .phase-heading { padding: .5rem .55rem .6rem; background: var(--phase); color: var(--phase-ink); border-radius: .38rem; text-align: center; }
+  .phase-heading > span { display: block; font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .045em; }
+  .phase-heading h3 { margin: .08rem 0 0; font-size: clamp(.98rem, 1.65vw, 1.2rem); font-weight: 600; line-height: 1.22; }
+  .objectives { align-self: center; margin: .33rem 0; min-width: 7.5rem; padding: .08rem .6rem; text-align: center; border-radius: .27rem; color: var(--chip-ink); background: var(--chip); font-size: .8rem; font-weight: 700; }
+  .phase-tasks { flex: 1; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: .4rem; padding: .6rem .75rem .75rem; }
+  .phase-tasks h4 { text-align: center; margin: 0; padding-block-end: .42rem; border-bottom: 1px solid var(--line); font-size: .96rem; }
+  .phase-tasks ul { list-style: none; padding: 0; margin: .48rem 0 .85rem; font-size: .91rem; }
+  .phase-tasks li + li { margin-top: .26rem; }
+  .phase-tasks li strong { font-weight: 600; }
+  .outcome { margin: auto 0 0; border-radius: .28rem; padding: .38rem .45rem; text-align: center; background: var(--outcome); color: var(--outcome-ink); font-size: .87rem; font-weight: 600; }
+  .schedule { margin-top: 2rem; }
+  .schedule > summary {
+    padding: .65rem .85rem;
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    color: var(--text);
+    cursor: pointer;
+  }
+  .schedule > summary:hover { background: var(--tint); }
+  .schedule > summary > h2 { display: inline; margin-inline-start: .2rem; }
+  .schedule h2 { font-size: 1.42rem; margin: 0; line-height: 1.2; }
+  .schedule p { margin: .4rem 0 .8rem; color: var(--muted); font-size: .92rem; }
+  .table-scroll { overflow: auto; border: 1px solid var(--line); border-radius: .4rem; }
+  .timeline { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .88rem; }
+  .timeline :is(th, td) { border: 1px solid var(--line); padding: .43rem .5rem; text-align: center; }
+  .timeline .task, .timeline .phase td { text-align: start; }
+  .timeline .task { min-width: 260px; }
+  .timeline th[scope="row"] { font-weight: 400; }
+  .timeline thead { background: var(--phase-1); color: var(--phase-ink); }
+  .timeline tbody tr:nth-child(even) { background: var(--tint); }
+  .timeline tbody .phase td { background: var(--chip); color: var(--chip-ink); font-weight: 700; }
+  .timeline tbody .x { background: var(--active); color: var(--active-ink); font-weight: 700; }
+  @media (max-width: 720px) {
+    .phases { grid-template-columns: 1fr; gap: 1rem; }
+    .phase-heading h3 { font-size: 1.12rem; }
+    .phase-tasks li { font-size: .96rem; }
   }
 }
 
-@media (max-width: 640px){
-  .project-years{
-    grid-template-columns: 1fr 1fr;
-  }
+[data-theme="dark"] .project-plan {
+  --line: #344655;
+  --year-1: #1a324a;
+  --year-2: #22435f;
+  --year-3: #235461;
+  --year-4: #227c85;
+  --year-ink: #edf6fd;
+  --phase-1: #203c57;
+  --phase-2: #21485e;
+  --phase-3: #21555e;
+  --chip: #1b2c3e;
+  --chip-ink: #c6dff5;
+  --tint: #151d26;
+  --outcome: #173734;
+  --outcome-ink: #a0e4d9;
+  --active: #23534f;
+  --active-ink: #cef3ed;
 }
 
 /* =========================
