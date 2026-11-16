@@ -8,7 +8,7 @@ permalink: /es/recursos/
 <div class="grid">
   <div class="card resource-card resource-card--h5pdf is-coming-soon" data-ribbon="Próximamente">
     <img class="resource-logo resource-logo-light" src="{{ '/assets/img/resources/h5pdf-logo.webp' | relative_url }}" alt="H5PDF" />
-    <img class="resource-logo resource-logo-dark" src="{{ '/assets/img/resources/h5pdf-logo-dark.webp' | relative_url }}" alt="H5PDF" />
+    <img class="resource-logo resource-logo-dark" src="{{ '/assets/img/resources/h5pdf-logo-dark.webp' | relative_url }}?v=2" alt="H5PDF" />
     <h3>H5PDF</h3>
     <p>Herramienta para convertir documentos PDF en presentaciones interactivas H5P manteniendo una apariencia visual fiel al original.</p>
     <p><a href="#">Abrir recurso</a></p>
