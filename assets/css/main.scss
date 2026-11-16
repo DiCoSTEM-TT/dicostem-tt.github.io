@@ -311,6 +311,11 @@ img { max-width: 100%; height: auto; }
   object-fit: contain;
 }
 
+.pf-logo.uex img{
+  width: clamp(120px, 19vw, 190px);
+  max-height: none;
+}
+
 /* Extra en pantallas muy anchas */
 @media (min-width: 1400px){
   .pf-logo img{ max-height: 96px; }
@@ -362,6 +367,10 @@ img { max-width: 100%; height: auto; }
   }
   .fineprint{
     text-align: center;
+  }
+
+  .pf-grid{
+    column-gap: .75rem;
   }
 
   /* Pre-footer en móvil: ajustes suaves */
