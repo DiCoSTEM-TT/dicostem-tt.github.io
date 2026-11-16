@@ -267,7 +267,7 @@ img { max-width: 100%; height: auto; }
 /* Rejilla dentro de .container para alinear con el contenido */
 .pf-grid{
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto; /* logo izq · onda · logo dcha */
+  grid-template-columns: minmax(0, 1fr) min(48%, 23rem) minmax(0, 1fr);
   align-items: end;
   gap: 1rem 2rem;
 }
@@ -285,7 +285,7 @@ img { max-width: 100%; height: auto; }
   line-height: 0; /* evita espacio bajo el SVG inline */
 }
 .pf-wave .wave{
-  width: min(100%, 23rem);
+  width: 100%;
 }
 
 .pf-wave .wave > svg{
@@ -314,9 +314,48 @@ img { max-width: 100%; height: auto; }
   object-fit: contain;
 }
 
+.pf-logo.uex{
+  container-name: uex-logo;
+  container-type: inline-size;
+  justify-content: flex-start;
+}
+
+.pf-logo.faculty{
+  justify-content: flex-end;
+}
+
+.pf-logo img{
+  max-width: 100%;
+}
+
 .pf-logo.uex img{
   width: clamp(120px, 19vw, 190px);
   max-height: none;
+}
+
+.pf-logo.uex .uex-compact,
+[data-theme="dark"] .pf-logo.uex .uex-compact{
+  display: none;
+}
+
+@container uex-logo (max-width: 119px){
+  .pf-logo.uex .uex-horizontal,
+  [data-theme="dark"] .pf-logo.uex .uex-horizontal{
+    display: none;
+  }
+
+  .pf-logo.uex .uex-compact{
+    width: 60px;
+  }
+
+  .pf-logo.uex .uex-compact.logo-light,
+  [data-theme="dark"] .pf-logo.uex .uex-compact.logo-dark{
+    display: block;
+  }
+
+  [data-theme="dark"] .pf-logo.uex .uex-compact.logo-light{
+    display: none;
+  }
 }
 
 /* Extra en pantallas muy anchas */
