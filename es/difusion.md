@@ -4,7 +4,8 @@ title: Difusión
 permalink: /es/difusion/
 ---
 
-<h2>2026</h2>
+<details class="year-group" open>
+  <summary>2026</summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
     <h3>Construir para aprender: aprendizaje y emociones en cinco proyectos STEM de Educación Primaria</h3>
@@ -50,8 +51,10 @@ permalink: /es/difusion/
     <p><a href="https://congresos.educacioneditora.net/index.php/SIEC/SIEC2026/schedConf/presentations">Índice de presentaciones del congreso</a></p>
   </article>
 </div>
+</details>
 
-<h2>2025</h2>
+<details class="year-group">
+  <summary>2025</summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
     <h3>Innovación digital en la formación del profesorado: un análisis cualitativo de la integración de competencias STEM y herramientas tecnológicas</h3>
@@ -89,8 +92,10 @@ permalink: /es/difusion/
     <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Actas del congreso, pp. 1095–1098</a></p>
   </article>
 </div>
+</details>
 
-<h2>2024</h2>
+<details class="year-group">
+  <summary>2024</summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
     <h3>La Inteligencia Artificial en la docencia: perspectiva de los futuros maestros de primaria sobre su aplicación en la enseñanza de las Matemáticas</h3>
@@ -149,3 +154,4 @@ permalink: /es/difusion/
     <p>12th International Congress of Educational Sciences and Development (2024). Comunicación oral.</p>
   </article>
 </div>
+</details>

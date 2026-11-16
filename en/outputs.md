@@ -8,7 +8,8 @@ permalink: /en/outputs/
 
 {% assign years = site.data.results | group_by: 'year' %}
 {% for year in years %}
-<h2>{{ year.name }}</h2>
+<details class="year-group"{% if forloop.first %} open{% endif %}>
+  <summary>{{ year.name }}</summary>
 <div class="grid">
   {% for item in year.items %}
   <article class="card">
@@ -18,4 +19,6 @@ permalink: /en/outputs/
   </article>
   {% endfor %}
 </div>
+</details>
+
 {% endfor %}

@@ -749,3 +749,30 @@ table.timeline tbody .phase:nth-of-type(3n) td{
   font-size: .95rem;
   color: var(--muted);
 }
+
+.year-group + .year-group {
+  margin-block-start: 1rem;
+}
+
+.year-group > summary {
+  padding: .65rem .85rem;
+  border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+  border-radius: .5rem;
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.year-group > summary:hover {
+  background: color-mix(in srgb, var(--link) 8%, var(--bg));
+}
+
+.year-group > summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.year-group[open] > summary {
+  margin-block-end: 1rem;
+}

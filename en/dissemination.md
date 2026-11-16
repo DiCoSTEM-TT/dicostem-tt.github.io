@@ -4,7 +4,8 @@ title: Dissemination
 permalink: /en/dissemination/
 ---
 
-<h2>2026</h2>
+<details class="year-group" open>
+  <summary>2026</summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
     <h3>Building to learn: learning and emotions in five primary education STEM projects</h3>
@@ -50,8 +51,10 @@ permalink: /en/dissemination/
     <p><a href="https://congresos.educacioneditora.net/index.php/SIEC/SIEC2026/schedConf/presentations">Conference presentation index</a></p>
   </article>
 </div>
+</details>
 
-<h2>2025</h2>
+<details class="year-group">
+  <summary>2025</summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
     <h3>Digital innovation in teacher education: a qualitative analysis of the integration of STEM competences and technological tools</h3>
@@ -89,8 +92,10 @@ permalink: /en/dissemination/
     <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 1095–1098</a></p>
   </article>
 </div>
+</details>
 
-<h2>2024</h2>
+<details class="year-group">
+  <summary>2024</summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
     <h3>Artificial Intelligence in teaching: the perspective of future Primary teachers on its application to the teaching of Mathematics</h3>
@@ -149,3 +154,4 @@ permalink: /en/dissemination/
     <p>12th International Congress of Educational Sciences and Development (2024). Oral communication.</p>
   </article>
 </div>
+</details>
