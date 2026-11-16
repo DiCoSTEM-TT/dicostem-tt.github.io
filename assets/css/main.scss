@@ -279,9 +279,6 @@ img { max-width: 100%; height: auto; }
 
 /* Onda contenida y sin huecos “tipográficos” */
 .pf-wave{
-  position: relative;
-  z-index: 1;
-  transform: translateY(50%);
   pointer-events: none;
   display: flex;
   justify-content: center;
@@ -301,9 +298,9 @@ img { max-width: 100%; height: auto; }
 /* Logos laterales: wrapper con variantes claro/oscuro */
 .pf-logo{
   display: flex;
-  align-items: flex-end;
+  align-self: center;
+  align-items: center;
   justify-content: center;
-  margin-bottom: clamp(4px, 0.8vw, 12px); /* un pelín más altos que la onda */
 }
 .pf-logo .logo-dark{ display: none; }
 [data-theme="dark"] .pf-logo .logo-light{ display: none; }
@@ -371,8 +368,7 @@ img { max-width: 100%; height: auto; }
 .site-footer {
   background: color-mix(in srgb, var(--brand-2) 8%, var(--bg));
   border-top: 1px solid color-mix(in srgb, var(--muted) 15%, transparent);
-  /* Reserva la mitad inferior de la onda y un margen para los financiadores. */
-  padding: max(1.5rem, calc(min(6.2vw, 3rem) + .5rem)) 0 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .footer-bar{
