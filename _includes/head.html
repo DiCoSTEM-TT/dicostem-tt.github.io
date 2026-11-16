@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+{% if page.project_plan %}{% include project-plan-styles.html %}{% endif %}
 
 <!-- Favicons -->
 <link rel="icon" href="{{ '/assets/img/logos/favicon-dark.svg' | relative_url }}" type="image/svg+xml" media="(prefers-color-scheme: dark)">

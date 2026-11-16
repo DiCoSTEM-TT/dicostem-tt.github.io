@@ -1,0 +1,98 @@
+<style>
+.project-plan {
+  --line: #cbdbe4;
+  --year-1: #e2eefb;
+  --year-2: #cce3f6;
+  --year-3: #b3dfdf;
+  --year-4: #227c85;
+  --year-ink: #163b50;
+  --phase-1: #254a68;
+  --phase-2: #245d72;
+  --phase-3: #1d6570;
+  --phase-ink: #fff;
+  --chip: #edf4fb;
+  --chip-ink: #2a4c67;
+  --tint: #f6f9fc;
+  --outcome: #e3f4f1;
+  --outcome-ink: #145f58;
+  --active: #c2e9e4;
+  --active-ink: #114c46;
+
+  margin-block: 2rem 1.5rem;
+}
+
+.project-plan > h2 {
+  margin: 0 0 .9rem;
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.project-plan .years { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 .75rem; padding: 0; list-style: none; border-radius: .4rem; overflow: hidden; }
+.project-plan .years li { position: relative; isolation: isolate; text-align: center; padding: .32rem .05rem; font-weight: 700; color: var(--year-ink); }
+.project-plan .years li::before { position: absolute; content: ""; inset: 0 -.75rem 0 0; z-index: -1; background: var(--fill); clip-path: polygon(0 0, calc(100% - .75rem) 0, 100% 50%, calc(100% - .75rem) 100%, 0 100%); }
+.project-plan .years li:nth-child(1) { --fill: var(--year-1); z-index: 4; }
+.project-plan .years li:nth-child(2) { --fill: var(--year-2); z-index: 3; }
+.project-plan .years li:nth-child(3) { --fill: var(--year-3); z-index: 2; }
+.project-plan .years li:nth-child(4) { --fill: var(--year-4); color: #fff; }
+.project-plan .years li:last-child::before { inset-inline-end: 0; clip-path: none; }
+.project-plan .phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+.project-plan .phase-card { display: flex; flex-direction: column; min-width: 0; --phase: var(--phase-1); }
+.project-plan .phase-card:nth-child(2) { --phase: var(--phase-2); }
+.project-plan .phase-card:nth-child(3) { --phase: var(--phase-3); }
+.project-plan .phase-heading { padding: .5rem .55rem .6rem; background: var(--phase); color: var(--phase-ink); border-radius: .38rem; text-align: center; }
+.project-plan .phase-heading > span { display: block; font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .045em; }
+.project-plan .phase-heading h3 { margin: .08rem 0 0; font-size: clamp(.98rem, 1.65vw, 1.2rem); font-weight: 600; line-height: 1.22; }
+.project-plan .objectives { align-self: center; margin: .33rem 0; min-width: 7.5rem; padding: .08rem .6rem; text-align: center; border-radius: .27rem; color: var(--chip-ink); background: var(--chip); font-size: .8rem; font-weight: 700; }
+.project-plan .phase-tasks { flex: 1; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: .4rem; padding: .6rem .75rem .75rem; }
+.project-plan .phase-tasks h4 { text-align: center; margin: 0; padding-block-end: .42rem; border-bottom: 1px solid var(--line); font-size: .96rem; }
+.project-plan .phase-tasks ul { list-style: none; padding: 0; margin: .48rem 0 .85rem; font-size: .91rem; }
+.project-plan .phase-tasks li + li { margin-top: .26rem; }
+.project-plan .phase-tasks li strong { font-weight: 600; }
+.project-plan .outcome { margin: auto 0 0; border-radius: .28rem; padding: .38rem .45rem; text-align: center; background: var(--outcome); color: var(--outcome-ink); font-size: .87rem; font-weight: 600; }
+.project-plan .schedule { margin-top: 2rem; }
+.project-plan .schedule > summary {
+  padding: .65rem .85rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+.project-plan .schedule > summary:hover { background: var(--tint); }
+.project-plan .schedule > summary > h2 { display: inline; margin-inline-start: .2rem; }
+.project-plan .schedule h2 { font-size: 1.42rem; margin: 0; line-height: 1.2; }
+.project-plan .schedule p { margin: .4rem 0 .8rem; color: var(--muted); font-size: .92rem; }
+.project-plan .table-scroll { overflow: auto; border: 1px solid var(--line); border-radius: .4rem; }
+.project-plan .timeline { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .88rem; }
+.project-plan .timeline :is(th, td) { border: 1px solid var(--line); padding: .43rem .5rem; text-align: center; }
+.project-plan .timeline .task, .project-plan .timeline .phase td { text-align: start; }
+.project-plan .timeline .task { min-width: 260px; }
+.project-plan .timeline th[scope="row"] { font-weight: 400; }
+.project-plan .timeline thead { background: var(--phase-1); color: var(--phase-ink); }
+.project-plan .timeline tbody tr:nth-child(even) { background: var(--tint); }
+.project-plan .timeline tbody .phase td { background: var(--chip); color: var(--chip-ink); font-weight: 700; }
+.project-plan .timeline tbody .x { background: var(--active); color: var(--active-ink); font-weight: 700; }
+@media (max-width: 720px) {
+  .project-plan .phases { grid-template-columns: 1fr; gap: 1rem; }
+  .project-plan .phase-heading h3 { font-size: 1.12rem; }
+  .project-plan .phase-tasks li { font-size: .96rem; }
+}
+
+[data-theme="dark"] .project-plan {
+  --line: #344655;
+  --year-1: #1a324a;
+  --year-2: #22435f;
+  --year-3: #235461;
+  --year-4: #227c85;
+  --year-ink: #edf6fd;
+  --phase-1: #203c57;
+  --phase-2: #21485e;
+  --phase-3: #21555e;
+  --chip: #1b2c3e;
+  --chip-ink: #c6dff5;
+  --tint: #151d26;
+  --outcome: #173734;
+  --outcome-ink: #a0e4d9;
+  --active: #23534f;
+  --active-ink: #cef3ed;
+}
+</style>

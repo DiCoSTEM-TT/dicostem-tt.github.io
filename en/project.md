@@ -1,4 +1,5 @@
 ---
+project_plan: true
 layout: page
 title: The Project
 permalink: /en/project/
