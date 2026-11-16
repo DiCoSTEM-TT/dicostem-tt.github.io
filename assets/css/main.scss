@@ -279,6 +279,10 @@ img { max-width: 100%; height: auto; }
 
 /* Onda contenida y sin huecos “tipográficos” */
 .pf-wave{
+  position: relative;
+  z-index: 1;
+  transform: translateY(50%);
+  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -367,7 +371,8 @@ img { max-width: 100%; height: auto; }
 .site-footer {
   background: color-mix(in srgb, var(--brand-2) 8%, var(--bg));
   border-top: 1px solid color-mix(in srgb, var(--muted) 15%, transparent);
-  padding: 1.5rem 0;
+  /* Reserva la mitad inferior de la onda y un margen para los financiadores. */
+  padding: max(1.5rem, calc(min(6.2vw, 3rem) + .5rem)) 0 1.5rem;
 }
 
 .footer-bar{
