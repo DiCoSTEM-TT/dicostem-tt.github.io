@@ -759,9 +759,12 @@ table.timeline tbody .phase:nth-of-type(3n) td{
   border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
   border-radius: .5rem;
   color: var(--text);
-  font-size: 1.25rem;
-  font-weight: 600;
   cursor: pointer;
+}
+
+.year-group > summary > h2 {
+  display: inline;
+  margin: 0;
 }
 
 .year-group > summary:hover {

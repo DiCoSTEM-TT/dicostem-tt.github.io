@@ -1,27 +1,21 @@
 [
   {
-    "authors": "Corral de la Torre, R., Martínez-Borreguero, G., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
-    "year": 2026,
-    "title": "Project-based STEM learning through a socially relevant challenge: cognitive and affective outcomes of a sustainable construction project in secondary education",
-    "journal": "Frontiers in Education",
-    "details": ", 11, 1851518",
-    "doi": "10.3389/feduc.2026.1851518"
-  },
-  {
     "authors": "Martínez-Borreguero, G., Maestre-Jiménez, J. R., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
     "year": 2026,
     "title": "More visible, not more demanding? Sustainability learning in Spain's reformed primary curriculum",
     "journal": "Education 3-13",
     "details": "",
-    "doi": "10.1080/03004279.2026.2759794"
+    "doi": "10.1080/03004279.2026.2759794",
+    "published": "2026-11-09"
   },
   {
-    "authors": "Martínez-Borreguero, G., Maestre-Jiménez, J., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
+    "authors": "Corral de la Torre, R., Martínez-Borreguero, G., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
     "year": 2026,
-    "title": "From Sustainability Concepts to STEM Projects: Conceptual Learning Following an Integrated STEM Intervention in Primary and Secondary Education",
-    "journal": "Education Sciences",
-    "details": ", 16, 865",
-    "doi": "10.3390/educsci16060865"
+    "title": "Project-based STEM learning through a socially relevant challenge: cognitive and affective outcomes of a sustainable construction project in secondary education",
+    "journal": "Frontiers in Education",
+    "details": ", 11, 1851518",
+    "doi": "10.3389/feduc.2026.1851518",
+    "published": "2026-08-19"
   },
   {
     "authors": "Mateos-Núñez, M., Martínez-Borreguero, G., Corral de la Torre, R., & Naranjo-Correa, F. L.",
@@ -29,15 +23,8 @@
     "title": "Changes in working group consensus ratings of STEM teaching self-efficacy following a project design intervention",
     "journal": "Discover Education",
     "details": ", 5, 1237",
-    "doi": "10.1007/s44217-026-01993-x"
-  },
-  {
-    "authors": "Mateos-Núñez, M., Román-Mangas, B., Rodríguez-González, B., Martínez-Borreguero, G., & Naranjo-Correa, F. L.",
-    "year": 2026,
-    "title": "Análisis cualitativo de aspectos cognitivos y afectivos de la implementación de talleres STEM en el aula de infantil",
-    "journal": "Revista Lusófona de Educação",
-    "details": ", 71",
-    "doi": "10.24140/ISSN.1645-7250.RLE.10528"
+    "doi": "10.1007/s44217-026-01993-x",
+    "published": "2026-08-04"
   },
   {
     "authors": "Naranjo-Correa, F. L., Martínez-Borreguero, G., Corral de la Torre, R., & Mateos-Núñez, M.",
@@ -45,15 +32,29 @@
     "title": "Methodological Openness and Social Sustainability in Secondary Education: Sociometric and Perceptual Evidence from Project-Based Learning",
     "journal": "Sustainability",
     "details": ", 18(11), 5686",
-    "doi": "10.3390/su18115686"
+    "doi": "10.3390/su18115686",
+    "published": "2026-06-04",
+    "dehesa": "10662/42942"
   },
   {
     "authors": "Martínez-Borreguero, G., Maestre-Jiménez, J., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
-    "year": 2024,
-    "title": "Integrating Energy and Sustainability into the Educational Curriculum: A Pathway to Achieving SDGs",
-    "journal": "Sustainability",
-    "details": ", 16(10), 4100",
-    "doi": "10.3390/su16104100"
+    "year": 2026,
+    "title": "From Sustainability Concepts to STEM Projects: Conceptual Learning Following an Integrated STEM Intervention in Primary and Secondary Education",
+    "journal": "Education Sciences",
+    "details": ", 16, 865",
+    "doi": "10.3390/educsci16060865",
+    "published": "2026-05-30",
+    "dehesa": "10662/42857",
+    "zenodo": "https://zenodo.org/records/20522311"
+  },
+  {
+    "authors": "Mateos-Núñez, M., Román-Mangas, B., Rodríguez-González, B., Martínez-Borreguero, G., & Naranjo-Correa, F. L.",
+    "year": 2026,
+    "title": "Análisis cualitativo de aspectos cognitivos y afectivos de la implementación de talleres STEM en el aula de infantil",
+    "journal": "Revista Lusófona de Educação",
+    "details": ", 71",
+    "doi": "10.24140/ISSN.1645-7250.RLE.10528",
+    "published": "2026-05-24"
   },
   {
     "authors": "Mateos-Núñez, M., Martínez-Borreguero, G., & Naranjo-Correa, F. L.",
@@ -61,6 +62,17 @@
     "title": "Evaluación del Aprendizaje y las Emociones de Maestros en Formación tras el Diseño de Propuestas Prácticas Basadas en la Educación STEM",
     "journal": "Revista Interacções",
     "details": ", 20(68), 1–21",
-    "doi": "10.25755/int.35772"
+    "doi": "10.25755/int.35772",
+    "published": "2024-10-01"
+  },
+  {
+    "authors": "Martínez-Borreguero, G., Maestre-Jiménez, J., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
+    "year": 2024,
+    "title": "Integrating Energy and Sustainability into the Educational Curriculum: A Pathway to Achieving SDGs",
+    "journal": "Sustainability",
+    "details": ", 16(10), 4100",
+    "doi": "10.3390/su16104100",
+    "published": "2024-05-14",
+    "dehesa": "10662/22854"
   }
 ]

@@ -5,13 +5,15 @@ permalink: /en/dissemination/
 ---
 
 <details class="year-group" open>
-  <summary>2026</summary>
+  <summary><h2>2026</h2></summary>
 <div class="dissemination-grid">
+  {% comment %}
   <article class="dissemination-card">
     <h3>Building to learn: learning and emotions in five primary education STEM projects</h3>
     <p class="dissemination-meta">32 Encuentros de Didáctica de las Ciencias Experimentales, Bilbao</p>
     <p>Francisco Luis Naranjo Correa, Guadalupe Martínez Borreguero, Rosa Corral de la Torre, Milagros Mateos Núñez</p>
   </article>
+  {% endcomment %}
   <article class="dissemination-card">
     <h3>Natural building and service-learning in STEM education: cognitive and affective outcomes of a Superadobe project in secondary education and curriculum diversification</h3>
     <p class="dissemination-meta">32 Encuentros de Didáctica de las Ciencias Experimentales, Bilbao</p>
@@ -54,8 +56,27 @@ permalink: /en/dissemination/
 </details>
 
 <details class="year-group">
-  <summary>2025</summary>
+  <summary><h2>2025</h2></summary>
 <div class="dissemination-grid">
+  <article class="dissemination-card">
+    <h3>Integration of sustainability concepts in the classroom: exploring the effects of a project-based teaching intervention</h3>
+    <p>12th International Congress on Research in Science Teaching (CIIDC 2025). Oral communication.</p>
+    <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 1953–1956</a></p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Cognitive and emotional effects of implementing projects in the science area of Primary Education</h3>
+    <p>12th International Congress on Research in Science Teaching (CIIDC 2025). Oral communication.</p>
+    <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 2344–2347</a></p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Cognitive and emotional analysis of the impact of interdisciplinary inquiry in teacher education</h3>
+    <p>12th International Congress on Research in Science Teaching (CIIDC 2025). Oral communication.</p>
+    <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 1095–1098</a></p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Preservice teachers and STEM education: Insights from a hands-on intervention proposal</h3>
+    <p>European Science Education Research Association (ESERA) Conference 2025. Poster.</p>
+  </article>
   <article class="dissemination-card">
     <h3>Digital innovation in teacher education: a qualitative analysis of the integration of STEM competences and technological tools</h3>
     <p>14th Ibero-American Congress on Qualitative Research (CIAIQ 2025). Oral communication.</p>
@@ -72,66 +93,15 @@ permalink: /en/dissemination/
     <h3>Associative Cognition Networks through qualitative analysis for science and mathematics learning on water and health with educational robotics</h3>
     <p>14th Ibero-American Congress on Qualitative Research (CIAIQ 2025). Oral communication.</p>
   </article>
-  <article class="dissemination-card">
-    <h3>Preservice teachers and STEM education: Insights from a hands-on intervention proposal</h3>
-    <p>European Science Education Research Association (ESERA) Conference 2025. Poster.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>Integration of sustainability concepts in the classroom: exploring the effects of a project-based teaching intervention</h3>
-    <p>12th International Congress on Research in Science Teaching (CIIDC 2025). Oral communication.</p>
-    <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 1953–1956</a></p>
-  </article>
-  <article class="dissemination-card">
-    <h3>Cognitive and emotional effects of implementing projects in the science area of Primary Education</h3>
-    <p>12th International Congress on Research in Science Teaching (CIIDC 2025). Oral communication.</p>
-    <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 2344–2347</a></p>
-  </article>
-  <article class="dissemination-card">
-    <h3>Cognitive and emotional analysis of the impact of interdisciplinary inquiry in teacher education</h3>
-    <p>12th International Congress on Research in Science Teaching (CIIDC 2025). Oral communication.</p>
-    <p><a href="https://congresoenseciencias.org/wp-content/uploads/2025/09/Libro_Actas_12CIIDC.pdf">Conference proceedings, pp. 1095–1098</a></p>
-  </article>
 </div>
 </details>
 
 <details class="year-group">
-  <summary>2024</summary>
+  <summary><h2>2024</h2></summary>
 <div class="dissemination-grid">
   <article class="dissemination-card">
-    <h3>Artificial Intelligence in teaching: the perspective of future Primary teachers on its application to the teaching of Mathematics</h3>
-    <p>7th International Congress on Pedagogical Innovation and Educational Praxis - Innovagogia. Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>Exploring science through practice: a STEM approach in Primary Education</h3>
-    <p>7th International Symposium on Science Education SIEC 2024. Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>An exploratory study of the curricular approach and cognitive demand relating to energy and waste in Secondary Education</h3>
-    <p>7th International Symposium on Science Education SIEC 2024. Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>Digital Competence and STEM Education in Teacher Training: A first look at the DiCoSTEM-TT Project</h3>
-    <p>31st University Conference on Educational Technology - JUTE24. Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>The impact of virtual labs on physics education</h3>
-    <p>31st University Conference on Educational Technology - JUTE24. Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>Digital and scientific competences through STEM education: analysis of Primary teachers’ perceptions</h3>
-    <p>31st University Conference on Educational Technology - JUTE24. Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>The evolution of education on waste in Spain: implications of current curriculum legislation for sustainability</h3>
-    <p>13th Ibero-American Congress on Qualitative Research (CIAIQ 2024). Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>STEM education for a digital world: analysis of the perspective of practising teachers</h3>
-    <p>13th Ibero-American Congress on Qualitative Research (CIAIQ 2024). Oral communication.</p>
-  </article>
-  <article class="dissemination-card">
-    <h3>The use of Artificial Intelligence in Primary Education: opinions and expectations of pre-service teachers regarding mathematical problem solving</h3>
-    <p>13th Ibero-American Congress on Qualitative Research (CIAIQ 2024). Oral communication.</p>
+    <h3>Modelling strategy in Science, Technology, Engineering and Mathematics for variational thinking in Primary Education</h3>
+    <p>12th International Congress of Educational Sciences and Development (2024). Oral communication.</p>
   </article>
   <article class="dissemination-card">
     <h3>Analysing the effects of implementing practical STEM workshops in Primary Education</h3>
@@ -150,8 +120,40 @@ permalink: /en/dissemination/
     <p>27th Symposium of the SEIEM (2024). Poster.</p>
   </article>
   <article class="dissemination-card">
-    <h3>Modelling strategy in Science, Technology, Engineering and Mathematics for variational thinking in Primary Education</h3>
-    <p>12th International Congress of Educational Sciences and Development (2024). Oral communication.</p>
+    <h3>The evolution of education on waste in Spain: implications of current curriculum legislation for sustainability</h3>
+    <p>13th Ibero-American Congress on Qualitative Research (CIAIQ 2024). Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>STEM education for a digital world: analysis of the perspective of practising teachers</h3>
+    <p>13th Ibero-American Congress on Qualitative Research (CIAIQ 2024). Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>The use of Artificial Intelligence in Primary Education: opinions and expectations of pre-service teachers regarding mathematical problem solving</h3>
+    <p>13th Ibero-American Congress on Qualitative Research (CIAIQ 2024). Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Digital Competence and STEM Education in Teacher Training: A first look at the DiCoSTEM-TT Project</h3>
+    <p>31st University Conference on Educational Technology - JUTE24. Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>The impact of virtual labs on physics education</h3>
+    <p>31st University Conference on Educational Technology - JUTE24. Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Digital and scientific competences through STEM education: analysis of Primary teachers’ perceptions</h3>
+    <p>31st University Conference on Educational Technology - JUTE24. Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Exploring science through practice: a STEM approach in Primary Education</h3>
+    <p>7th International Symposium on Science Education SIEC 2024. Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>An exploratory study of the curricular approach and cognitive demand relating to energy and waste in Secondary Education</h3>
+    <p>7th International Symposium on Science Education SIEC 2024. Oral communication.</p>
+  </article>
+  <article class="dissemination-card">
+    <h3>Artificial Intelligence in teaching: the perspective of future Primary teachers on its application to the teaching of Mathematics</h3>
+    <p>7th International Congress on Pedagogical Innovation and Educational Praxis - Innovagogia. Oral communication.</p>
   </article>
 </div>
 </details>
