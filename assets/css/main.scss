@@ -189,6 +189,15 @@ img { max-width: 100%; height: auto; }
   margin: 0 0 .6rem;
 }
 
+.resource-logo-dark,
+[data-theme="dark"] .resource-logo-light{
+  display: none;
+}
+
+[data-theme="dark"] .resource-logo-dark{
+  display: block;
+}
+
 .resource-card > *{
   position: relative;
   z-index: 1;
