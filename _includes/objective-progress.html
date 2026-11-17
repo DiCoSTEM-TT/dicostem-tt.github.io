@@ -1,0 +1,23 @@
+{% assign panel = site.data.objective_progress %}
+{% assign labels = panel[page.lang] %}
+<link rel="stylesheet" href="{{ '/assets/css/objective-progress.css' | relative_url }}">
+<section class="objective-progress" aria-labelledby="objectives-progress-heading">
+  <header>
+    <h2 id="objectives-progress-heading">{{ labels.heading | escape }}</h2>
+    <p>{{ labels.date | escape }}</p>
+  </header>
+  {% for item in panel.items %}
+    {% assign objective = item.labels[page.lang] %}
+    <details class="objective-progress-row" data-value="{{ item.value }}" style="--item-light: {{ item.light }}; --item-dark: {{ item.dark }}; --fraction: {{ item.value | divided_by: 100.0 }}">
+      <summary>
+        <span class="objective-progress-label"><span>{{ objective.code }}</span> {{ objective.title | escape }}</span>
+        <strong class="objective-progress-value" aria-hidden="true">{{ item.value }}%</strong>
+        <span class="objective-progress-track" role="progressbar" aria-label="{{ objective.code }} · {{ objective.title | escape }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ item.value }}">
+          <span class="objective-progress-fill"></span>
+        </span>
+      </summary>
+      <p>{{ objective.description | escape }}</p>
+    </details>
+  {% endfor %}
+</section>
+<script src="{{ '/assets/js/objective-progress.js' | relative_url }}" defer></script>

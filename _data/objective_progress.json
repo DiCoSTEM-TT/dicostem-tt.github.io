@@ -1,0 +1,170 @@
+{
+  "es": {
+    "heading": "Avance de los objetivos específicos",
+    "date": "Estimación · Octubre de 2026"
+  },
+  "pt": {
+    "heading": "Progresso dos objetivos específicos",
+    "date": "Estimativa · Outubro de 2026"
+  },
+  "en": {
+    "heading": "Progress on the specific objectives",
+    "date": "Estimate · October 2026"
+  },
+  "items": [
+    {
+      "value": 95,
+      "light": "#286897",
+      "dark": "#2A7EBA",
+      "labels": {
+        "es": {
+          "code": "OE1",
+          "title": "Diagnóstico inicial",
+          "description": "Diagnosticar y analizar las variables digitales, cognitivas y emocionales implicadas en los procesos de enseñanza y aprendizaje STEM en docentes en formación."
+        },
+        "pt": {
+          "code": "OE1",
+          "title": "Diagnóstico inicial",
+          "description": "Diagnosticar e analisar as variáveis digitais, cognitivas e emocionais envolvidas no ensino e na aprendizagem STEM dos futuros professores."
+        },
+        "en": {
+          "code": "SO1",
+          "title": "Initial assessment",
+          "description": "Initial diagnosis and analysis of variables in digital, cognitive and emotional domains."
+        }
+      }
+    },
+    {
+      "value": 90,
+      "light": "#267640",
+      "dark": "#309F52",
+      "labels": {
+        "es": {
+          "code": "OE2",
+          "title": "Plan de formación",
+          "description": "Diseñar un plan de formación metacognitivo para la adquisición de competencias profesionales de carácter digital, pedagógico y científico-tecnológico."
+        },
+        "pt": {
+          "code": "OE2",
+          "title": "Plano de formação",
+          "description": "Conceber um plano de formação metacognitivo para a aquisição de competências profissionais de natureza digital, pedagógica, científica e tecnológica."
+        },
+        "en": {
+          "code": "SO2",
+          "title": "Training plan",
+          "description": "To develop and design a metacognitive training plan for the acquisition of professional competences (digital, pedagogical and scientific-technological)."
+        }
+      }
+    },
+    {
+      "value": 75,
+      "light": "#007A76",
+      "dark": "#00A59F",
+      "labels": {
+        "es": {
+          "code": "OE3",
+          "title": "Laboratorios virtuales",
+          "description": "Diseñar y analizar, desde una perspectiva multidimensional, modelos de integración de laboratorios virtuales, con y sin IA, para la enseñanza y el aprendizaje STEM en diferentes etapas educativas."
+        },
+        "pt": {
+          "code": "OE3",
+          "title": "Laboratórios virtuais",
+          "description": "Conceber e analisar, numa perspetiva multidimensional, modelos de integração de laboratórios virtuais, com e sem IA, para o ensino e a aprendizagem STEM em diferentes níveis de ensino."
+        },
+        "en": {
+          "code": "SO3",
+          "title": "Virtual laboratories",
+          "description": "To design and analyse, from a multidimensional perspective, models for integrating virtual laboratories, with and without AI, into STEM teaching and learning at different educational stages."
+        }
+      }
+    },
+    {
+      "value": 85,
+      "light": "#B55020",
+      "dark": "#EE763A",
+      "labels": {
+        "es": {
+          "code": "OE4",
+          "title": "Materiales digitales STEM",
+          "description": "Desarrollar materiales didácticos digitales para su integración en procesos de enseñanza y aprendizaje de áreas STEM en entornos híbridos."
+        },
+        "pt": {
+          "code": "OE4",
+          "title": "Materiais digitais STEM",
+          "description": "Desenvolver materiais didáticos digitais para integrar no ensino e na aprendizagem das áreas STEM em ambientes híbridos."
+        },
+        "en": {
+          "code": "SO4",
+          "title": "Digital STEM materials",
+          "description": "To develop digital teaching materials for integration into STEM teaching and learning processes in hybrid environments."
+        }
+      }
+    },
+    {
+      "value": 80,
+      "light": "#5A3F8B",
+      "dark": "#A88AD7",
+      "labels": {
+        "es": {
+          "code": "OE5",
+          "title": "Instrumentos de evaluación",
+          "description": "Diseñar y elaborar procedimientos e instrumentos para la evaluación del alumnado."
+        },
+        "pt": {
+          "code": "OE5",
+          "title": "Instrumentos de avaliação",
+          "description": "Conceber procedimentos e instrumentos de avaliação dos alunos."
+        },
+        "en": {
+          "code": "SO5",
+          "title": "Assessment instruments",
+          "description": "To design and develop procedures and instruments for student assessment."
+        }
+      }
+    },
+    {
+      "value": 60,
+      "light": "#A32D4C",
+      "dark": "#EA708E",
+      "labels": {
+        "es": {
+          "code": "OE6",
+          "title": "Evaluación de la implementación",
+          "description": "Analizar y evaluar la implementación de materiales didácticos digitales en laboratorios virtuales, con y sin IA, para una educación STEM digital en diferentes niveles educativos."
+        },
+        "pt": {
+          "code": "OE6",
+          "title": "Avaliação da implementação",
+          "description": "Analisar e avaliar a implementação de materiais didáticos digitais em laboratórios virtuais, com e sem IA, para a educação STEM digital em diferentes níveis de ensino."
+        },
+        "en": {
+          "code": "SO6",
+          "title": "Implementation evaluation",
+          "description": "To analyse and evaluate the implementation of digital teaching materials in Virtual Laboratories, with and without AI, for digital STEM Education at different educational levels."
+        }
+      }
+    },
+    {
+      "value": 80,
+      "light": "#75691F",
+      "dark": "#9B8D38",
+      "labels": {
+        "es": {
+          "code": "OE7",
+          "title": "Difusión y transferencia",
+          "description": "Difundir resultados y conclusiones mediante publicaciones, jornadas, seminarios y congresos."
+        },
+        "pt": {
+          "code": "OE7",
+          "title": "Divulgação e transferência",
+          "description": "Divulgar os resultados e as conclusões através de publicações, jornadas, seminários e congressos."
+        },
+        "en": {
+          "code": "SO7",
+          "title": "Dissemination and transfer",
+          "description": "To disseminate results and conclusions through publications, workshops, seminars and conferences."
+        }
+      }
+    }
+  ]
+}

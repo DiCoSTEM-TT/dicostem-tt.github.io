@@ -1,0 +1,74 @@
+.objective-progress {
+  margin-block: 1.5rem;
+  padding: clamp(.8rem, 3vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, var(--brand) 22%, var(--bg));
+  border-radius: var(--radius);
+}
+.objective-progress header { margin-bottom: .6rem; }
+.objective-progress header h2,
+.objective-progress-value {
+  font-family: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+  font-weight: 600;
+}
+.objective-progress header h2 { margin: 0; }
+.objective-progress header p { margin: .15rem 0 0; color: var(--muted); }
+.objective-progress-row {
+  --item-color: var(--item-light);
+  border-block-start: 1px solid color-mix(in srgb, var(--brand) 20%, var(--bg));
+  transition: opacity 180ms ease;
+}
+[data-theme="dark"] .objective-progress-row { --item-color: var(--item-dark); }
+.objective-progress.has-active .objective-progress-row:not([open]) { opacity: .54; }
+.objective-progress-row > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: .32rem clamp(.65rem, 3vw, 1.5rem);
+  padding: .6rem 0;
+  list-style: none;
+  cursor: pointer;
+}
+.objective-progress-row > summary::-webkit-details-marker { display: none; }
+.objective-progress-row > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.objective-progress-label {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.objective-progress-label > span { flex: none; color: var(--muted); font-size: .82em; }
+.objective-progress-value {
+  grid-area: 1 / 2 / span 2;
+  min-width: 3.2ch;
+  color: var(--item-color);
+  font-size: clamp(2.2rem, 7vw, 3.65rem);
+  line-height: 1;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.objective-progress-track {
+  grid-area: 2 / 1;
+  height: .55rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--brand) 16%, var(--bg));
+}
+.objective-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--item-color);
+  transform: scaleX(var(--fraction));
+  transform-origin: left;
+}
+.objective-progress-row > p {
+  margin: 0 0 .7rem;
+  padding-inline-start: .7rem;
+  border-inline-start: 2px solid var(--item-color);
+}
+@media (prefers-reduced-motion: reduce) {
+  .objective-progress-row { transition: none; }
+}
