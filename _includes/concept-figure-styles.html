@@ -204,6 +204,38 @@
 @keyframes concept-fade-out {
   to { opacity: 0; }
 }
+.concept-disclosure .concept-sector:nth-of-type(1) { --point: #2a7eba; }
+.concept-disclosure .concept-sector:nth-of-type(2) { --point: #5a3f8b; }
+.concept-disclosure .concept-sector:nth-of-type(3) { --point: #923c76; }
+.concept-disclosure .concept-sector:nth-of-type(4) { --point: #ca3960; }
+.concept-disclosure .concept-sector:nth-of-type(5) { --point: #ee763a; }
+.concept-disclosure .concept-sector:nth-of-type(6) { --point: #8f8b46; }
+.concept-disclosure .concept-sector:nth-of-type(7) { --point: #309f52; }
+.concept-disclosure .concept-sector:nth-of-type(8) { --point: #00a59f; }
+
+.concept-disclosure .concept-sector-shape {
+  fill: color-mix(in srgb, var(--point) 34%, white);
+  stroke: color-mix(in srgb, var(--point) 72%, var(--text));
+}
+
+.concept-disclosure .concept-symbol {
+  stroke: #182733;
+}
+
+[data-theme="dark"] .concept-disclosure .concept-sector-shape {
+  fill: var(--point);
+  stroke: color-mix(in srgb, var(--point) 70%, var(--text));
+}
+
+[data-theme="dark"] .concept-disclosure .concept-symbol {
+  stroke: #fff;
+  filter: drop-shadow(0 0 1px #17212b);
+}
+
+.concept-disclosure .concept-sector:is(:hover, :focus-visible) .concept-sector-shape {
+  stroke: var(--text);
+}
+
 .concept-venn { width: min(100%, 28rem); margin-block: 1rem 1.35rem; }
 .concept-venn .concept-sector circle {
   fill: var(--venn-fill);
