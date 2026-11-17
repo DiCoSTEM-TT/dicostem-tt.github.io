@@ -266,11 +266,10 @@
   --venn-mix-left: #263728;
   --venn-mix-right: #1F1744;
 }
-.concept-venn .venn-overlaps { pointer-events: none; }
 .concept-venn .venn-overlap-top { fill: var(--venn-mix-top); }
 .concept-venn .venn-overlap-left { fill: var(--venn-mix-left); }
 .concept-venn .venn-overlap-right { fill: var(--venn-mix-right); }
-.concept-venn .concept-sector circle {
+.concept-venn .concept-sector circle:not([class]) {
   fill: var(--venn-fill);
 }
 .concept-venn .concept-sector:is(:hover, :focus-visible) text { text-decoration: underline; }
@@ -282,6 +281,20 @@
   pointer-events: none;
 }
 .concept-venn .venn-outline { fill: none; stroke: var(--bg); stroke-width: 5; pointer-events: none; }
-.concept-venn .venn-center { pointer-events: none; }
+.concept-venn .venn-center image { pointer-events: none; }
+.concept-venn .concept-sector:is(:hover, :focus-visible) circle { filter: brightness(1.1); }
+.venn-tooltip {
+  position: fixed;
+  z-index: 100;
+  width: min(20rem, calc(100vw - 1rem));
+  padding: .65rem .8rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--brand);
+  border-radius: var(--radius);
+  box-shadow: 0 .3rem 1.2rem rgb(0 0 0 / 22%);
+  font-size: .93rem;
+}
+.venn-tooltip p { margin: .25rem 0 0; }
 [data-theme="dark"] .concept-venn .venn-logo-disc { fill: #172635; }
 </style>

@@ -18,29 +18,34 @@
         </text>
       </a>
     {% endfor %}
-    <g class="venn-overlaps" aria-hidden="true">
-      <circle cx="136" cy="137" r="125" clip-path="url(#venn-right)" class="venn-overlap-top"/>
-      <circle cx="136" cy="137" r="125" clip-path="url(#venn-bottom)" class="venn-overlap-left"/>
-      <circle cx="274" cy="137" r="125" clip-path="url(#venn-bottom)" class="venn-overlap-right"/>
-    </g>
+    {% assign overlap_shapes = "136,137,right,top|136,137,bottom,left|274,137,bottom,right" | split: "|" %}
+    {% for overlap in text.overlaps %}
+      {% assign shape = overlap_shapes[forloop.index0] | split: "," %}
+      <a href="#venn-dialog" class="concept-sector" aria-label="{{ overlap[0] | escape }}" aria-haspopup="dialog" data-title="{{ overlap[0] | escape }}" data-description="{{ overlap[1] | escape }}">
+        <circle cx="{{ shape[0] }}" cy="{{ shape[1] }}" r="125" clip-path="url(#venn-{{ shape[2] }})" class="venn-overlap-{{ shape[3] }}"/>
+      </a>
+    {% endfor %}
     <g class="venn-outline" aria-hidden="true">
       <circle cx="136" cy="137" r="125"/>
       <circle cx="274" cy="137" r="125"/>
       <circle cx="205" cy="255" r="125"/>
     </g>
-    <g class="venn-center" clip-path="url(#venn-left)" aria-hidden="true">
+    <g class="venn-center" clip-path="url(#venn-left)">
       <g clip-path="url(#venn-right)">
+        <a href="#venn-dialog" class="concept-sector" aria-label="{{ text.center[0] | escape }}" aria-haspopup="dialog" data-title="{{ text.center[0] | escape }}" data-description="{{ text.center[1] | escape }}">
         <circle class="venn-logo-disc" cx="205" cy="255" r="125" fill="#fff"/>
         <image class="concept-mark-light" href="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" x="165" y="140" width="80" height="80"/>
         <image class="concept-mark-dark" href="{{ '/assets/img/logos/DiCoSTEM-TT_N.svg' | relative_url }}" x="165" y="140" width="80" height="80"/>
+        </a>
       </g>
     </g>
   </svg>
   <figcaption>{{ text.instruction | escape }}</figcaption>
+  <div class="venn-tooltip" role="tooltip" hidden><strong></strong><p></p></div>
   <dialog id="venn-dialog" aria-labelledby="venn-dialog-title" aria-describedby="venn-dialog-description">
     <h3 id="venn-dialog-title"></h3>
     <p id="venn-dialog-description"></p>
     <form method="dialog"><button type="submit">{{ text.close | escape }}</button></form>
   </dialog>
 </figure>
-<script src="{{ '/assets/js/research-figure.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/project-venn.js' | relative_url }}" defer></script>

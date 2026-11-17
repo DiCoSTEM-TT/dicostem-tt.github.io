@@ -23,6 +23,24 @@
         "Educación STEM",
         "Combinamos el diseño interdisciplinar y las metodologías activas para desarrollar la alfabetización científica y tecnológica."
       ]
+    ],
+    "overlaps": [
+      [
+        "Tecnología y formación docente",
+        "El futuro profesorado aprende a elegir y evaluar recursos digitales, incluidos los de inteligencia artificial, según los objetivos didácticos y las necesidades del aula."
+      ],
+      [
+        "Tecnología para aprender STEM",
+        "Los laboratorios virtuales, las simulaciones y otros recursos digitales permiten explorar fenómenos, probar hipótesis y analizar datos en actividades STEM."
+      ],
+      [
+        "Formación docente en educación STEM",
+        "Los futuros docentes diseñan propuestas interdisciplinares, aplican metodologías activas y reflexionan sobre cómo aprende el alumnado."
+      ]
+    ],
+    "center": [
+      "Cómo se integran las tres áreas",
+      "DiCoSTEM‑TT diseña y evalúa propuestas para que el futuro profesorado aprenda a enseñar STEM con laboratorios virtuales y materiales digitales, con y sin IA. Estudiamos cómo estas propuestas influyen en el aprendizaje, las competencias y las emociones."
     ]
   },
   "pt": {
@@ -49,6 +67,24 @@
         "Educação STEM",
         "Combinamos a conceção interdisciplinar e as metodologias ativas para desenvolver a literacia científica e tecnológica."
       ]
+    ],
+    "overlaps": [
+      [
+        "Tecnologia e formação de professores",
+        "Os futuros professores aprendem a escolher e avaliar recursos digitais, incluindo os de inteligência artificial, em função dos objetivos didáticos e das necessidades da sala de aula."
+      ],
+      [
+        "Tecnologia para aprender STEM",
+        "Os laboratórios virtuais, as simulações e outros recursos digitais permitem explorar fenómenos, testar hipóteses e analisar dados em atividades STEM."
+      ],
+      [
+        "Formação de professores em educação STEM",
+        "Os futuros professores concebem propostas interdisciplinares, aplicam metodologias ativas e refletem sobre a forma como os alunos aprendem."
+      ]
+    ],
+    "center": [
+      "Como se integram as três áreas",
+      "O DiCoSTEM‑TT concebe e avalia propostas para que os futuros professores aprendam a ensinar STEM com laboratórios virtuais e materiais digitais, com e sem IA. Estudamos como estas propostas influenciam a aprendizagem, as competências e as emoções."
     ]
   },
   "en": {
@@ -75,6 +111,24 @@
         "STEM education",
         "We combine interdisciplinary design and active learning to develop scientific and technological literacy."
       ]
+    ],
+    "overlaps": [
+      [
+        "Technology and teacher education",
+        "Future teachers learn to select and evaluate digital resources, including AI tools, in line with teaching goals and classroom needs."
+      ],
+      [
+        "Technology for STEM learning",
+        "Virtual laboratories, simulations and other digital resources let learners explore phenomena, test hypotheses and analyse data in STEM activities."
+      ],
+      [
+        "Teacher education in STEM",
+        "Future teachers design interdisciplinary activities, use active learning methods and reflect on how pupils learn."
+      ]
+    ],
+    "center": [
+      "How the three areas come together",
+      "DiCoSTEM‑TT designs and evaluates activities that help future teachers teach STEM with virtual laboratories and digital materials, with and without AI. We study how these activities affect learning, competences and emotions."
     ]
   }
 }
