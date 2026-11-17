@@ -15,7 +15,9 @@
     "journal": "Frontiers in Education",
     "details": ", 11, 1851518",
     "doi": "10.3389/feduc.2026.1851518",
-    "published": "2026-08-19"
+    "published": "2026-08-19",
+    "dehesa": "10662/43948",
+    "zenodo": "https://zenodo.org/records/22641532"
   },
   {
     "authors": "Mateos-Núñez, M., Martínez-Borreguero, G., Corral de la Torre, R., & Naranjo-Correa, F. L.",
@@ -24,7 +26,9 @@
     "journal": "Discover Education",
     "details": ", 5, 1237",
     "doi": "10.1007/s44217-026-01993-x",
-    "published": "2026-08-04"
+    "published": "2026-08-04",
+    "dehesa": "10662/44677",
+    "zenodo": "https://zenodo.org/records/24035369"
   },
   {
     "authors": "Naranjo-Correa, F. L., Martínez-Borreguero, G., Corral de la Torre, R., & Mateos-Núñez, M.",
@@ -34,7 +38,8 @@
     "details": ", 18(11), 5686",
     "doi": "10.3390/su18115686",
     "published": "2026-06-04",
-    "dehesa": "10662/42942"
+    "dehesa": "10662/42942",
+    "zenodo": "https://zenodo.org/records/20596505"
   },
   {
     "authors": "Martínez-Borreguero, G., Maestre-Jiménez, J., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
@@ -54,7 +59,9 @@
     "journal": "Revista Lusófona de Educação",
     "details": ", 71",
     "doi": "10.24140/ISSN.1645-7250.RLE.10528",
-    "published": "2026-05-24"
+    "published": "2026-05-24",
+    "dehesa": "10662/42856",
+    "zenodo": "https://zenodo.org/records/20528428"
   },
   {
     "authors": "Mateos-Núñez, M., Martínez-Borreguero, G., & Naranjo-Correa, F. L.",
@@ -63,7 +70,9 @@
     "journal": "Revista Interacções",
     "details": ", 20(68), 1–21",
     "doi": "10.25755/int.35772",
-    "published": "2024-10-01"
+    "published": "2024-10-01",
+    "dehesa": "10662/23876",
+    "zenodo": "https://zenodo.org/records/24035373"
   },
   {
     "authors": "Martínez-Borreguero, G., Maestre-Jiménez, J., Mateos-Núñez, M., & Naranjo-Correa, F. L.",
@@ -73,6 +82,7 @@
     "details": ", 16(10), 4100",
     "doi": "10.3390/su16104100",
     "published": "2024-05-14",
-    "dehesa": "10662/22854"
+    "dehesa": "10662/22854",
+    "zenodo": "https://zenodo.org/records/24035371"
   }
 ]

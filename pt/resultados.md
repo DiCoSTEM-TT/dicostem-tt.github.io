@@ -15,13 +15,7 @@ permalink: /pt/resultados/
   <article class="card">
     <h3>{{ item.title | escape }}</h3>
     <p>{{ item.authors | escape }} ({{ item.year }}). <cite>{{ item.journal | escape }}</cite>{{ item.details | escape }}.</p>
-    <p><a href="https://doi.org/{{ item.doi | escape }}">DOI {{ item.doi | escape }}</a></p>
-    {% if item.dehesa or item.zenodo %}
-    <ul class="article-repositories">
-      {% if item.dehesa %}<li><a href="https://hdl.handle.net/{{ item.dehesa | escape }}">DEHESA · {{ item.dehesa | escape }}</a></li>{% endif %}
-      {% if item.zenodo %}<li><a href="{{ item.zenodo | escape }}">Depósito no Zenodo</a></li>{% endif %}
-    </ul>
-    {% endif %}
+    {% include publication-links.html item=item %}
   </article>
   {% endfor %}
 </div>

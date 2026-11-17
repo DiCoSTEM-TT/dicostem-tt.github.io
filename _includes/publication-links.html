@@ -1,0 +1,25 @@
+{% assign publication = include.item %}
+<div class="publication-links">
+  <a href="https://doi.org/{{ publication.doi | escape }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+    </svg>
+    <span><strong>DOI</strong> {{ publication.doi | escape }}</span>
+  </a>
+  {% if publication.dehesa %}
+  <a href="https://hdl.handle.net/{{ publication.dehesa | escape }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m3 9 9-5 9 5H3Zm2 11h14M7 10v7m5-7v7m5-7v7"/>
+    </svg>
+    <span><strong>DEHESA</strong> · Handle {{ publication.dehesa | escape }}</span>
+  </a>
+  {% endif %}
+  {% if publication.zenodo %}
+  <a href="{{ publication.zenodo | escape }}">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 7V4h14v3M4 8h16v12H4zM9 12h6"/>
+    </svg>
+    <span><strong>Zenodo</strong> {{ publication.zenodo | split: '/' | last | escape }}</span>
+  </a>
+  {% endif %}
+</div>
