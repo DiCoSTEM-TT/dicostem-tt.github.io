@@ -17,7 +17,17 @@ cards.forEach((card, index) => {
   const button = document.createElement('button');
   const label = document.createElement('span');
   label.className = 'team-avatar-name';
-  label.textContent = name;
+  const givenName = card.dataset.givenName;
+
+  if (givenName && name.startsWith(givenName + ' ')) {
+    const given = document.createElement('span');
+    const surnames = document.createElement('span');
+    given.textContent = givenName;
+    surnames.textContent = name.slice(givenName.length + 1);
+    label.append(given, ' ', surnames);
+  } else {
+    label.textContent = name;
+  }
   card.id = `team-member-${index + 1}`;
   card.hidden = true;
   portrait.className = '';

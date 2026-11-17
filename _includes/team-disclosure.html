@@ -1,14 +1,16 @@
 <style>
 .team-avatars {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: clamp(.65rem, 1.8vw, 1rem);
   align-items: start;
 }
 .team-avatar {
   display: block;
   padding: 0;
-  min-width: 0;
+  flex: 1 0 min(7rem, 100%);
+  max-width: 8.5rem;
   border: 0;
   border-radius: .85rem;
   background: transparent;
@@ -34,6 +36,7 @@
   margin-top: .3rem;
   overflow-wrap: anywhere;
 }
+.team-avatar-name span { display: block; }
 .team-avatar:hover img,
 .team-avatar[aria-expanded="true"] img { border-color: var(--brand); }
 .team-avatar:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
@@ -51,11 +54,8 @@
 }
 .team-avatar-content > .team-card[hidden] { display: none; }
 .team-avatar-content .team-photo { max-width: 14rem; align-self: center; }
-@media (max-width: 640px) {
-  .team-avatars { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
 @media (prefers-reduced-motion: reduce) {
   .team-avatar-panel { transition: none; }
 }
 </style>
-<script src="{{ '/assets/js/team-disclosure.js?v=names' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/team-disclosure.js?v=name-lines' | relative_url }}" defer></script>

@@ -1,4 +1,5 @@
 - name: Francisco Luis Naranjo Correa
+  given_name: Francisco Luis
   role: "Investigador principal · Profesor titular de universidad"
   role_en: "Principal Investigator · Associate Professor"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas · INPEx
@@ -20,6 +21,7 @@
   sort_key: "naranjo correa francisco luis"
 
 - name: Guadalupe Martínez Borreguero
+  given_name: Guadalupe
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas · INPEx
@@ -37,6 +39,7 @@
 
 
 - name: Milagros Mateos Núñez
+  given_name: Milagros
   role: "Profesora permanente laboral"
   role_en: "Permanent Lecturer"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas · INPEx
@@ -54,6 +57,7 @@
 
 
 - name: Ana Belén Borrachero Cortés
+  given_name: Ana Belén
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Psicología y Antropología
@@ -71,6 +75,7 @@
 
 
 - name: Ana Caballero Carrasco
+  given_name: Ana
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas · INPEx
@@ -88,6 +93,7 @@
 
 
 - name: María Antonia Dávila Acedo
+  given_name: María Antonia
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas · INPEx
@@ -105,6 +111,7 @@
 
 
 - name: Lina Viviana Melo Niño
+  given_name: Lina Viviana
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
   affiliation: Universidad de Extremadura · Facultad de Educación y Psicología · Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas · INPEx

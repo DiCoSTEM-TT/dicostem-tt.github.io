@@ -10,7 +10,7 @@ permalink: /pt/equipa/
 <div class="team">
   {%- if lead -%}
   <section class="team-lead">
-    <article class="card team-card">
+    <article class="card team-card" data-given-name="{{ lead.given_name | escape }}">
       <img src="{{ lead.photo | relative_url }}" alt="{{ lead.name }}" class="team-photo" />
       <h3>{{ lead.name }}</h3>
       <p class="team-role">{{ lead.role_pt }}</p>
@@ -32,7 +32,7 @@ permalink: /pt/equipa/
 
   <section class="team-grid">
     {%- for m in others -%}
-    <article class="card team-card">
+    <article class="card team-card" data-given-name="{{ m.given_name | escape }}">
       <img src="{{ m.photo | relative_url }}" alt="{{ m.name }}" class="team-photo" />
       <h3>{{ m.name }}</h3>
       <p class="team-role">{{ m.role_pt }}</p>
