@@ -92,48 +92,48 @@ From a methodological point of view, the project combines exploratory and quasi-
   <details class="schedule">
     <summary><h2>Timeline by semester</h2></summary>
     <p>Lead person listed first. “X” indicates scheduled activity.</p>
-    <div class="table-scroll" role="region" aria-label="Table of tasks by semester" tabindex="0">
-<table class="timeline">
-  <thead>
-    <tr>
-      <th class="task" scope="col">Task</th>
-      <th scope="col" aria-label="Semester 1">1</th><th scope="col" aria-label="Semester 2">2</th><th scope="col" aria-label="Semester 3">3</th><th scope="col" aria-label="Semester 4">4</th><th scope="col" aria-label="Semester 5">5</th><th scope="col" aria-label="Semester 6">6</th><th scope="col" aria-label="Semester 7">7</th><th scope="col" aria-label="Semester 8">8</th>
+    <div class="table-scroll" role="region" aria-label="Table of tasks by semester">
+<table class="timeline" role="table">
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" class="task" scope="col">Task</th>
+      <th role="columnheader" scope="col" aria-label="Semester 1">1</th><th role="columnheader" scope="col" aria-label="Semester 2">2</th><th role="columnheader" scope="col" aria-label="Semester 3">3</th><th role="columnheader" scope="col" aria-label="Semester 4">4</th><th role="columnheader" scope="col" aria-label="Semester 5">5</th><th role="columnheader" scope="col" aria-label="Semester 6">6</th><th role="columnheader" scope="col" aria-label="Semester 7">7</th><th role="columnheader" scope="col" aria-label="Semester 8">8</th>
     </tr>
   </thead>
-  <tbody>
-    <tr class="phase"><td colspan="9">Phase 1 · Initial analysis and plan design (SO1–SO2)</td></tr>
-    <tr><th class="task" scope="row">T1.1 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td class="x">X</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.2 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td class="x">X</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.3 GMB/ABBC/MADA/LVMN</th><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.4 FLNC/GMB/MMN</th><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.5 MADA/MMN/ACC</th><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.6 GMB/FLNC/ABBC</th><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.7 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.8 ACC/MMN/LVMN</th><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T1.9 MADA/FLNC/ABBC</th><td></td><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
+  <tbody role="rowgroup">
+    <tr role="row" class="phase"><td role="cell" colspan="9">Phase 1 · Initial analysis and plan design (SO1–SO2)</td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.1 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.2 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.3 GMB/ABBC/MADA/LVMN</th><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.4 FLNC/GMB/MMN</th><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.5 MADA/MMN/ACC</th><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.6 GMB/FLNC/ABBC</th><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.7 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.8 ACC/MMN/LVMN</th><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T1.9 MADA/FLNC/ABBC</th><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
 
-    <tr class="phase"><td colspan="9">Phase 2 · Development of materials (SO3–SO5)</td></tr>
-    <tr><th class="task" scope="row">T2.1 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.2 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.3 FLNC/GMB/LVMN/ABBC</th><td></td><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.4 LVMN/MMN/ACC</th><td></td><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.5 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.6 GMB/LVMN/MADA</th><td></td><td></td><td></td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.7 FLNC/ACC/ABBC/MADA</th><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.8 ACC/MMN/MADA</th><td></td><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.9 FLNC/MADA/LVMN/GMB</th><td></td><td></td><td></td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.10 ABBC/MMN/ACC</th><td></td><td></td><td></td><td class="x">X</td><td></td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T2.11 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td></td><td class="x">X</td><td></td><td></td><td></td></tr>
+    <tr role="row" class="phase"><td role="cell" colspan="9">Phase 2 · Development of materials (SO3–SO5)</td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.1 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.2 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.3 FLNC/GMB/LVMN/ABBC</th><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.4 LVMN/MMN/ACC</th><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.5 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.6 GMB/LVMN/MADA</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.7 FLNC/ACC/ABBC/MADA</th><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.8 ACC/MMN/MADA</th><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.9 FLNC/MADA/LVMN/GMB</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.10 ABBC/MMN/ACC</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T2.11 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
 
-    <tr class="phase"><td colspan="9">Phase 3 · Implementation and evaluation (SO6–SO7)</td></tr>
-    <tr><th class="task" scope="row">T3.1 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td></td><td class="x">X</td><td></td><td></td><td></td></tr>
-    <tr><th class="task" scope="row">T3.2 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td></tr>
-    <tr><th class="task" scope="row">T3.3 ACC/MMN/LVMN</th><td></td><td></td><td></td><td></td><td class="x">X</td><td class="x">X</td><td class="x">X</td><td></td></tr>
-    <tr><th class="task" scope="row">T3.4 ABBC/LVMN/MADA</th><td></td><td></td><td></td><td></td><td></td><td class="x">X</td><td class="x">X</td><td></td></tr>
-    <tr><th class="task" scope="row">T3.5 FLNC/GMB/ABBC</th><td></td><td></td><td></td><td></td><td></td><td></td><td class="x">X</td><td class="x">X</td></tr>
-    <tr><th class="task" scope="row">T3.6 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td></td><td></td><td></td><td class="x">X</td><td class="x">X</td></tr>
-    <tr><th class="task" scope="row">T3.7 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="x">X</td></tr>
-    <tr><th class="task" scope="row">T3.8 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="x">X</td></tr>
+    <tr role="row" class="phase"><td role="cell" colspan="9">Phase 3 · Implementation and evaluation (SO6–SO7)</td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.1 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell"></td><td role="cell"></td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.2 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.3 ACC/MMN/LVMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.4 ABBC/LVMN/MADA</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td><td role="cell"></td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.5 FLNC/GMB/ABBC</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.6 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td><td role="cell" class="x">X</td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.7 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td></tr>
+    <tr role="row"><th role="rowheader" class="task" scope="row">T3.8 FLNC/GMB/LVMN/ACC/ABBC/MADA/MMN</th><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell"></td><td role="cell" class="x">X</td></tr>
   </tbody>
 </table>
     </div>

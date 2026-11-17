@@ -61,7 +61,7 @@
 .project-plan .schedule > summary > h2 { display: inline; margin-inline-start: .2rem; }
 .project-plan .schedule h2 { font-size: 1.42rem; margin: 0; line-height: 1.2; }
 .project-plan .schedule p { margin: .4rem 0 .8rem; color: var(--muted); font-size: .92rem; }
-.project-plan .table-scroll { overflow: auto; border: 1px solid var(--line); border-radius: .4rem; }
+.project-plan .table-scroll { border: 1px solid var(--line); border-radius: .4rem; }
 .project-plan .timeline { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .88rem; }
 .project-plan .timeline :is(th, td) { border: 1px solid var(--line); padding: .43rem .5rem; text-align: center; }
 .project-plan .timeline .task, .project-plan .timeline .phase td { text-align: start; }
@@ -75,6 +75,49 @@
   .project-plan .phases { grid-template-columns: 1fr; gap: 1rem; }
   .project-plan .phase-heading h3 { font-size: 1.12rem; }
   .project-plan .phase-tasks li { font-size: .96rem; }
+
+  .project-plan .timeline {
+    display: block;
+    min-width: 0;
+  }
+
+  .project-plan .timeline thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .project-plan .timeline tbody {
+    display: block;
+  }
+
+  .project-plan .timeline tbody tr {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    counter-reset: semester;
+  }
+
+  .project-plan .timeline .task,
+  .project-plan .timeline .phase td {
+    grid-column: 1 / -1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .project-plan .timeline tbody tr:not(.phase) td {
+    min-height: 2.7rem;
+    padding: .2rem 0;
+    counter-increment: semester;
+  }
+
+  .project-plan .timeline tbody tr:not(.phase) td::before {
+    content: counter(semester);
+    display: block;
+    font-size: .72rem;
+    font-weight: 400;
+  }
 }
 
 [data-theme="dark"] .project-plan {
