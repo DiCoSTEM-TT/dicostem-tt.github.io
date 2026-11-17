@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-PT" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ajuda do H5PDF</title>
+    <link rel="icon" href="../icon.png" />
+    
+    <link rel="stylesheet" href="../style.css?v=0.2.0-1794939332" />
+    <script>
+      // Modo claro por defecto; el oscuro solo si el usuario lo eligio antes.
+      try {
+        if (localStorage.getItem("h5pdf-theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (err) {
+        // sin almacenamiento local: se queda en claro
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container topbar">
+        <span class="logo"><img src="../icon.png" alt="" /></span>
+        <span class="site-title">
+          <strong>H5PDF</strong>
+          <span>De PDF para Apresentação H5P</span>
+        </span>
+        <span class="spacer"></span>
+        <nav class="lang-switch" aria-label="Idioma">
+          <a href="es.html" lang="es" hreflang="es">Español</a> | <strong aria-current="true">Português</strong> | <a href="en.html" lang="en" hreflang="en">English</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar entre modo claro e escuro" title="Alternar entre modo claro e escuro">◐</button>
+      </div>
+      <nav class="subnav" aria-label="Projeto">
+        <div class="container">
+          <a href="../index.html?lang=pt">Conversor</a><span aria-current="page">Ajuda</span>
+          <span class="spacer"></span>
+          <a class="project-credit" href="https://dicostem-tt.github.io/pt/" target="_blank" rel="noopener" title="DiCoSTEM-TT · Competência Digital e Educação STEM na Formação de Professores">Ferramenta desenvolvida no projeto de investigação DiCoSTEM-TT</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container help">
+
+
+      <section class="hero">
+        <h1>Ajuda do H5PDF</h1>
+        <p class="subtitle">Tudo o que precisa para converter um PDF numa Apresentação H5P e utilizá-la no Moodle. Versão 0.2.0.</p>
+      </section>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">Conteúdo</h2>
+        <ol>
+          <li><a href="#what">O que é o H5PDF</a></li>
+          <li><a href="#before">Antes de começar</a></li>
+          <li><a href="#tutorial-web">Tutorial: converter na web</a></li>
+          <li><a href="#offline">Utilizar sem ligação</a></li>
+          <li><a href="#options">As opções, uma a uma</a></li>
+          <li><a href="#result">O que contém o ficheiro .h5p</a></li>
+          <li><a href="#moodle">Utilizá-lo no Moodle</a></li>
+          <li><a href="#tips">Conselhos para preparar o PDF</a></li>
+          <li><a href="#troubleshooting">Resolução de problemas</a></li>
+          <li><a href="#privacy">Privacidade</a></li>
+          <li><a href="#about">Versão e informação</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what">1. O que é o H5PDF</h2>
+      <p>O H5PDF converte um PDF (por exemplo, diapositivos exportados do PowerPoint, Keynote, Google Slides ou Canva) num pacote <strong>H5P</strong> do tipo <strong>Apresentação de curso</strong> (<em>Course Presentation</em>). Esse pacote é carregado no Moodle, onde pode ser visto, partilhado e editado.</p>
+      <ul>
+        <li>Cada página do PDF transforma-se num diapositivo. A página é usada como imagem de fundo, pelo que o aspeto é idêntico ao original: tipos de letra, cores, fórmulas e desenhos mantêm-se tal como estão.</li>
+        <li>Se o escolher, cada diapositivo inclui um <strong>botão de transcrição</strong> com o texto da página, que os leitores de ecrã conseguem ler.</li>
+        <li>Já no Moodle, pode acrescentar sobre cada diapositivo perguntas, ligações, vídeos ou outros elementos interativos com o editor H5P.</li>
+      </ul>
+      <p>O texto dos diapositivos não pode ser editado no Moodle, porque faz parte da imagem de fundo. Para o alterar, edite a apresentação original, exporte-a novamente para PDF e volte a convertê-la.</p>
+
+      <h2 id="before">2. Antes de começar</h2>
+      <ul>
+        <li><strong>Um PDF.</strong> Serve qualquer tamanho de página; o formato panorâmico 16:9 é o que melhor aproveita o espaço. A conversão é feita no seu navegador: com apresentações muito longas em alta resolução a memória pode esgotar-se, sobretudo em tablets.</li>
+        <li><strong>Um Moodle com H5P.</strong> O Moodle inclui H5P desde a versão 3.9. O tipo de conteúdo Apresentação de curso tem de estar disponível no seu site (ver <a href="#moodle">Utilizá-lo no Moodle</a>).</li>
+        <li><strong>Opcional: um modelo.</strong> Se o seu Moodle usar versões do H5P diferentes das habituais, pode indicar um modelo exportado do seu próprio Moodle (ver <a href="#options">As opções</a>).</li>
+      </ul>
+      <p>Para praticar, use a apresentação de exemplo desta ajuda: seis diapositivos que apresentam o H5PDF e que aparecem em todas as capturas de ecrã.</p>
+      <p class="web-only"><a class="download" href="../help/pt/H5PDF-exemplo.pdf" download>Transferir a apresentação de exemplo (PDF)</a></p>
+
+
+      <h2 id="tutorial-web">3. Tutorial: converter na web</h2>
+      <ol class="steps">
+        <li>
+          <p>Abra o H5PDF no navegador. Verá o formulário de conversão. Pode mudar o idioma no canto superior direito e alternar entre modo claro e escuro com o botão <span aria-hidden="true">◐</span>.</p>
+          <figure>
+            <img src="../help/pt/static-web-form.png" width="1000" height="900" loading="lazy" alt="Página principal do H5PDF com o formulário: PDF, modelo H5P opcional, título, resolução, caixa do botão de transcrição e botão Converter." />
+            <figcaption>O conversor na web.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>Em <strong>PDF</strong>, carregue no botão de seleção de ficheiro e escolha o seu PDF. O texto desse botão é definido pelo navegador, no idioma dele. O <strong>Título</strong> é preenchido com o nome do ficheiro; altere-o se quiser: é o nome que a atividade terá no Moodle e o nome proposto para o ficheiro.</p>
+          <figure>
+            <img src="../help/pt/static-web-ready.png" width="788" height="555" loading="lazy" alt="Formulário com o PDF de exemplo selecionado e o título preenchido automaticamente." />
+            <figcaption>PDF escolhido e título proposto.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>Verifique a <strong>Resolução</strong> e a caixa do <strong>botão de transcrição</strong>. Os valores predefinidos (150 ppp, com botão) servem na maioria dos casos. Mais detalhes em <a href="#options">As opções</a>.</p>
+        </li>
+        <li>
+          <p>Carregue em <strong>Converter</strong>. Antes de começar, o navegador pergunta onde guardar o ficheiro <code>.h5p</code>:</p>
+          <ul>
+            <li><strong>Chrome e Edge</strong> abrem a caixa «Guardar como»: escolha a pasta e o nome.</li>
+            <li><strong>Safari e Firefox</strong> não permitem que a página abra essa caixa e guardam o ficheiro como uma transferência normal. Para que também perguntem onde guardar, ative nas definições do navegador a opção de perguntar em cada transferência.</li>
+          </ul>
+          <p>Se cancelar a caixa de guardar, nada é convertido.</p>
+        </li>
+        <li>
+          <p>Durante a conversão, o botão mostra o progresso. No fim fica verde e por baixo aparece o nome do ficheiro guardado.</p>
+          <figure>
+            <img src="../help/pt/static-web-done.png" width="788" height="559" loading="lazy" alt="Formulário após a conversão: botão verde Convertido e a mensagem Guardado como com o nome do ficheiro." />
+            <figcaption>Conversão concluída.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>Carregue o ficheiro no Moodle seguindo <a href="#moodle">Utilizá-lo no Moodle</a>.</p>
+        </li>
+      </ol>
+
+
+      <h2 id="offline">4. Utilizar sem ligação</h2>
+      <p>Esta versão do H5PDF funciona inteiramente no seu navegador. A página, as suas bibliotecas e o modelo são transferidos deste mesmo site na primeira vez, e o navegador guarda uma cópia.</p>
+      <ul>
+        <li>Depois da primeira visita pode abri-la e converter sem ligação à internet, no mesmo navegador e com o mesmo endereço.</li>
+        <li>O reconhecimento de texto (OCR) transfere os seus modelos de idioma (cerca de 6 MB) na primeira vez que uma página precisa dele. Para o ter também sem ligação, converta antes, com ligação, algum PDF digitalizado.</li>
+        <li>Funciona nas versões atuais do Chrome, Edge, Firefox e Safari. Se o navegador estiver em modo privado, pode não guardar a cópia.</li>
+      </ul>
+
+      <h2 id="options">5. As opções, uma a uma</h2>
+      <h3>PDF</h3>
+      <p>O documento a converter. É aceite um único PDF por conversão. Não pode estar protegido por palavra-passe.</p>
+      <h3>Modelo H5P (opcional)</h3>
+      <p>O H5PDF inclui um modelo de Apresentação de curso que funciona na maioria dos Moodle atuais. Se, ao importar o resultado, o seu Moodle se queixar da versão do tipo de conteúdo, crie no seu Moodle uma Apresentação de curso vazia, transfira-a como ficheiro <code>.h5p</code> e carregue-a neste campo. Desse modelo, o H5PDF toma a versão da Apresentação de curso e a dos elementos que gera (texto e imagem), os textos da interface no idioma do seu Moodle e as suas definições, pelo que o resultado coincide com o que o seu site tem instalado. Basta fazê-lo uma vez e reutilizar o ficheiro. Se o deixar vazio, é usado o modelo incluído.</p>
+      <h3>Título</h3>
+      <p>Nome do conteúdo H5P e nome proposto para o ficheiro. É preenchido com o nome do PDF; pode alterá-lo antes de converter. Aceita até 255 carateres.</p>
+      <h3>Resolução (ppp)</h3>
+      <p>Pontos por polegada com que cada página é desenhada. Aceita valores de 72 a 600.</p>
+      <ul>
+        <li><strong>150 (predefinido):</strong> nítido em ecrãs normais e com um tamanho de ficheiro moderado.</li>
+        <li><strong>200–300:</strong> para ecrãs de alta resolução, projeção em ecrã inteiro ou páginas com letra muito pequena.</li>
+        <li><strong>96–120:</strong> para apresentações longas ou se o seu Moodle limitar o tamanho dos ficheiros que se podem carregar.</li>
+      </ul>
+      <p>Duplicar a resolução multiplica aproximadamente por quatro o tamanho de cada imagem.</p>
+      <h3>Incluir botão de transcrição</h3>
+      <p>Acrescenta a cada diapositivo um botão redondo azul (<strong>i</strong>) no canto inferior direito. Ao carregar nele abre-se uma caixa com o texto da página. É útil para a acessibilidade (os leitores de ecrã leem-no), para copiar texto e para pesquisar. Se uma página não tiver texto, por ser uma imagem ou uma digitalização, o H5PDF reconhece-o automaticamente (OCR) em espanhol, português e inglês, dando prioridade ao idioma da interface. O reconhecimento é feito no seu navegador com o Tesseract.js; na primeira vez são transferidos os modelos de idioma (cerca de 6 MB) deste mesmo site. Reveja o texto reconhecido: pode conter erros, sobretudo em fórmulas, tabelas ou letra manuscrita.</p>
+
+      <h2 id="result">6. O que contém o ficheiro .h5p</h2>
+      <p>O ficheiro é um pacote H5P padrão com um diapositivo por página. Não leva código próprio: apenas conteúdo, pelo que o Moodle o trata como qualquer outra Apresentação de curso.</p>
+      <figure>
+        <img src="../help/pt/viewer-cover.png" width="960" height="540" loading="lazy" alt="Primeiro diapositivo da apresentação de exemplo no visualizador H5P, com a barra de progresso e os controlos de navegação por baixo." />
+        <figcaption>A capa do exemplo no visualizador H5P. Por baixo, a barra de progresso e os controlos de navegação que o H5P acrescenta.</figcaption>
+      </figure>
+      <h3>Proporções: nada é deformado</h3>
+      <p>O H5P reserva a parte inferior da apresentação para a barra de navegação, pelo que o espaço disponível para cada diapositivo é um pouco mais largo do que o formato 16:9. O H5PDF coloca cada página centrada e sem deformar, e preenche as margens laterais prolongando a cor das bordas da página. Com fundos lisos ou gradientes as margens não se notam; se uma fotografia tocar a borda esquerda ou direita, verá uma faixa.</p>
+      <p>O mesmo acontece com outros formatos: numa página 4:3 as margens laterais são mais largas e, numa página mais panorâmica do que o espaço, o preenchimento é acrescentado em cima e em baixo.</p>
+      <figure>
+        <img src="../help/pt/viewer-slide.png" width="960" height="540" loading="lazy" alt="Diapositivo do exemplo com um círculo perfeitamente redondo." />
+        <figcaption>O círculo do diapositivo 3 vê-se redondo: a página mantém a sua proporção.</figcaption>
+      </figure>
+      <h3>O botão de transcrição</h3>
+      <figure>
+        <img src="../help/pt/viewer-transcript.png" width="960" height="540" loading="lazy" alt="Diapositivo com a caixa de transcrição aberta a mostrar o texto da página." />
+        <figcaption>Ao carregar no botão azul abre-se o texto do diapositivo.</figcaption>
+      </figure>
+
+      <h2 id="moodle">7. Utilizá-lo no Moodle</h2>
+      <p>Há duas formas habituais. Os nomes exatos dos menus podem variar ligeiramente consoante a versão e o tema do seu Moodle.</p>
+      <h3>Como atividade H5P de uma disciplina</h3>
+      <ol class="steps">
+        <li><p>Na disciplina, ative o <strong>modo de edição</strong>.</p></li>
+        <li><p>Na secção pretendida, escolha <strong>Adicionar uma atividade ou recurso → H5P</strong>.</p></li>
+        <li><p>Dê-lhe um nome, arraste o ficheiro <code>.h5p</code> para o campo do pacote e guarde.</p></li>
+      </ol>
+      <h3>No banco de conteúdos</h3>
+      <ol class="steps">
+        <li><p>Abra o <strong>Banco de conteúdos</strong> da disciplina e carregue em <strong>Carregar</strong>.</p></li>
+        <li><p>Escolha o ficheiro <code>.h5p</code>. A partir daí pode reutilizá-lo em várias disciplinas ou atividades.</p></li>
+      </ol>
+      <h3>Acrescentar interatividade</h3>
+      <p>Abra o conteúdo com <strong>Editar</strong> (no banco de conteúdos ou a partir da atividade). Cada diapositivo tem a página como fundo; use a barra de ferramentas da Apresentação de curso para acrescentar por cima perguntas, textos, ligações, imagens ou vídeos. Não apague nem mova a imagem de fundo.</p>
+      <div class="callout">
+        <p><strong>Se o Moodle não reconhecer o tipo de conteúdo</strong> (por exemplo, um erro de biblioteca indisponível), a Apresentação de curso não está instalada ou está desativada no seu site. Quem administra o Moodle pode ativá-la ou atualizá-la em <strong>Administração do site → H5P → Gerir tipos de conteúdo H5P</strong>. Também pode experimentar com um modelo exportado do seu Moodle (ver <a href="#options">Modelo H5P</a>).</p>
+      </div>
+
+      <h2 id="tips">8. Conselhos para preparar o PDF</h2>
+      <ul>
+        <li>Crie os diapositivos em formato panorâmico (16:9). É o que melhor ocupa o espaço do H5P.</li>
+        <li>Exporte para PDF a partir da aplicação original em vez de imprimir para PDF ou digitalizar: o texto é mantido e a transcrição fica completa.</li>
+        <li>Evite fotografias ou elementos que toquem as bordas esquerda e direita da página: é aí que o H5PDF prolonga o fundo.</li>
+        <li>Deixe livre o canto inferior direito se for incluir o botão de transcrição.</li>
+        <li>As animações e transições do PowerPoint ou do Keynote não passam para o PDF. Se um diapositivo se constrói em vários passos, exporte os passos como páginas separadas ou acrescente a interatividade depois no Moodle.</li>
+        <li>Se a apresentação for muito longa, considere dividi-la: é mais cómodo de editar no Moodle e o ficheiro fica mais leve.</li>
+      </ul>
+
+      <h2 id="troubleshooting">9. Resolução de problemas</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Mensagem ou sintoma</th><th>O que fazer</th></tr></thead>
+          <tbody>
+            <tr><td>«O ficheiro não é um PDF válido» ou «O H5PDF só aceita ficheiros PDF»</td><td>Confirme que o ficheiro é mesmo um PDF e não outro formato com o nome alterado. Exporte-o novamente a partir da aplicação original.</td></tr>
+            <tr><td>«O PDF está danificado ou não pode ser aberto»</td><td>Abra-o na Pré-visualização ou no Acrobat; se abrir, guarde-o de novo como PDF e tente outra vez.</td></tr>
+            <tr><td>«O PDF está protegido por palavra-passe»</td><td>Retire a proteção (por exemplo, exportando-o de novo sem palavra-passe) e volte a convertê-lo.</td></tr>
+
+            <tr><td>«Não foi possível converter o PDF»</td><td>Experimente uma resolução menor ou exporte o PDF de novo.</td></tr>
+            <tr><td>«Modelo H5P inválido»</td><td>O modelo tem de ser um <code>.h5p</code> de Apresentação de curso exportado do Moodle. Deixe o campo vazio para usar o modelo incluído.</td></tr>
+
+            <tr><td>Não aparece a caixa de guardar (web)</td><td>No Safari e no Firefox o ficheiro vai para a pasta de transferências. Ative nas definições do navegador a opção de perguntar onde guardar.</td></tr>
+            <tr><td>A página web aparece sem estilos ou com um aspeto antigo</td><td>Force o recarregamento com <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>R</kbd> (<kbd>Ctrl</kbd> <kbd>F5</kbd> no Windows).</td></tr>
+            <tr><td>A conversão para ou o separador recarrega sozinho</td><td>O navegador ficou sem memória. Baixe a resolução, feche outros separadores ou divida a apresentação.</td></tr>
+            <tr><td>O Moodle não importa o ficheiro</td><td>Ver o aviso de <a href="#moodle">Utilizá-lo no Moodle</a> sobre o tipo de conteúdo.</td></tr>
+            <tr><td>A transcrição está vazia ou tem erros</td><td>A página é uma imagem ou uma digitalização e o reconhecimento de texto não a conseguiu ler bem. Se puder, exporte o PDF a partir da aplicação original para que o texto venha incluído. Numa digitalização, use uma resolução de 200–300 ppp.</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="privacy">10. Privacidade</h2>
+      <ul>
+
+        <li><strong>Os seus ficheiros não saem do seu computador.</strong> O PDF é processado no seu navegador e o resultado é guardado diretamente onde escolher. Nada é enviado para nenhum servidor: este site apenas fornece a página e as suas bibliotecas.</li>
+        <li>Para funcionar sem ligação, o navegador guarda uma cópia deste site (não dos seus PDF nem dos pacotes que gera).</li>
+
+        <li>A página não usa cookies nem serviços de terceiros. Apenas guarda no seu navegador se prefere o modo escuro.</li>
+        <li>Guarda também o idioma que escolher.</li>
+      </ul>
+
+      <h2 id="about">11. Versão e informação</h2>
+      <p><strong>H5PDF 0.2.0</strong>. O H5PDF foi desenvolvido no projeto de investigação <a href="https://dicostem-tt.github.io/pt/" target="_blank" rel="noopener">DiCoSTEM-TT</a>, «Competência Digital e Educação STEM na Formação de Professores», como recurso aberto para os professores que criam materiais digitais para o Moodle. Se utilizar o H5PDF na sua docência ou numa publicação, agradecemos que mencione o projeto.</p>
+      <p lang="pt-PT">Projeto de I&amp;D&amp;I PID2022-140601OA-I00, financiado pelo MCIN/AEI/10.13039/501100011033/ e pelo FEDER «Uma maneira de fazer a Europa».</p>
+      <p>O código do H5PDF é distribuído com a licença <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">Apache 2.0</a>, e esta ajuda, as capturas de ecrã e a apresentação de exemplo, com a licença <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank" rel="noopener">CC BY 4.0</a>. Os logótipos institucionais do rodapé não estão incluídos nessas licenças. As bibliotecas de terceiros mantêm as suas (<a href="../THIRD_PARTY_NOTICES.md">avisos de terceiros</a>).</p>
+      <p>O H5P é um projeto de código aberto de <a href="https://h5p.org" target="_blank" rel="noopener">h5p.org</a>. Moodle é uma marca registada da Moodle Pty Ltd.</p>
+
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-bar">
+        <img class="footer-brand" src="../logos/MICIU-Cofinanciado-AEI.svg" alt="Ministério da Ciência, Inovação e Universidades · Agência Estatal de Investigação · Cofinanciado pela União Europeia" lang="pt-PT" />
+        <div class="fineprint" lang="pt-PT">Projeto de I&amp;D&amp;I PID2022-140601OA-I00, financiado pelo MCIN/AEI/10.13039/501100011033/ e pelo FEDER «Uma maneira de fazer a Europa».</div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        const root = document.documentElement;
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        try {
+          localStorage.setItem("h5pdf-theme", next);
+        } catch (err) {
+          // sin almacenamiento local: el cambio dura esta sesion
+        }
+      });
+      // En la app de escritorio se muestran las indicaciones propias de la app.
+      const markApp = () => document.documentElement.classList.add("in-app");
+      if (window.pywebview) {
+        markApp();
+      }
+      window.addEventListener("pywebviewready", markApp);
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("../sw.js");
+        });
+      }
+    </script>
+
+  </body>
+</html>

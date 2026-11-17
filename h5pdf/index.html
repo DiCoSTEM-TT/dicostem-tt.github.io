@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H5PDF</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css?v=0.2.0-1794939332" />
+    <script>
+      try {
+        if (localStorage.getItem("h5pdf-theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (err) {
+        // sin almacenamiento local: modo claro
+      }
+    </script>
+    <script src="vendor/jszip/jszip.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container topbar">
+        <span class="logo"><img src="icon.png" alt="" /></span>
+        <span class="site-title">
+          <strong>H5PDF</strong>
+          <span data-t="tagline"></span>
+        </span>
+        <span class="spacer"></span>
+        <nav class="lang-switch" id="lang-switch"></nav>
+        <button type="button" class="theme-toggle" id="theme-toggle">◐</button>
+      </div>
+      <nav class="subnav">
+        <div class="container">
+          <span aria-current="page" data-t="converter_nav"></span>
+          <a id="help-link" data-t="help_nav"></a>
+          <span class="spacer"></span>
+          <a class="project-credit" id="project-link" target="_blank" rel="noopener" data-t="project_credit"></a>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero">
+        <h1 data-t="heading"></h1>
+        <p class="subtitle" data-t="web_subtitle"></p>
+      </section>
+      <form class="card" id="convert-form">
+        <label>
+          <span data-t="pdf_label"></span>
+          <input type="file" id="pdf-input" accept=".pdf,application/pdf" />
+        </label>
+        <label>
+          <span data-t="template_label"></span>
+          <input type="file" id="template-input" accept=".h5p" />
+        </label>
+        <label>
+          <span data-t="title_label"></span>
+          <input type="text" id="title-input" />
+        </label>
+        <label>
+          <span data-t="dpi_label"></span>
+          <input type="number" id="dpi-input" value="150" min="72" max="600" step="1" />
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="transcript-input" checked />
+          <span data-t="transcript_label"></span>
+        </label>
+        <button type="submit" id="convert-button" class="btn-primary">
+          <span class="progress-fill" aria-hidden="true"></span>
+          <span class="btn-label" data-t="convert"></span>
+        </button>
+        <div class="engine-info" id="engine-info" role="status"></div>
+      </form>
+      <section class="note">
+        <h2 data-t="note_heading"></h2>
+        <p data-t="note_text"></p>
+      </section>
+      <p class="version">H5PDF 0.2.0</p>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-bar">
+        <img class="footer-brand" id="funding-logo" src="logos/MICIU-Cofinanciado-AEI.svg" alt="" />
+        <div class="fineprint" id="funding-text"></div>
+      </div>
+    </footer>
+    <script type="module" src="app.js?v=0.2.0-1794939332"></script>
+  </body>
+</html>

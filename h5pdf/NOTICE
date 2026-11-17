@@ -1,0 +1,17 @@
+H5PDF
+Copyright 2026 los autores de H5PDF: Francisco Luis Naranjo Correa, Ana Belén Borrachero Cortés, Ana Caballero Carrasco, María Antonia Dávila Acedo, Guadalupe Martínez Borreguero, Milagros Mateos Núñez, Lina Viviana Melo Niño
+(Universidad de Extremadura). Ver CITATION.cff.
+
+Herramienta desarrollada en el proyecto de investigación DiCoSTEM-TT, «Competencia Digital y
+Educación STEM en la Formación del Profesorado» (https://dicostem-tt.github.io/).
+
+Proyecto de I+D+i PID2022-140601OA-I00, financiado por MCIN/AEI/10.13039/501100011033/ y por
+FEDER «Una manera de hacer Europa».
+
+El código se distribuye con la licencia Apache 2.0 (archivo LICENSE). La documentación, la
+ayuda, las capturas y la presentación de ejemplo se distribuyen con la licencia CC BY 4.0
+(archivo LICENSE-CONTENT.md). Los componentes de terceros conservan sus licencias
+(h5pdf/static/THIRD_PARTY_NOTICES.md).
+
+Quien redistribuya H5PDF o una obra derivada debe conservar este aviso, como establece el
+apartado 4 de la licencia Apache 2.0.
