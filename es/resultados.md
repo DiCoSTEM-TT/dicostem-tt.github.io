@@ -29,4 +29,6 @@ permalink: /es/resultados/
 
 {% endfor %}
 
+{% include doctoral-theses.html %}
+
 <script src="{{ '/assets/js/current-date.js' | relative_url }}" defer></script>

@@ -1,0 +1,16 @@
+{% assign doctoral = site.data.doctoral_theses %}
+{% assign language = page.lang %}
+{% assign theses = doctoral.theses | sort: 'date' | reverse %}
+<section id="tesis-doctorales" aria-labelledby="doctoral-title">
+  <h2 id="doctoral-title">{{ doctoral.heading[language] | escape }}</h2>
+  <p>{{ doctoral.status[language] | escape }}</p>
+  <div class="grid">
+    {% for thesis in theses %}
+      <article class="card">
+        <h3>{{ thesis.name | escape }}</h3>
+        <p>{{ thesis.topic[language] | escape }}</p>
+        <p>{{ doctoral.start[language] | escape }} <time datetime="{{ thesis.date }}">{{ thesis.month[language] | escape }}</time>.</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

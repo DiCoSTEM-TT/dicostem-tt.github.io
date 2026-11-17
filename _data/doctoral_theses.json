@@ -1,0 +1,61 @@
+{
+  "heading": {
+    "es": "Tesis doctorales vinculadas al proyecto",
+    "pt": "Teses de doutoramento ligadas ao projeto",
+    "en": "Doctoral theses linked to the project"
+  },
+  "status": {
+    "es": "En curso · Universidad de Extremadura",
+    "pt": "Em curso · Universidade da Extremadura",
+    "en": "In progress · University of Extremadura"
+  },
+  "start": {
+    "es": "Inicio en",
+    "pt": "Início em",
+    "en": "Started in"
+  },
+  "theses": [
+    {
+      "name": "Francisco Javier Freije Moreno",
+      "date": "2025-11",
+      "month": {
+        "es": "noviembre de 2025",
+        "pt": "novembro de 2025",
+        "en": "November 2025"
+      },
+      "topic": {
+        "es": "Evaluación formativa digital en proyectos STEAM de Primaria con diseño universal para el aprendizaje (DUA).",
+        "pt": "Avaliação formativa digital em projetos STEAM no ensino primário com desenho universal para a aprendizagem (DUA).",
+        "en": "Digital formative assessment in primary school STEAM projects using Universal Design for Learning (UDL)."
+      }
+    },
+    {
+      "name": "Rosa Corral de la Torre",
+      "date": "2024-11",
+      "month": {
+        "es": "noviembre de 2024",
+        "pt": "novembro de 2024",
+        "en": "November 2024"
+      },
+      "topic": {
+        "es": "Metodologías activas para la enseñanza y el aprendizaje de la tecnología desde un enfoque STEM.",
+        "pt": "Metodologias ativas para o ensino e a aprendizagem da tecnologia com uma abordagem STEM.",
+        "en": "Active learning methods for teaching and learning technology through a STEM approach."
+      }
+    },
+    {
+      "name": "Jesús Ramón Maestre Jiménez",
+      "date": "2022-11",
+      "month": {
+        "es": "noviembre de 2022",
+        "pt": "novembro de 2022",
+        "en": "November 2022"
+      },
+      "topic": {
+        "es": "Aprendizaje y emociones en una propuesta STEM sobre residuos, agua y energía.",
+        "pt": "Aprendizagem e emoções numa proposta STEM sobre resíduos, água e energia.",
+        "en": "Learning and emotions in a STEM teaching programme on waste, water and energy."
+      }
+    }
+  ]
+}
