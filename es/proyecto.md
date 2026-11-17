@@ -10,6 +10,14 @@ permalink: /es/proyecto/
 #### Descripción
 DiCoSTEM‑TT es un proyecto de investigación centrado en la formación inicial del profesorado y orientado al desarrollo de la competencia digital y STEM en futuros docentes de Educación Primaria y Secundaria. La propuesta se sitúa en el ámbito de la Didáctica de las Ciencias Experimentales y responde a dos retos prioritarios de los sistemas educativos actuales: la digitalización de la educación y el fortalecimiento de la alfabetización científica, tecnológica y pedagógica del profesorado.
 
+<section class="project-participants" aria-labelledby="project-participants-title">
+  <h3 id="project-participants-title">Quién participa</h3>
+  <ul class="participant-cards">
+    <li><strong>Futuros docentes de Primaria</strong><p>Estudiantes del Grado en Educación Primaria de la UEx, con prácticas en centros de Primaria.</p></li>
+    <li><strong>Futuros docentes de Secundaria</strong><p>Estudiantes del Máster en Formación del Profesorado de la UEx, con prácticas en centros de Secundaria.</p></li>
+  </ul>
+</section>
+
 El proyecto analiza, diseña, implementa y evalúa propuestas formativas basadas en laboratorios virtuales, materiales didácticos digitales y metodologías activas, con el objetivo de generar evidencia empírica sobre modelos eficaces de integración tecnológica en la enseñanza y el aprendizaje de las áreas STEM. Desde esta perspectiva, adopta un enfoque metacognitivo y multidimensional que atiende no solo a los procesos cognitivos, sino también a dimensiones afectivas, motivacionales, competenciales y digitales implicadas en la futura práctica profesional del profesorado.
 
 Asimismo, DiCoSTEM‑TT contempla el desarrollo de contenidos digitales de calidad y la incorporación educativa de la Inteligencia Artificial como apoyo a la formación docente, con especial atención a su uso en entornos híbridos de aprendizaje. De este modo, el proyecto aspira a generar conocimiento, recursos y propuestas transferibles que contribuyan a mejorar la educación STEM digital en contextos educativos reales.
@@ -32,11 +40,6 @@ Desde el punto de vista metodológico, el proyecto combina diseños exploratorio
       <p>Realizamos pruebas piloto y, cuando procede, comparamos grupos para estudiar el aprendizaje, las competencias y las emociones.</p>
     </li>
   </ol>
-  <h3>Quién participa</h3>
-  <ul class="participant-cards">
-    <li><strong>Futuros docentes de Primaria</strong><p>Estudiantes del Grado en Educación Primaria de la UEx, con prácticas en centros de Primaria.</p></li>
-    <li><strong>Futuros docentes de Secundaria</strong><p>Estudiantes del Máster en Formación del Profesorado de la UEx, con prácticas en centros de Secundaria.</p></li>
-  </ul>
   {% include research-figure.html %}
 </section>
 

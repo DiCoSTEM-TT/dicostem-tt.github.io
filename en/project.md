@@ -10,6 +10,14 @@ permalink: /en/project/
 #### Description
 DiCoSTEM‑TT is a research project focused on initial teacher education and aimed at developing digital and STEM competence among future primary and secondary teachers. The proposal is situated within the field of Experimental Science Education and responds to two major challenges currently facing education systems: the digitalisation of education and the need to strengthen scientific, technological and pedagogical literacy in teacher education.
 
+<section class="project-participants" aria-labelledby="project-participants-title">
+  <h3 id="project-participants-title">Who takes part</h3>
+  <ul class="participant-cards">
+    <li><strong>Future primary school teachers</strong><p>Students on the UEx Primary Education degree, with placements in primary schools.</p></li>
+    <li><strong>Future secondary school teachers</strong><p>Students on the UEx Master’s in Teacher Education, with placements in secondary schools.</p></li>
+  </ul>
+</section>
+
 The project analyses, designs, implements and evaluates training proposals based on virtual laboratories, digital teaching materials and active methodologies, with the aim of generating empirical evidence on effective models of technological integration in STEM teaching and learning. From this perspective, it adopts a metacognitive and multidimensional approach that addresses not only cognitive processes, but also the affective, motivational, competence-based and digital dimensions involved in future professional teaching practice.
 
 Furthermore, DiCoSTEM‑TT includes the development of high-quality digital content and the educational integration of Artificial Intelligence as support for teacher education, with particular attention to its use in hybrid learning environments. In this way, the project aims to generate knowledge, resources and transferable proposals that contribute to improving digital STEM education in real educational contexts.
@@ -32,11 +40,6 @@ From a methodological point of view, the project combines exploratory and quasi-
       <p>We run pilot studies and, where appropriate, compare groups to study learning, competences and emotions.</p>
     </li>
   </ol>
-  <h3>Who takes part</h3>
-  <ul class="participant-cards">
-    <li><strong>Future primary school teachers</strong><p>Students on the UEx Primary Education degree, with placements in primary schools.</p></li>
-    <li><strong>Future secondary school teachers</strong><p>Students on the UEx Master’s in Teacher Education, with placements in secondary schools.</p></li>
-  </ul>
   {% include research-figure.html %}
 </section>
 

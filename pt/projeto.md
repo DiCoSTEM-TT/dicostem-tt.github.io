@@ -10,6 +10,14 @@ permalink: /pt/projeto/
 #### Descrição
 DiCoSTEM‑TT é um projeto de investigação centrado na formação inicial de professores e orientado para o desenvolvimento da competência digital e STEM dos futuros docentes do ensino básico e secundário. O projeto insere-se na área da Didática das Ciências Experimentais e responde a dois desafios dos atuais sistemas educativos: a digitalização da educação e o reforço da literacia científica, tecnológica e pedagógica dos professores.
 
+<section class="project-participants" aria-labelledby="project-participants-title">
+  <h3 id="project-participants-title">Quem participa</h3>
+  <ul class="participant-cards">
+    <li><strong>Futuros professores do ensino primário</strong><p>Estudantes da licenciatura em Educação Primária da UEx, com estágios em escolas do ensino primário.</p></li>
+    <li><strong>Futuros professores do ensino secundário</strong><p>Estudantes do mestrado em Formação de Professores da UEx, com estágios em escolas do ensino secundário.</p></li>
+  </ul>
+</section>
+
 O projeto analisa, concebe, implementa e avalia propostas de formação baseadas em laboratórios virtuais, materiais didáticos digitais e metodologias ativas. Pretende produzir evidência empírica sobre modelos eficazes de integração da tecnologia no ensino e na aprendizagem STEM. A abordagem metacognitiva e multidimensional considera os processos cognitivos e as dimensões afetivas, motivacionais, profissionais e digitais da futura prática docente.
 
 O projeto contempla ainda o desenvolvimento de conteúdos digitais de qualidade e a integração educativa da inteligência artificial como apoio à formação de professores, com especial atenção aos ambientes híbridos de aprendizagem. Pretende, assim, gerar conhecimento, recursos e propostas que possam ser aplicados em contextos educativos reais e contribuam para melhorar a educação STEM digital.
@@ -32,11 +40,6 @@ Do ponto de vista metodológico, o projeto combina desenhos de investigação ex
       <p>Realizamos estudos-piloto e, quando adequado, comparamos grupos para estudar a aprendizagem, as competências e as emoções.</p>
     </li>
   </ol>
-  <h3>Quem participa</h3>
-  <ul class="participant-cards">
-    <li><strong>Futuros professores do ensino primário</strong><p>Estudantes da licenciatura em Educação Primária da UEx, com estágios em escolas do ensino primário.</p></li>
-    <li><strong>Futuros professores do ensino secundário</strong><p>Estudantes do mestrado em Formação de Professores da UEx, com estágios em escolas do ensino secundário.</p></li>
-  </ul>
   {% include research-figure.html %}
 </section>
 
