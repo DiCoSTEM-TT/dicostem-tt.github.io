@@ -6,7 +6,7 @@
       <clipPath id="venn-left"><circle cx="136" cy="137" r="125"/></clipPath>
       <clipPath id="venn-right"><circle cx="274" cy="137" r="125"/></clipPath>
     </defs>
-    {% assign areas = "136,137,90,107,#17636f,-38|274,137,320,107,#234b67,38|205,255,205,318,#245a78,0" | split: "|" %}
+    {% assign areas = "136,137,90,107,#17636f,-60|274,137,320,107,#234b67,60|205,255,205,318,#245a78,0" | split: "|" %}
     {% for area in text.areas %}
       {% assign shape = areas[forloop.index0] | split: "," %}
       <a href="#venn-dialog" class="concept-sector" aria-label="{{ area[2] | escape }}" aria-haspopup="dialog" data-title="{{ area[2] | escape }}" data-description="{{ area[3] | escape }}" style="--venn-fill: {{ shape[4] }}">
