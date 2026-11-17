@@ -14,11 +14,10 @@ permalink: /pt/equipa/
       <img src="{{ lead.photo | relative_url }}" alt="{{ lead.name }}" class="team-photo" />
       <h3>{{ lead.name }}</h3>
       <p class="team-role">{{ lead.role_pt }}</p>
-      <p class="team-affiliation">{{ lead.affiliation_pt }}</p>
+      {% assign affiliation = lead.affiliation_pt %}
+      {% include team-affiliation.html label=affiliation %}
       {%- if lead.bio_pt %}<p>{{ lead.bio_pt }}</p>{% endif %}
       <p class="team-meta">
-        {%- if lead.orcid -%}<span><strong>ORCID:</strong> <a href="https://orcid.org/{{ lead.orcid }}">{{ lead.orcid }}</a></span>{%- endif -%}
-        {%- if lead.scopus -%}<span><strong>Scopus:</strong> <a href="https://www.scopus.com/authid/detail.uri?authorId={{ lead.scopus }}">{{ lead.scopus }}</a></span>{%- endif -%}
         {% include team-profile-links.html member=lead %}
         {%- if lead.email -%}
         {%- assign lead_email_parts = lead.email | split: "@" -%}
@@ -37,11 +36,10 @@ permalink: /pt/equipa/
       <img src="{{ m.photo | relative_url }}" alt="{{ m.name }}" class="team-photo" />
       <h3>{{ m.name }}</h3>
       <p class="team-role">{{ m.role_pt }}</p>
-      <p class="team-affiliation">{{ m.affiliation_pt }}</p>
+      {% assign affiliation = m.affiliation_pt %}
+      {% include team-affiliation.html label=affiliation %}
       {%- if m.bio_pt %}<p>{{ m.bio_pt }}</p>{% endif %}
       <p class="team-meta">
-        {%- if m.orcid -%}<span><strong>ORCID:</strong> <a href="https://orcid.org/{{ m.orcid }}">{{ m.orcid }}</a></span>{%- endif -%}
-        {%- if m.scopus -%}<span><strong>Scopus:</strong> <a href="https://www.scopus.com/authid/detail.uri?authorId={{ m.scopus }}">{{ m.scopus }}</a></span>{%- endif -%}
         {% include team-profile-links.html member=m %}
         {%- if m.email -%}
         {%- assign member_email_parts = m.email | split: "@" -%}

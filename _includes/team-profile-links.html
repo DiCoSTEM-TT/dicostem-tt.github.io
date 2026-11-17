@@ -1,20 +1,27 @@
-{% if include.member.uex_profile or include.member.scholar_profile %}
-  <span class="team-profile-links">
-    {% if include.member.uex_profile %}
-      <a href="{{ include.member.uex_profile | escape }}">
-        <img src="{{ '/assets/img/logos/uex-abreviado-vertical-color.svg' | relative_url }}" alt="" width="20" height="20">
-        {% case page.lang %}
-          {% when 'pt' %}Perfil de investigação na UEx
-          {% when 'en' %}UEx research profile
-          {% else %}Perfil investigador en la UEx
-        {% endcase %}
-      </a>
-    {% endif %}
-    {% if include.member.scholar_profile %}
-      <a href="{{ include.member.scholar_profile | escape }}">
-        <img src="https://scholar.google.com/favicon.ico" alt="" width="20" height="20" referrerpolicy="no-referrer">
-        Google Scholar
-      </a>
-    {% endif %}
-  </span>
-{% endif %}
+{% assign member = include.member %}
+<span class="team-profile-links">
+  {% if member.orcid %}
+    <a href="https://orcid.org/{{ member.orcid | escape }}" title="ORCID iD {{ member.orcid | escape }}">
+      <img src="https://info.orcid.org/wp-content/uploads/2021/12/orcid_16x16.gif" alt="" width="24" height="24" referrerpolicy="no-referrer">
+      ORCID
+    </a>
+  {% endif %}
+  {% if member.scopus %}
+    <a href="https://www.scopus.com/authid/detail.uri?authorId={{ member.scopus | escape }}" title="Scopus Author ID {{ member.scopus | escape }}">
+      <img src="{{ '/assets/img/logos/scopus.svg' | relative_url }}" alt="" width="24" height="24">
+      Scopus
+    </a>
+  {% endif %}
+  {% if member.uex_profile %}
+    <a href="{{ member.uex_profile | escape }}">
+      <img src="https://uex.thegecocompany.com/wp-content/uploads/2026/07/uex-logotipo-entornos-digitales-color.svg" alt="" width="24" height="24" referrerpolicy="no-referrer">
+      UEx
+    </a>
+  {% endif %}
+  {% if member.scholar_profile %}
+    <a href="{{ member.scholar_profile | escape }}">
+      <img src="https://scholar.google.com/favicon.ico" alt="" width="24" height="24" referrerpolicy="no-referrer">
+      Google Scholar
+    </a>
+  {% endif %}
+</span>

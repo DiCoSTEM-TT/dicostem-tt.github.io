@@ -1,0 +1,22 @@
+{% assign institutions = include.label | split: " · " %}
+<p class="team-affiliation">
+  {%- for institution in institutions -%}
+    {%- assign url = nil -%}
+    {%- case institution -%}
+      {%- when 'Universidad de Extremadura', 'Universidade da Extremadura', 'University of Extremadura' -%}
+        {%- assign url = 'https://www.unex.es/' -%}
+      {%- when 'Facultad de Educación y Psicología', 'Faculdade de Educação e Psicologia', 'Faculty of Education and Psychology' -%}
+        {%- assign url = 'https://educacion.unex.es/' -%}
+      {%- when 'Departamento de Didáctica de las Ciencias Experimentales y las Matemáticas', 'Departamento de Didática das Ciências Experimentais e da Matemática', 'Department of Experimental Science and Mathematics Education' -%}
+        {%- assign url = 'https://educacion.unex.es/centro/departamentos/?departamentoid=Y008' -%}
+      {%- when 'Departamento de Psicología y Antropología', 'Departamento de Psicologia e Antropologia', 'Department of Psychology and Anthropology' -%}
+        {%- assign url = 'https://des-ciencias.unex.es/centro/departamentos/?departamentoid=Y061' -%}
+      {%- when 'INPEx' -%}
+        {%- assign url = 'https://institutoinpex.es/' -%}
+    {%- endcase -%}
+    {%- if url -%}<a href="{{ url | escape }}">{{ institution | escape }}</a>
+    {%- else -%}{{ institution | escape }}
+    {%- endif -%}
+    {%- unless forloop.last %} · {% endunless -%}
+  {%- endfor -%}
+</p>
