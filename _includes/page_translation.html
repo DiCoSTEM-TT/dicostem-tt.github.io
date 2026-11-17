@@ -7,7 +7,7 @@
 {%- endfor -%}
 {% if include.mode == 'navigation' %}
 <span class="lang-switch">
-  {% assign language_names = 'Español,English,Português' | split: ',' %}
+  {% assign language_names = 'Español,Português,English' | split: ',' %}
   {% for language in site.languages %}
     {% assign tag = language %}
     {% if language == 'pt' %}{% assign tag = 'pt-PT' %}{% endif %}

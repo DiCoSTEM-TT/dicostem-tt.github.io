@@ -7,7 +7,7 @@ claim:
 url: "https://dicostem-tt.github.io"
 baseurl: ""  # keep empty for organization/user pages
 lang: es
-languages: ["es","en","pt"]
+languages: ["es","pt","en"]
 timezone: Europe/Madrid
 
 theme: null
