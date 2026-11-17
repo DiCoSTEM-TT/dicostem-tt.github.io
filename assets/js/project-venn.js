@@ -1,6 +1,7 @@
 const venn = document.querySelector('.concept-venn');
 const tooltip = venn.querySelector('.venn-tooltip');
 const dialog = venn.querySelector('dialog');
+const diagram = venn.querySelector('svg');
 let hideTimer;
 
 function hideTooltip() {
@@ -23,10 +24,29 @@ venn.querySelectorAll('.concept-sector').forEach(area => {
     tooltip.hidden = false;
 
     const { offsetWidth, offsetHeight } = tooltip;
-    const x = Math.max(8, Math.min(event.clientX + 10, document.documentElement.clientWidth - offsetWidth - 8));
-    const below = event.clientY + 10;
-    const y = below + offsetHeight <= window.innerHeight - 8
-      ? below : Math.max(8, event.clientY - offsetHeight - 10);
+    const rect = diagram.getBoundingClientRect();
+    const right = document.documentElement.clientWidth;
+    const bottom = window.innerHeight;
+    const gap = 8;
+    let x = Math.max(gap, Math.min(event.clientX, right - offsetWidth - gap));
+    let y = Math.max(gap, Math.min(event.clientY, bottom - offsetHeight - gap));
+    let overlay = false;
+
+    if (rect.right + offsetWidth + 2 * gap <= right) {
+      x = rect.right + gap;
+    } else if (rect.left >= offsetWidth + 2 * gap) {
+      x = rect.left - offsetWidth - gap;
+    } else if (rect.bottom + offsetHeight + 2 * gap <= bottom) {
+      y = rect.bottom + gap;
+    } else if (rect.top >= offsetHeight + 2 * gap) {
+      y = rect.top - offsetHeight - gap;
+    } else {
+      overlay = true;
+      y = event.clientY + offsetHeight + 2 * gap <= bottom
+        ? event.clientY + gap : Math.max(gap, event.clientY - offsetHeight - gap);
+    }
+
+    tooltip.classList.toggle('is-overlay', overlay);
     tooltip.style.left = x + 'px';
     tooltip.style.top = y + 'px';
   });

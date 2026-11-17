@@ -2,7 +2,7 @@
   "es": {
     "toggle": "Mostrar u ocultar los ámbitos de investigación",
     "heading": "El cruce del que parte el proyecto",
-    "instruction": "Pulsa un círculo para explorar el proyecto.",
+    "instruction": "Pasa el ratón por una zona o púlsala para explorar el proyecto.",
     "close": "Cerrar",
     "areas": [
       [
@@ -46,7 +46,7 @@
   "pt": {
     "toggle": "Mostrar ou ocultar os domínios de investigação",
     "heading": "O ponto de partida do projeto",
-    "instruction": "Selecione um círculo para explorar o projeto.",
+    "instruction": "Passe o rato por uma zona ou selecione-a para explorar o projeto.",
     "close": "Fechar",
     "areas": [
       [
@@ -90,7 +90,7 @@
   "en": {
     "toggle": "Show or hide the research areas",
     "heading": "Where the project begins",
-    "instruction": "Select a circle to explore the project.",
+    "instruction": "Hover over or select an area to explore the project.",
     "close": "Close",
     "areas": [
       [
