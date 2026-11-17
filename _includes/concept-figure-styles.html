@@ -256,21 +256,22 @@
   width: min(100%, 28rem);
   margin-block: 1rem 1.35rem;
   --venn-ink: #000;
-  --venn-mix-top: #FF826F;
-  --venn-mix-left: #F1A8C1;
-  --venn-mix-right: #CD89CD;
+  --venn-base-strength: 34%;
+  --venn-overlap-strength: 55%;
+  --venn-mix-top: #EE763A;
+  --venn-mix-left: #5A3F8B;
+  --venn-mix-right: #00A59F;
 }
 [data-theme="dark"] .concept-venn {
   --venn-ink: #fff;
-  --venn-mix-top: #BC150F;
-  --venn-mix-left: #263728;
-  --venn-mix-right: #1F1744;
+  --venn-base-strength: 100%;
+  --venn-overlap-strength: 100%;
 }
-.concept-venn .venn-overlap-top { fill: var(--venn-mix-top); }
-.concept-venn .venn-overlap-left { fill: var(--venn-mix-left); }
-.concept-venn .venn-overlap-right { fill: var(--venn-mix-right); }
+.concept-venn .venn-overlap-top { fill: color-mix(in srgb, var(--venn-mix-top) var(--venn-overlap-strength), white); }
+.concept-venn .venn-overlap-left { fill: color-mix(in srgb, var(--venn-mix-left) var(--venn-overlap-strength), white); }
+.concept-venn .venn-overlap-right { fill: color-mix(in srgb, var(--venn-mix-right) var(--venn-overlap-strength), white); }
 .concept-venn .concept-sector circle:not([class]) {
-  fill: var(--venn-fill);
+  fill: color-mix(in srgb, var(--venn-fill) var(--venn-base-strength), white);
 }
 .concept-venn .concept-sector:is(:hover, :focus-visible) text { text-decoration: underline; }
 .concept-venn .concept-sector text {
@@ -279,6 +280,12 @@
   font-size: 18px;
   font-weight: 700;
   pointer-events: none;
+}
+[data-theme="dark"] .concept-venn .concept-sector text {
+  paint-order: stroke fill;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linejoin: round;
 }
 .concept-venn .venn-outline { fill: none; stroke: var(--bg); stroke-width: 5; pointer-events: none; }
 .concept-venn .venn-center image { pointer-events: none; }
