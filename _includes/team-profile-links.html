@@ -1,0 +1,20 @@
+{% if include.member.uex_profile or include.member.scholar_profile %}
+  <span class="team-profile-links">
+    {% if include.member.uex_profile %}
+      <a href="{{ include.member.uex_profile | escape }}">
+        <img src="{{ '/assets/img/logos/uex-abreviado-vertical-color.svg' | relative_url }}" alt="" width="20" height="20">
+        {% case page.lang %}
+          {% when 'pt' %}Perfil de investigação na UEx
+          {% when 'en' %}UEx research profile
+          {% else %}Perfil investigador en la UEx
+        {% endcase %}
+      </a>
+    {% endif %}
+    {% if include.member.scholar_profile %}
+      <a href="{{ include.member.scholar_profile | escape }}">
+        <img src="https://scholar.google.com/favicon.ico" alt="" width="20" height="20" referrerpolicy="no-referrer">
+        Google Scholar
+      </a>
+    {% endif %}
+  </span>
+{% endif %}

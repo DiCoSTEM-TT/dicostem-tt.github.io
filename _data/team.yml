@@ -1,4 +1,6 @@
 - name: Francisco Luis Naranjo Correa
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/c72563e5629518fc43026db8680c8139"
+  scholar_profile: "https://scholar.google.com/citations?user=jrs1JloAAAAJ"
   given_name: Francisco Luis
   role: "Investigador principal · Profesor titular de universidad"
   role_en: "Principal Investigator · Associate Professor"
@@ -21,6 +23,8 @@
   sort_key: "naranjo correa francisco luis"
 
 - name: Guadalupe Martínez Borreguero
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/d6994678d3dd0460d93eefb4a3b8f018"
+  scholar_profile: "https://scholar.google.com/citations?user=t2aZ3Z0AAAAJ"
   given_name: Guadalupe
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
@@ -39,6 +43,8 @@
 
 
 - name: Milagros Mateos Núñez
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/e706f1fc02d869ac5a1eff88931dd905"
+  scholar_profile: "https://scholar.google.com/citations?user=h2V9TCIAAAAJ"
   given_name: Milagros
   role: "Profesora permanente laboral"
   role_en: "Permanent Lecturer"
@@ -57,6 +63,8 @@
 
 
 - name: Ana Belén Borrachero Cortés
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/958ef481b98f5926216b889339cb2796"
+  scholar_profile: "https://scholar.google.com/citations?user=ott31XUAAAAJ"
   given_name: Ana Belén
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
@@ -75,6 +83,8 @@
 
 
 - name: Ana Caballero Carrasco
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/f8818d8a328db1dcdb252a0cf834a66b"
+  scholar_profile: "https://scholar.google.com/citations?user=g0vwdzkAAAAJ"
   given_name: Ana
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
@@ -93,6 +103,8 @@
 
 
 - name: María Antonia Dávila Acedo
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/23333d2dd10ffde6953ed82be6882fd3"
+  scholar_profile: "https://scholar.google.com/citations?user=_pctwNkAAAAJ"
   given_name: María Antonia
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
@@ -111,6 +123,8 @@
 
 
 - name: Lina Viviana Melo Niño
+  uex_profile: "https://opendata.unex.es/investiga/investigadores/a2490a54113d1b41161ece875d086b08"
+  scholar_profile: "https://scholar.google.com/citations?user=hD-dgf8AAAAJ"
   given_name: Lina Viviana
   role: "Profesora titular de universidad"
   role_en: "Associate Professor"
