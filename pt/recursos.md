@@ -12,7 +12,7 @@ permalink: /pt/recursos/
     <img class="resource-logo resource-logo-dark" src="{{ '/assets/img/resources/h5pdf-logo-dark.webp' | relative_url }}?v=2" alt="H5PDF" />
     <h3>H5PDF</h3>
     <p>Ferramenta para converter documentos PDF em apresentações interativas H5P, mantendo a aparência visual do original.</p>
-    <p><a href="{{ '/h5pdf/' | relative_url }}?lang=pt">Abrir recurso</a></p>
+    <p><a href="{{ '/h5pdf/' | relative_url }}?lang=pt" target="_blank" rel="noopener noreferrer">Abrir recurso</a></p>
   </div>
   <div class="card resource-card is-coming-soon" data-ribbon="Em breve">
     <h3>Guia para professores sobre competências digitais (rascunho)</h3>
