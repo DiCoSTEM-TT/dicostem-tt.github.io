@@ -32,6 +32,22 @@ From a methodological point of view, the project combines exploratory and quasi-
       <p>We run pilot studies and, where appropriate, compare groups to study learning, competences and emotions.</p>
     </li>
   </ol>
+  <figure class="concept-figure" aria-labelledby="concept-title">
+    <div class="concept-map">
+      <h3 id="concept-title">DiCoSTEM‑TT research areas</h3>
+      <ul role="list">
+        <li>Teacher education</li>
+        <li>Digital competence</li>
+        <li>STEM education</li>
+        <li>Artificial intelligence</li>
+        <li>Hybrid learning environments</li>
+        <li>Affective and emotional dimensions</li>
+        <li>Virtual laboratories</li>
+        <li>Teacher metacognition</li>
+      </ul>
+    </div>
+    <figcaption>Adapted from the project’s conceptual framework in the academic defence document.</figcaption>
+  </figure>
 </section>
 
 <section class="project-plan" aria-labelledby="project-plan-title">
