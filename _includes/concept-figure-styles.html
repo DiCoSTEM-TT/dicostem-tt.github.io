@@ -136,6 +136,14 @@
 }
 .concept-disclosure > summary::-webkit-details-marker { display: none; }
 .concept-disclosure > summary img { width: 82%; }
+.concept-disclosure .concept-mark-dark,
+[data-theme="dark"] .concept-disclosure .concept-mark-light { display: none; }
+[data-theme="dark"] .concept-disclosure .concept-mark-dark { display: block; }
+[data-theme="dark"] .concept-disclosure:not([open]) > summary { background: #172635; }
+[data-theme="dark"] .concept-disclosure .concept-logo-disc {
+  fill: #172635;
+  stroke: color-mix(in srgb, var(--brand) 62%, #172635);
+}
 .concept-disclosure > summary::after {
   content: "+";
   position: absolute;
