@@ -5,6 +5,12 @@ const panel = document.createElement('div');
 const content = document.createElement('div');
 let activeButton;
 
+const accents = ['#EE763A', '#309F52', '#00A59F', '#2A7EBA', '#5A3F8B', '#CA3960'];
+for (let i = accents.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [accents[i], accents[j]] = [accents[j], accents[i]];
+}
+
 avatars.className = 'team-avatars';
 panel.className = 'team-avatar-panel';
 content.className = 'team-avatar-content';
@@ -34,6 +40,7 @@ cards.forEach((card, index) => {
   portrait.alt = '';
   button.type = 'button';
   button.className = 'team-avatar';
+  button.style.setProperty('--avatar-accent', accents[index % accents.length]);
   button.setAttribute('aria-controls', card.id);
   button.setAttribute('aria-expanded', 'false');
   button.append(portrait, label);

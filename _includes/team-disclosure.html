@@ -39,7 +39,7 @@
 }
 .team-avatar-name span { display: block; }
 .team-avatar:hover img,
-.team-avatar[aria-expanded="true"] img { border-color: var(--brand); }
+.team-avatar[aria-expanded="true"] img { border-color: var(--avatar-accent, var(--brand)); }
 .team-avatar:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
 .team.team-disclosure { gap: 0; }
 .team-avatar-panel {
@@ -95,4 +95,4 @@
   border-radius: .2rem;
 }
 </style>
-<script src="{{ '/assets/js/team-disclosure.js?v=name-lines' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/team-disclosure.js?v=v7-colors' | relative_url }}" defer></script>
