@@ -32,22 +32,7 @@ Desde el punto de vista metodológico, el proyecto combina diseños exploratorio
       <p>Realizamos pruebas piloto y, cuando procede, comparamos grupos para estudiar el aprendizaje, las competencias y las emociones.</p>
     </li>
   </ol>
-  <figure class="concept-figure" aria-labelledby="concept-title">
-    <div class="concept-map">
-      <h3 id="concept-title">Ámbitos de DiCoSTEM‑TT</h3>
-      <ul role="list">
-        <li>Formación del profesorado</li>
-        <li>Competencia digital</li>
-        <li>Educación STEM</li>
-        <li>Inteligencia artificial</li>
-        <li>Entornos híbridos</li>
-        <li>Dimensión afectiva y emocional</li>
-        <li>Laboratorios virtuales</li>
-        <li>Metacognición docente</li>
-      </ul>
-    </div>
-    <figcaption>Adaptación de la estructura conceptual del proyecto presentada en la memoria de la defensa.</figcaption>
-  </figure>
+  {% include research-figure.html %}
 </section>
 
 <section class="project-plan" aria-labelledby="project-plan-title">

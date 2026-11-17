@@ -174,80 +174,123 @@
 }
 
 .concept-figure {
-  margin: 1.5rem 0 0;
-  padding: 1rem;
-  border: 1px solid color-mix(in srgb, var(--muted) 25%, transparent);
-  border-radius: var(--radius);
-  background: color-mix(in srgb, var(--bg) 94%, var(--brand));
+  width: min(100%, 35rem);
+  margin: 1.5rem auto 0;
+  --sector: #234b67;
+  --sector-active: #1b6470;
 }
 
-.concept-map {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: stretch;
+.concept-radial {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
 }
 
-.concept-map::before {
-  content: "";
-  position: absolute;
-  inset: 14% 15%;
-  z-index: -1;
-  border: 2px solid color-mix(in srgb, var(--brand) 50%, var(--bg));
-  border-radius: 40%;
+.concept-frame {
+  fill: color-mix(in srgb, var(--bg) 92%, var(--brand));
+  stroke: var(--sector);
+  stroke-width: 2;
+  stroke-dasharray: 8 6;
 }
 
-.concept-map h3,
-.concept-map li {
-  display: grid;
-  place-items: center;
-  min-height: 3.1rem;
-  padding: .5rem;
-  text-align: center;
-  overflow-wrap: anywhere;
-  border-radius: .6rem;
+.concept-field {
+  fill: color-mix(in srgb, var(--bg) 85%, var(--brand));
+  stroke: color-mix(in srgb, var(--bg) 55%, var(--brand));
+  stroke-width: 2;
 }
 
-.concept-map h3 {
-  grid-area: 2 / 2;
-  margin: 0;
-  color: var(--text);
-  background: color-mix(in srgb, var(--bg) 73%, var(--brand));
-  border: 2px solid var(--brand);
-  font-size: clamp(1rem, 2vw, 1.25rem);
+.concept-hub {
+  fill: var(--sector-active);
+  stroke: var(--sector);
+  stroke-width: 2;
 }
 
-.concept-map ul {
-  display: contents;
-  list-style: none;
+.concept-logo-disc {
+  fill: #fff;
+  stroke: var(--sector);
+  stroke-width: 2;
 }
 
-.concept-map li {
-  background: var(--bg);
-  border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+.concept-title,
+.concept-label {
+  fill: var(--text);
+  text-anchor: middle;
   font-weight: 600;
-  font-size: .95rem;
+}
+
+.concept-title {
+  font-size: 24px;
+  paint-order: stroke fill;
+  stroke: color-mix(in srgb, var(--bg) 92%, var(--brand));
+  stroke-width: 9px;
+  stroke-linejoin: round;
+}
+
+.concept-label {
+  font-size: 20px;
+}
+
+.concept-sector {
+  cursor: pointer;
+}
+
+.concept-sector-shape {
+  fill: var(--sector);
+  stroke: var(--brand);
+  stroke-width: 1.5;
+}
+
+.concept-symbol {
+  fill: none;
+  stroke: #b8efeb;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.concept-sector:hover .concept-sector-shape,
+.concept-sector:focus-visible .concept-sector-shape {
+  fill: var(--sector-active);
+  stroke-width: 4;
+}
+
+.concept-sector:focus-visible .concept-label {
+  text-decoration: underline;
 }
 
 .concept-figure figcaption {
-  margin-top: .8rem;
+  text-align: center;
+  margin-top: .6rem;
   color: var(--muted);
-  font-size: .88rem;
+  font-size: .9rem;
 }
 
-@media (max-width: 640px) {
-  .concept-map {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.concept-figure dialog {
+  width: min(28rem, calc(100% - 2rem));
+  padding: 1.4rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius);
+}
 
-  .concept-map h3 {
-    grid-area: 1 / 1 / 2 / -1;
-  }
+.concept-figure dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
 
-  .concept-map::before {
-    border-radius: .8rem;
-  }
+.concept-figure dialog h3 {
+  margin-top: 0;
+}
+
+.concept-figure dialog button {
+  padding: .35rem .85rem;
+  color: var(--text);
+  background: color-mix(in srgb, var(--bg) 85%, var(--brand));
+  border: 1px solid var(--brand);
+  border-radius: .4rem;
+  font: inherit;
+  cursor: pointer;
 }
 </style>

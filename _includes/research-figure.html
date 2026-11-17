@@ -1,0 +1,90 @@
+{% assign text = site.data.research_domains[page.lang] %}
+<figure class="concept-figure">
+  <svg class="concept-radial" viewBox="0 0 620 646" role="group" aria-labelledby="concept-title" xmlns="http://www.w3.org/2000/svg">
+    <rect class="concept-frame" x="2" y="28" width="616" height="616" rx="106"/>
+    <rect class="concept-field" x="30" y="57" width="560" height="555" rx="90"/>
+    <text id="concept-title" class="concept-title" x="310" y="32">{{ text.heading | escape }}</text>
+    <path class="concept-hub" d="M310 251 334 276H368V310L393 333 368 357V391H334L310 416 286 391H252V357L227 333 252 310V276H286Z"/>
+    <circle class="concept-logo-disc" cx="310" cy="333" r="46"/>
+    <image href="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" x="272" y="295" width="76" height="76" aria-hidden="true"/>
+    {% assign domain = text.labels[0] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(0 310 333)"/>
+      <g class="concept-symbol" transform="translate(298 182)" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5zM6 11v5l6 3 6-3v-5M22 9v8"/></g>
+      <text class="concept-label" transform="translate(310 76) rotate(0)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[1] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(45 310 333)"/>
+      <g class="concept-symbol" transform="translate(394 223)" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M2 19h20M9 10h6m-3-3v6"/></g>
+      <text class="concept-label" transform="translate(494 147) rotate(45)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[2] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(90 310 333)"/>
+      <g class="concept-symbol" transform="translate(438 321)" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1"/></g>
+      <text class="concept-label" transform="translate(565 333) rotate(90)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[3] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(135 310 333)"/>
+      <g class="concept-symbol" transform="translate(396 420)" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/></g>
+      <text class="concept-label" transform="translate(496 519) rotate(-45)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[4] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(180 310 333)"/>
+      <g class="concept-symbol" transform="translate(298 458)" aria-hidden="true"><circle cx="8" cy="9" r="5"/><circle cx="16" cy="9" r="5"/><circle cx="12" cy="16" r="5"/></g>
+      <text class="concept-label" transform="translate(310 581) rotate(0)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[5] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(225 310 333)"/>
+      <g class="concept-symbol" transform="translate(200 420)" aria-hidden="true"><path d="M12 21 3 12a5 5 0 0 1 9-5 5 5 0 0 1 9 5zM4 13h4l2-4 3 7 2-3h5"/></g>
+      <text class="concept-label" transform="translate(117 519) rotate(45)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[6] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(270 310 333)"/>
+      <g class="concept-symbol" transform="translate(158 321)" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M12 17v4m-5 0h10M7 7h4m-4 4h4m3-3 2 2 3-4"/></g>
+      <text class="concept-label" transform="translate(53 333) rotate(-90)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+    {% assign domain = text.labels[7] %}
+    <a href="#concept-dialog" class="concept-sector" aria-label="{{ domain[2] | escape }}" aria-haspopup="dialog" data-title="{{ domain[2] | escape }}" data-description="{{ domain[3] | escape }}">
+      <path class="concept-sector-shape" d="M310 113 344 246 310 213 277 246Z" transform="rotate(315 310 333)"/>
+      <g class="concept-symbol" transform="translate(200 223)" aria-hidden="true"><path d="M8 17c0-3-4-4-4-9a8 8 0 0 1 16 0c0 5-4 6-4 9M8 17h8M9 20h6m-5 2h4M10 9l2 2 3-4"/></g>
+      <text class="concept-label" transform="translate(120 147) rotate(-45)" aria-hidden="true">
+        <tspan x="0">{{ domain[0] | escape }}</tspan>
+        <tspan x="0" dy="22">{{ domain[1] | escape }}</tspan>
+      </text>
+    </a>
+  </svg>
+  <figcaption>{{ text.instruction | escape }}</figcaption>
+  <dialog id="concept-dialog" aria-labelledby="concept-dialog-title" aria-describedby="concept-dialog-description">
+    <h3 id="concept-dialog-title"></h3>
+    <p id="concept-dialog-description"></p>
+    <form method="dialog"><button type="submit">{{ text.close | escape }}</button></form>
+  </dialog>
+</figure>
+<script src="{{ '/assets/js/research-figure.js' | relative_url }}" defer></script>

@@ -1,0 +1,167 @@
+{
+  "es": {
+    "heading": "Didáctica de las Ciencias Experimentales",
+    "instruction": "Selecciona una punta de la figura para explorar ese ámbito.",
+    "close": "Cerrar",
+    "labels": [
+      [
+        "Formación del",
+        "profesorado",
+        "Formación del profesorado",
+        "Estudiamos cómo preparar a futuros docentes de Primaria y Secundaria para integrar la tecnología en la enseñanza de las áreas STEM."
+      ],
+      [
+        "Competencia",
+        "digital",
+        "Competencia digital",
+        "Analizamos las competencias digitales docentes y diseñamos actividades para desarrollarlas en la formación inicial."
+      ],
+      [
+        "Educación",
+        "STEM",
+        "Educación STEM",
+        "Integramos ciencia, tecnología, ingeniería y matemáticas en propuestas en las que el alumnado explora fenómenos, diseña soluciones y justifica sus decisiones."
+      ],
+      [
+        "Inteligencia",
+        "artificial",
+        "Inteligencia artificial",
+        "Exploramos el uso de la IA como apoyo didáctico y diseñamos materiales y actividades con y sin IA para estudiar su aportación."
+      ],
+      [
+        "Entornos",
+        "híbridos",
+        "Entornos híbridos",
+        "Diseñamos actividades que combinan el trabajo presencial y digital, con recursos que se pueden utilizar en distintos momentos del aprendizaje."
+      ],
+      [
+        "Dimensión afectiva",
+        "y emocional",
+        "Dimensión afectiva y emocional",
+        "Estudiamos las emociones y la autoeficacia junto con el aprendizaje y las competencias para comprender cómo se vive la formación STEM."
+      ],
+      [
+        "Laboratorios",
+        "virtuales",
+        "Laboratorios virtuales",
+        "Diseñamos y evaluamos entornos digitales de experimentación en los que se pueden manipular variables, observar fenómenos y contrastar explicaciones."
+      ],
+      [
+        "Metacognición",
+        "docente",
+        "Metacognición docente",
+        "Promovemos que los futuros docentes planifiquen, revisen y valoren sus decisiones y estrategias de enseñanza."
+      ]
+    ]
+  },
+  "en": {
+    "heading": "Experimental Science Education",
+    "instruction": "Select a point on the diagram to explore that area.",
+    "close": "Close",
+    "labels": [
+      [
+        "Teacher",
+        "education",
+        "Teacher education",
+        "We study how to prepare future primary and secondary teachers to integrate technology into STEM teaching."
+      ],
+      [
+        "Digital",
+        "competence",
+        "Digital competence",
+        "We examine teachers’ digital competences and design activities to develop them during initial teacher education."
+      ],
+      [
+        "STEM",
+        "education",
+        "STEM education",
+        "We bring science, technology, engineering and mathematics together in activities where learners explore phenomena, design solutions and justify their decisions."
+      ],
+      [
+        "Artificial",
+        "intelligence",
+        "Artificial intelligence",
+        "We explore AI as a teaching aid and design materials and activities with and without AI to study its contribution."
+      ],
+      [
+        "Hybrid learning",
+        "environments",
+        "Hybrid learning environments",
+        "We design activities that combine face-to-face and digital work, with resources for different stages of learning."
+      ],
+      [
+        "Affective and",
+        "emotional dimensions",
+        "Affective and emotional dimensions",
+        "We study emotions and self-efficacy alongside learning and competences to understand how students experience STEM teacher education."
+      ],
+      [
+        "Virtual",
+        "laboratories",
+        "Virtual laboratories",
+        "We design and evaluate digital experimentation environments in which learners manipulate variables, observe phenomena and test explanations."
+      ],
+      [
+        "Teacher",
+        "metacognition",
+        "Teacher metacognition",
+        "We encourage future teachers to plan, review and evaluate their teaching decisions and strategies."
+      ]
+    ]
+  },
+  "pt": {
+    "heading": "Didática das Ciências Experimentais",
+    "instruction": "Selecione uma ponta da figura para explorar esse âmbito.",
+    "close": "Fechar",
+    "labels": [
+      [
+        "Formação de",
+        "professores",
+        "Formação de professores",
+        "Estudamos como preparar futuros professores do ensino básico e secundário para integrar a tecnologia no ensino das áreas STEM."
+      ],
+      [
+        "Competência",
+        "digital",
+        "Competência digital",
+        "Analisamos as competências digitais dos professores e concebemos atividades para as desenvolver durante a formação inicial."
+      ],
+      [
+        "Educação",
+        "STEM",
+        "Educação STEM",
+        "Integramos ciência, tecnologia, engenharia e matemática em propostas em que os alunos exploram fenómenos, concebem soluções e justificam as suas decisões."
+      ],
+      [
+        "Inteligência",
+        "artificial",
+        "Inteligência artificial",
+        "Exploramos a IA como apoio didático e concebemos materiais e atividades com e sem IA para estudar o seu contributo."
+      ],
+      [
+        "Ambientes híbridos",
+        "de aprendizagem",
+        "Ambientes híbridos de aprendizagem",
+        "Concebemos atividades que combinam trabalho presencial e digital, com recursos para diferentes momentos da aprendizagem."
+      ],
+      [
+        "Dimensão afetiva",
+        "e emocional",
+        "Dimensão afetiva e emocional",
+        "Estudamos as emoções e a autoeficácia, a par da aprendizagem e das competências, para compreender a experiência da formação STEM."
+      ],
+      [
+        "Laboratórios",
+        "virtuais",
+        "Laboratórios virtuais",
+        "Concebemos e avaliamos ambientes digitais de experimentação onde é possível manipular variáveis, observar fenómenos e testar explicações."
+      ],
+      [
+        "Metacognição",
+        "docente",
+        "Metacognição docente",
+        "Incentivamos os futuros professores a planear, rever e avaliar as suas decisões e estratégias de ensino."
+      ]
+    ]
+  }
+}
