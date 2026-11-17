@@ -27,7 +27,8 @@
         "es": "Evaluación formativa digital en proyectos STEAM de Primaria con diseño universal para el aprendizaje (DUA).",
         "pt": "Avaliação formativa digital em projetos STEAM no ensino primário com desenho universal para a aprendizagem (DUA).",
         "en": "Digital formative assessment in primary school STEAM projects using Universal Design for Learning (UDL)."
-      }
+      },
+      "surname": "Freije Moreno"
     },
     {
       "name": "Rosa Corral de la Torre",
@@ -41,7 +42,8 @@
         "es": "Metodologías activas para la enseñanza y el aprendizaje de la tecnología desde un enfoque STEM.",
         "pt": "Metodologias ativas para o ensino e a aprendizagem da tecnologia com uma abordagem STEM.",
         "en": "Active learning methods for teaching and learning technology through a STEM approach."
-      }
+      },
+      "surname": "Corral de la Torre"
     },
     {
       "name": "Jesús Ramón Maestre Jiménez",
@@ -55,7 +57,8 @@
         "es": "Aprendizaje y emociones en una propuesta STEM sobre residuos, agua y energía.",
         "pt": "Aprendizagem e emoções numa proposta STEM sobre resíduos, água e energia.",
         "en": "Learning and emotions in a STEM teaching programme on waste, water and energy."
-      }
+      },
+      "surname": "Maestre Jiménez"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {% assign doctoral = site.data.doctoral_theses %}
 {% assign language = page.lang %}
-{% assign theses = doctoral.theses | sort: 'date' | reverse %}
+{% assign theses = doctoral.theses | sort_natural: 'surname' %}
 <section id="tesis-doctorales" aria-labelledby="doctoral-title">
   <h2 id="doctoral-title">{{ doctoral.heading[language] | escape }}</h2>
   <p>{{ doctoral.status[language] | escape }}</p>
