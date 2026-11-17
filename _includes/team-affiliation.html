@@ -14,7 +14,7 @@
       {%- when 'INPEx' -%}
         {%- assign url = 'https://institutoinpex.es/' -%}
     {%- endcase -%}
-    {%- if url -%}<a href="{{ url | escape }}">{{ institution | escape }}</a>
+    {%- if url -%}<a href="{{ url | escape }}" target="_blank" rel="noopener noreferrer">{{ institution | escape }}</a>
     {%- else -%}{{ institution | escape }}
     {%- endif -%}
     {%- unless forloop.last %} · {% endunless -%}
