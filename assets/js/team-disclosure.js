@@ -1,5 +1,8 @@
 const team = document.querySelector('.team');
 const cards = Array.from(team.querySelectorAll('.team-card'));
+const header = document.querySelector('.site-header');
+const narrowView = matchMedia('(max-width: 960px)');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const avatars = document.createElement('div');
 const panel = document.createElement('div');
 const content = document.createElement('div');
@@ -44,7 +47,14 @@ cards.forEach((card, index) => {
   button.setAttribute('aria-controls', card.id);
   button.setAttribute('aria-expanded', 'false');
   button.append(portrait, label);
-  avatars.append(button);
+  if (card.closest('.team-lead')) {
+    const leadRow = document.createElement('div');
+    leadRow.className = 'team-avatar-lead';
+    leadRow.append(button);
+    avatars.append(leadRow);
+  } else {
+    avatars.append(button);
+  }
   content.append(card);
 
   button.addEventListener('pointerenter', event => {
@@ -66,6 +76,17 @@ cards.forEach((card, index) => {
     activeButton = button;
     button.setAttribute('aria-expanded', 'true');
     cards.forEach(member => { member.hidden = member !== card; });
+
+    if (narrowView.matches) {
+      requestAnimationFrame(async () => {
+        await Promise.allSettled(panel.getAnimations().map(animation => animation.finished));
+        if (activeButton !== button || !narrowView.matches) return;
+
+        const headerHeight = header?.getBoundingClientRect().height || 0;
+        const top = window.scrollY + panel.getBoundingClientRect().top - headerHeight - 8;
+        window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      });
+    }
   });
 });
 
