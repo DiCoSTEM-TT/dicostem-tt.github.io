@@ -55,6 +55,21 @@
 }
 .team-avatar-content > .team-card[hidden] { display: none; }
 .team-avatar-content .team-photo { max-width: 14rem; align-self: center; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .team-avatar img {
+    transition: transform 220ms ease-out;
+  }
+  .team-avatar:hover img {
+    transform: scale(1.06);
+    animation: team-portrait-wobble 420ms ease-out;
+  }
+}
+@keyframes team-portrait-wobble {
+  0%, 100% { rotate: 0deg; }
+  30% { rotate: -2.5deg; }
+  58% { rotate: 1.6deg; }
+  80% { rotate: -.7deg; }
+}
 @media (prefers-reduced-motion: reduce) {
   .team-avatar-panel { transition: none; }
 }
