@@ -29,7 +29,7 @@ Desde el punto de vista metodológico, el proyecto combina diseños exploratorio
     </li>
     <li class="card">
       <h3>Evaluamos</h3>
-      <p>El plan de investigación prevé pruebas piloto y, cuando el diseño lo permite, comparaciones entre grupos con medidas antes y después de la intervención. Combinamos datos cuantitativos y cualitativos para estudiar el aprendizaje, las competencias y las emociones.</p>
+      <p>Realizamos pruebas piloto y, cuando procede, comparamos grupos para estudiar el aprendizaje, las competencias y las emociones.</p>
     </li>
   </ol>
 </section>

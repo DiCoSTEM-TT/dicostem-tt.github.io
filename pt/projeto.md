@@ -29,7 +29,7 @@ Do ponto de vista metodológico, o projeto combina desenhos de investigação ex
     </li>
     <li class="card">
       <h3>Avaliamos</h3>
-      <p>O plano de investigação prevê estudos-piloto e, quando o desenho do estudo o permite, comparações entre grupos com medições antes e depois da intervenção. Combinamos dados quantitativos e qualitativos para estudar a aprendizagem, as competências e as emoções.</p>
+      <p>Realizamos estudos-piloto e, quando adequado, comparamos grupos para estudar a aprendizagem, as competências e as emoções.</p>
     </li>
   </ol>
 </section>

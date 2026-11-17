@@ -29,7 +29,7 @@ From a methodological point of view, the project combines exploratory and quasi-
     </li>
     <li class="card">
       <h3>Evaluate</h3>
-      <p>The research plan includes pilot studies and, where the design allows, comparisons between groups using measurements before and after the intervention. We combine quantitative and qualitative data to study learning, competences and emotions.</p>
+      <p>We run pilot studies and, where appropriate, compare groups to study learning, competences and emotions.</p>
     </li>
   </ol>
 </section>
