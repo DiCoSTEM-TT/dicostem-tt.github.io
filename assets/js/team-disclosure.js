@@ -15,17 +15,18 @@ cards.forEach((card, index) => {
   const name = card.querySelector('h3').textContent.trim();
   const portrait = card.querySelector('.team-photo').cloneNode();
   const button = document.createElement('button');
+  const label = document.createElement('span');
+  label.className = 'team-avatar-name';
+  label.textContent = name;
   card.id = `team-member-${index + 1}`;
   card.hidden = true;
   portrait.className = '';
   portrait.alt = '';
   button.type = 'button';
   button.className = 'team-avatar';
-  button.title = name;
-  button.setAttribute('aria-label', name);
   button.setAttribute('aria-controls', card.id);
   button.setAttribute('aria-expanded', 'false');
-  button.append(portrait);
+  button.append(portrait, label);
   avatars.append(button);
   content.append(card);
 
