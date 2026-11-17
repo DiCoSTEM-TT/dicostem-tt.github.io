@@ -166,18 +166,43 @@
 .concept-disclosure[open] > summary::after { content: "−"; }
 .concept-disclosure:not([open]) + figcaption { display: none; }
 @media (prefers-reduced-motion: no-preference) {
-  .concept-disclosure[open] :is(.concept-sector, .concept-frame, .concept-field) {
+  .concept-disclosure[open] .concept-sector {
+    --step: 60ms;
     transform-box: view-box;
     transform-origin: 50% 51.55%;
-    animation: concept-unfold 420ms cubic-bezier(.2,.7,.3,1) both;
+    animation: concept-unfold 360ms cubic-bezier(.18,.72,.28,1) calc(var(--index) * var(--step)) both;
   }
-  .concept-disclosure[open] .concept-title { animation: concept-fade 420ms ease-out both; }
+  .concept-disclosure .concept-sector:nth-of-type(1) { --index: 0; }
+  .concept-disclosure .concept-sector:nth-of-type(2) { --index: 1; }
+  .concept-disclosure .concept-sector:nth-of-type(3) { --index: 2; }
+  .concept-disclosure .concept-sector:nth-of-type(4) { --index: 3; }
+  .concept-disclosure .concept-sector:nth-of-type(5) { --index: 4; }
+  .concept-disclosure .concept-sector:nth-of-type(6) { --index: 5; }
+  .concept-disclosure .concept-sector:nth-of-type(7) { --index: 6; }
+  .concept-disclosure .concept-sector:nth-of-type(8) { --index: 7; }
+
+  .concept-disclosure[open].is-folding .concept-sector {
+    animation: concept-fold 330ms cubic-bezier(.5,0,.72,.5) calc((7 - var(--index)) * var(--step)) both;
+  }
+
+  .concept-disclosure[open] :is(.concept-frame, .concept-field, .concept-title) {
+    animation: concept-fade-in 280ms ease-out both;
+  }
+  .concept-disclosure[open].is-folding :is(.concept-frame, .concept-field, .concept-title) {
+    animation: concept-fade-out 280ms ease-in 430ms both;
+  }
 }
 @keyframes concept-unfold {
   from { opacity: 0; transform: scale(.18); }
 }
-@keyframes concept-fade {
+@keyframes concept-fold {
+  to { opacity: 0; transform: scale(.18); }
+}
+@keyframes concept-fade-in {
   from { opacity: 0; }
+}
+@keyframes concept-fade-out {
+  to { opacity: 0; }
 }
 .concept-venn { width: min(100%, 28rem); margin-block: 1rem 1.35rem; }
 .concept-venn .concept-sector circle {

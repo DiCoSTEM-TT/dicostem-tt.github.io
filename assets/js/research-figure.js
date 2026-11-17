@@ -11,3 +11,24 @@ conceptFigure.querySelectorAll('.concept-sector').forEach(sector => {
     conceptDialog.showModal();
   });
 });
+
+const conceptDisclosure = conceptFigure.querySelector('.concept-disclosure');
+
+if (conceptDisclosure) {
+  const summary = conceptDisclosure.querySelector('summary');
+  const radial = conceptDisclosure.querySelector('.concept-radial');
+
+  summary.addEventListener('click', async event => {
+    if (!conceptDisclosure.open || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    event.preventDefault();
+    if (conceptDisclosure.classList.contains('is-folding')) return;
+
+    conceptDisclosure.classList.add('is-folding');
+    radial.inert = true;
+    await Promise.allSettled(radial.getAnimations({ subtree: true }).map(animation => animation.finished));
+    conceptDisclosure.open = false;
+    conceptDisclosure.classList.remove('is-folding');
+    radial.inert = false;
+  });
+}
