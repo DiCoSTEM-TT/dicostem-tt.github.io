@@ -53,3 +53,5 @@ permalink: /en/team/
   </section>
 
 </div>
+
+{% include team-disclosure.html %}

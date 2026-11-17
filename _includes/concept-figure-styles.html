@@ -215,7 +215,7 @@
 
 .concept-disclosure .concept-sector .concept-sector-shape {
   fill: color-mix(in srgb, var(--point) 34%, white);
-  stroke: color-mix(in srgb, var(--point) 72%, var(--text));
+  stroke: color-mix(in srgb, var(--point) 47%, white);
 }
 
 .concept-disclosure .concept-symbol {
@@ -233,7 +233,15 @@
 }
 
 .concept-disclosure .concept-sector:is(:hover, :focus-visible) .concept-sector-shape {
+  stroke: color-mix(in srgb, var(--point) 63%, white);
+}
+
+[data-theme="dark"] .concept-disclosure .concept-sector:is(:hover, :focus-visible) .concept-sector-shape {
   stroke: var(--text);
+}
+
+:root:not([data-theme="dark"]) .concept-disclosure :is(.concept-frame, .concept-hub) {
+  stroke: color-mix(in srgb, var(--brand) 34%, white);
 }
 
 .concept-venn { width: min(100%, 28rem); margin-block: 1rem 1.35rem; }

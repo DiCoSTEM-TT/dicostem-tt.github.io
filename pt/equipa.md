@@ -53,3 +53,5 @@ permalink: /pt/equipa/
   </section>
 
 </div>
+
+{% include team-disclosure.html %}
