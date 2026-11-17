@@ -47,6 +47,11 @@ cards.forEach((card, index) => {
   avatars.append(button);
   content.append(card);
 
+  button.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse') button.classList.add('is-pointer-over');
+  });
+  button.addEventListener('pointerleave', () => button.classList.remove('is-pointer-over'));
+
   button.addEventListener('click', () => {
     const closing = activeButton === button;
     activeButton?.setAttribute('aria-expanded', 'false');
