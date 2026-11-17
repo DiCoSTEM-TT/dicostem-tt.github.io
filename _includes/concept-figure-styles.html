@@ -252,15 +252,30 @@
   stroke: color-mix(in srgb, var(--brand) 34%, white);
 }
 
-.concept-venn { width: min(100%, 28rem); margin-block: 1rem 1.35rem; }
+.concept-venn {
+  width: min(100%, 28rem);
+  margin-block: 1rem 1.35rem;
+  --venn-ink: #000;
+  --venn-mix-top: #FF826F;
+  --venn-mix-left: #F1A8C1;
+  --venn-mix-right: #CD89CD;
+}
+[data-theme="dark"] .concept-venn {
+  --venn-ink: #fff;
+  --venn-mix-top: #BC150F;
+  --venn-mix-left: #263728;
+  --venn-mix-right: #1F1744;
+}
+.concept-venn .venn-overlaps { pointer-events: none; }
+.concept-venn .venn-overlap-top { fill: var(--venn-mix-top); }
+.concept-venn .venn-overlap-left { fill: var(--venn-mix-left); }
+.concept-venn .venn-overlap-right { fill: var(--venn-mix-right); }
 .concept-venn .concept-sector circle {
   fill: var(--venn-fill);
-  transition: fill 180ms ease;
 }
-.concept-venn .concept-sector:is(:hover, :focus-visible) circle { fill: #087f87; }
-.concept-venn .concept-sector:focus-visible text { text-decoration: underline; }
+.concept-venn .concept-sector:is(:hover, :focus-visible) text { text-decoration: underline; }
 .concept-venn .concept-sector text {
-  fill: #fff;
+  fill: var(--venn-ink);
   text-anchor: middle;
   font-size: 18px;
   font-weight: 700;
@@ -269,7 +284,4 @@
 .concept-venn .venn-outline { fill: none; stroke: var(--bg); stroke-width: 5; pointer-events: none; }
 .concept-venn .venn-center { pointer-events: none; }
 [data-theme="dark"] .concept-venn .venn-logo-disc { fill: #172635; }
-@media (prefers-reduced-motion: reduce) {
-  .concept-venn .concept-sector circle { transition: none; }
-}
 </style>
