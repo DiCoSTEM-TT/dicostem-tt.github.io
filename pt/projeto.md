@@ -16,6 +16,24 @@ O projeto contempla ainda o desenvolvimento de conteúdos digitais de qualidade 
 
 Do ponto de vista metodológico, o projeto combina desenhos de investigação exploratórios e quase experimentais com análises qualitativas e quantitativas. Estuda variáveis relacionadas com a competência digital, a educação STEM e o uso educativo da inteligência artificial, desde o diagnóstico inicial até à validação empírica das propostas didáticas em contextos de formação de professores.
 
+<section class="research-method" aria-labelledby="metodologia">
+  <h2 id="metodologia">Como investigamos</h2>
+  <ol class="method-steps">
+    <li class="card">
+      <h3>Fazemos o diagnóstico</h3>
+      <p>Recorremos a questionários, testes e entrevistas para estudar a competência digital, a aprendizagem STEM e as emoções na formação de professores.</p>
+    </li>
+    <li class="card">
+      <h3>Concebemos recursos</h3>
+      <p>Com base no diagnóstico, desenvolvemos propostas de formação, laboratórios virtuais e materiais didáticos para ambientes híbridos de aprendizagem, com e sem IA.</p>
+    </li>
+    <li class="card">
+      <h3>Avaliamos</h3>
+      <p>O plano de investigação prevê estudos-piloto e, quando o desenho do estudo o permite, comparações entre grupos com medições antes e depois da intervenção. Combinamos dados quantitativos e qualitativos para estudar a aprendizagem, as competências e as emoções.</p>
+    </li>
+  </ol>
+</section>
+
 <section class="project-plan" aria-labelledby="project-plan-title">
   <h2 id="project-plan-title">Fases e tarefas do projeto</h2>
   <ol class="years" aria-label="Anos do projeto">

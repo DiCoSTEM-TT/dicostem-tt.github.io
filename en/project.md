@@ -16,6 +16,24 @@ Furthermore, DiCoSTEM‑TT includes the development of high-quality digital cont
 
 From a methodological point of view, the project combines exploratory and quasi-experimental designs with qualitative and quantitative analyses in order to study variables related to digital competence, STEM education and the educational use of Artificial Intelligence. This strategy makes it possible to move from initial diagnosis to the empirical validation of teaching proposals applicable in real teacher education contexts.
 
+<section class="research-method" aria-labelledby="metodologia">
+  <h2 id="metodologia">How we research</h2>
+  <ol class="method-steps">
+    <li class="card">
+      <h3>Assess needs</h3>
+      <p>We use questionnaires, tests and interviews to study digital competence, STEM learning and emotions in teacher education.</p>
+    </li>
+    <li class="card">
+      <h3>Design resources</h3>
+      <p>Drawing on the initial assessment, we develop training activities, virtual laboratories and teaching materials for hybrid learning, with and without AI.</p>
+    </li>
+    <li class="card">
+      <h3>Evaluate</h3>
+      <p>The research plan includes pilot studies and, where the design allows, comparisons between groups using measurements before and after the intervention. We combine quantitative and qualitative data to study learning, competences and emotions.</p>
+    </li>
+  </ol>
+</section>
+
 <section class="project-plan" aria-labelledby="project-plan-title">
   <h2 id="project-plan-title">Project phases and tasks</h2>
   <ol class="years" aria-label="Project years">

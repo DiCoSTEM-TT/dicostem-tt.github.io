@@ -16,6 +16,24 @@ Asimismo, DiCoSTEM‑TT contempla el desarrollo de contenidos digitales de calid
 
 Desde el punto de vista metodológico, el proyecto combina diseños exploratorios y cuasiexperimentales, junto con análisis cualitativos y cuantitativos, para estudiar variables relacionadas con la competencia digital, la educación STEM y el uso educativo de la Inteligencia Artificial. Esta estrategia permite avanzar desde el diagnóstico inicial hasta la validación empírica de propuestas didácticas aplicables en contextos reales de formación docente.
 
+<section class="research-method" aria-labelledby="metodologia">
+  <h2 id="metodologia">Cómo investigamos</h2>
+  <ol class="method-steps">
+    <li class="card">
+      <h3>Diagnosticamos</h3>
+      <p>Estudiamos la competencia digital, el aprendizaje STEM y las emociones en la formación docente mediante cuestionarios, pruebas y entrevistas.</p>
+    </li>
+    <li class="card">
+      <h3>Diseñamos</h3>
+      <p>A partir del diagnóstico, elaboramos propuestas de formación, laboratorios virtuales y materiales didácticos para trabajar en entornos híbridos, con y sin IA.</p>
+    </li>
+    <li class="card">
+      <h3>Evaluamos</h3>
+      <p>El plan de investigación prevé pruebas piloto y, cuando el diseño lo permite, comparaciones entre grupos con medidas antes y después de la intervención. Combinamos datos cuantitativos y cualitativos para estudiar el aprendizaje, las competencias y las emociones.</p>
+    </li>
+  </ol>
+</section>
+
 <section class="project-plan" aria-labelledby="project-plan-title">
   <h2 id="project-plan-title">Fases y tareas del proyecto</h2>
   <ol class="years" aria-label="Años del proyecto">

@@ -5,8 +5,10 @@ permalink: /pt/
 subtitle: "Competência Digital e Educação STEM na Formação de Professores"
 ---
 
-DiCoSTEM‑TT é um projeto de investigação, desenvolvimento e inovação que analisa, concebe e valida propostas para integrar a competência digital, a educação STEM e a inteligência artificial na formação inicial de professores.
+<p>Investigamos como preparar futuros professores do ensino básico e secundário para ensinar STEM com tecnologia digital. Concebemos e avaliamos laboratórios virtuais e materiais didáticos, com e sem inteligência artificial.</p>
 
-Estudamos como preparar futuros professores do ensino básico e secundário para integrarem a tecnologia digital de forma crítica e pedagogicamente fundamentada no ensino e na aprendizagem das áreas STEM. O projeto centra-se na conceção e implementação de laboratórios virtuais, materiais didáticos digitais e estratégias de formação baseadas em evidência.
-
-A investigação adota uma abordagem metacognitiva e multidimensional. Considera em conjunto as dimensões cognitivas, afetivas, profissionais e digitais da formação de professores e explora o uso educativo da inteligência artificial como apoio à prática pedagógica em ambientes de aprendizagem híbridos e digitais.
+<nav class="grid" aria-label="Explorar o projeto">
+  <a class="card" href="{{ '/pt/projeto/#metodologia' | relative_url }}">Como investigamos</a>
+  <a class="card" href="{{ '/pt/resultados/' | relative_url }}">Resultados publicados</a>
+  <a class="card" href="{{ '/pt/recursos/' | relative_url }}">Recursos para a sala de aula</a>
+</nav>
