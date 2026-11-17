@@ -6,14 +6,14 @@
       <clipPath id="venn-left"><circle cx="136" cy="137" r="125"/></clipPath>
       <clipPath id="venn-right"><circle cx="274" cy="137" r="125"/></clipPath>
     </defs>
-    {% assign areas = "136,137,91,109,#17636f|274,137,319,109,#234b67|205,255,205,317,#245a78" | split: "|" %}
+    {% assign areas = "136,137,90,107,#17636f,-38|274,137,320,107,#234b67,38|205,255,205,318,#245a78,0" | split: "|" %}
     {% for area in text.areas %}
       {% assign shape = areas[forloop.index0] | split: "," %}
       <a href="#venn-dialog" class="concept-sector" aria-label="{{ area[2] | escape }}" aria-haspopup="dialog" data-title="{{ area[2] | escape }}" data-description="{{ area[3] | escape }}" style="--venn-fill: {{ shape[4] }}">
         <circle cx="{{ shape[0] }}" cy="{{ shape[1] }}" r="125"/>
-        <text x="{{ shape[2] }}" y="{{ shape[3] }}" aria-hidden="true">
-          <tspan x="{{ shape[2] }}">{{ area[0] | escape }}</tspan>
-          {% if area[1] != "" %}<tspan x="{{ shape[2] }}" dy="22">{{ area[1] | escape }}</tspan>{% endif %}
+        <text transform="translate({{ shape[2] }} {{ shape[3] }}) rotate({{ shape[5] }})" aria-hidden="true">
+          <tspan x="0" y="-3">{{ area[0] | escape }}</tspan>
+          <tspan x="0" dy="22">{{ area[1] | escape }}</tspan>
         </text>
       </a>
     {% endfor %}
