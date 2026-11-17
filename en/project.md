@@ -32,6 +32,11 @@ From a methodological point of view, the project combines exploratory and quasi-
       <p>We run pilot studies and, where appropriate, compare groups to study learning, competences and emotions.</p>
     </li>
   </ol>
+  <h3>Who takes part</h3>
+  <ul class="participant-cards">
+    <li><strong>Future primary school teachers</strong><p>Students on the UEx Primary Education degree, with placements in primary schools.</p></li>
+    <li><strong>Future secondary school teachers</strong><p>Students on the UEx Master’s in Teacher Education, with placements in secondary schools.</p></li>
+  </ul>
   {% include research-figure.html %}
 </section>
 

@@ -1,0 +1,80 @@
+{
+  "es": {
+    "toggle": "Mostrar u ocultar los ámbitos de investigación",
+    "heading": "El cruce del que parte el proyecto",
+    "instruction": "Pulsa un círculo para explorar el proyecto.",
+    "close": "Cerrar",
+    "areas": [
+      [
+        "Tecnologías",
+        "emergentes",
+        "Tecnologías emergentes",
+        "Exploramos cómo la inteligencia artificial, los laboratorios virtuales y otros recursos digitales pueden apoyar decisiones didácticas en entornos híbridos."
+      ],
+      [
+        "Formación inicial",
+        "del profesorado",
+        "Formación inicial del profesorado",
+        "Los futuros docentes diseñan propuestas didácticas y reflexionan sobre su aplicación en contextos reales de aula."
+      ],
+      [
+        "Educación STEM",
+        "",
+        "Educación STEM",
+        "Combinamos el diseño interdisciplinar y las metodologías activas para desarrollar la alfabetización científica y tecnológica."
+      ]
+    ]
+  },
+  "pt": {
+    "toggle": "Mostrar ou ocultar os domínios de investigação",
+    "heading": "O ponto de partida do projeto",
+    "instruction": "Selecione um círculo para explorar o projeto.",
+    "close": "Fechar",
+    "areas": [
+      [
+        "Tecnologias",
+        "emergentes",
+        "Tecnologias emergentes",
+        "Exploramos como a inteligência artificial, os laboratórios virtuais e outros recursos digitais podem apoiar decisões didáticas em ambientes híbridos."
+      ],
+      [
+        "Formação inicial",
+        "de professores",
+        "Formação inicial de professores",
+        "Os futuros professores concebem propostas didáticas e refletem sobre a sua aplicação em contextos reais de sala de aula."
+      ],
+      [
+        "Educação STEM",
+        "",
+        "Educação STEM",
+        "Combinamos a conceção interdisciplinar e as metodologias ativas para desenvolver a literacia científica e tecnológica."
+      ]
+    ]
+  },
+  "en": {
+    "toggle": "Show or hide the research areas",
+    "heading": "Where the project begins",
+    "instruction": "Select a circle to explore the project.",
+    "close": "Close",
+    "areas": [
+      [
+        "Emerging",
+        "technologies",
+        "Emerging technologies",
+        "We explore how artificial intelligence, virtual laboratories and other digital resources can support teaching decisions in hybrid learning environments."
+      ],
+      [
+        "Initial teacher",
+        "education",
+        "Initial teacher education",
+        "Future teachers design teaching activities and reflect on how to use them in real classrooms."
+      ],
+      [
+        "STEM education",
+        "",
+        "STEM education",
+        "We combine interdisciplinary design and active learning to develop scientific and technological literacy."
+      ]
+    ]
+  }
+}

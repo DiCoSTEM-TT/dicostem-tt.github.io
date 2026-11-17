@@ -1,0 +1,39 @@
+{% assign text = site.data.concept_figures[page.lang] %}
+{% include concept-figure-styles.html %}
+<figure class="concept-figure concept-venn">
+  <svg class="concept-radial" viewBox="0 0 410 392" role="group" aria-label="{{ text.heading | escape }}" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="venn-left"><circle cx="136" cy="137" r="125"/></clipPath>
+      <clipPath id="venn-right"><circle cx="274" cy="137" r="125"/></clipPath>
+    </defs>
+    {% assign areas = "136,137,91,109,#17636f|274,137,319,109,#234b67|205,255,205,317,#245a78" | split: "|" %}
+    {% for area in text.areas %}
+      {% assign shape = areas[forloop.index0] | split: "," %}
+      <a href="#venn-dialog" class="concept-sector" aria-label="{{ area[2] | escape }}" aria-haspopup="dialog" data-title="{{ area[2] | escape }}" data-description="{{ area[3] | escape }}" style="--venn-fill: {{ shape[4] }}">
+        <circle cx="{{ shape[0] }}" cy="{{ shape[1] }}" r="125"/>
+        <text x="{{ shape[2] }}" y="{{ shape[3] }}" aria-hidden="true">
+          <tspan x="{{ shape[2] }}">{{ area[0] | escape }}</tspan>
+          {% if area[1] != "" %}<tspan x="{{ shape[2] }}" dy="22">{{ area[1] | escape }}</tspan>{% endif %}
+        </text>
+      </a>
+    {% endfor %}
+    <g class="venn-outline" aria-hidden="true">
+      <circle cx="136" cy="137" r="125"/>
+      <circle cx="274" cy="137" r="125"/>
+      <circle cx="205" cy="255" r="125"/>
+    </g>
+    <g class="venn-center" clip-path="url(#venn-left)" aria-hidden="true">
+      <g clip-path="url(#venn-right)">
+        <circle cx="205" cy="255" r="125" fill="#fff"/>
+        <image href="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" x="165" y="140" width="80" height="80"/>
+      </g>
+    </g>
+  </svg>
+  <figcaption>{{ text.instruction | escape }}</figcaption>
+  <dialog id="venn-dialog" aria-labelledby="venn-dialog-title" aria-describedby="venn-dialog-description">
+    <h3 id="venn-dialog-title"></h3>
+    <p id="venn-dialog-description"></p>
+    <form method="dialog"><button type="submit">{{ text.close | escape }}</button></form>
+  </dialog>
+</figure>
+<script src="{{ '/assets/js/research-figure.js' | relative_url }}" defer></script>

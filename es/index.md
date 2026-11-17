@@ -5,7 +5,9 @@ subtitle: "Competencia Digital y Educación STEM en Formación del Profesorado"
 permalink: /es/
 ---
 
-<p>Investigamos cómo formar a futuros docentes de Primaria y Secundaria para enseñar STEM con tecnología digital. Diseñamos y evaluamos laboratorios virtuales y materiales didácticos, con y sin inteligencia artificial.</p>
+<p>¿Cómo aprenden los futuros docentes a enseñar STEM con tecnología digital? Diseñamos y evaluamos propuestas con laboratorios virtuales, materiales didácticos e inteligencia artificial para orientar la formación del profesorado.</p>
+
+{% include project-venn.html %}
 
 <nav class="grid" aria-label="Explorar el proyecto">
   <a class="card" href="{{ '/es/proyecto/#metodologia' | relative_url }}">Cómo investigamos</a>

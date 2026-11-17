@@ -32,6 +32,11 @@ Do ponto de vista metodológico, o projeto combina desenhos de investigação ex
       <p>Realizamos estudos-piloto e, quando adequado, comparamos grupos para estudar a aprendizagem, as competências e as emoções.</p>
     </li>
   </ol>
+  <h3>Quem participa</h3>
+  <ul class="participant-cards">
+    <li><strong>Futuros professores do ensino primário</strong><p>Estudantes da licenciatura em Educação Primária da UEx, com estágios em escolas do ensino primário.</p></li>
+    <li><strong>Futuros professores do ensino secundário</strong><p>Estudantes do mestrado em Formação de Professores da UEx, com estágios em escolas do ensino secundário.</p></li>
+  </ul>
   {% include research-figure.html %}
 </section>
 

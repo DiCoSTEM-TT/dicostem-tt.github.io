@@ -5,7 +5,9 @@ subtitle: "Digital Competence and STEM Education in Teacher Training"
 permalink: /en/
 ---
 
-<p>We investigate how to prepare future primary and secondary teachers to teach STEM with digital technology. We design and evaluate virtual laboratories and teaching materials, with and without artificial intelligence.</p>
+<p>How do future teachers learn to teach STEM with digital technology? We design and evaluate activities using virtual laboratories, teaching materials and artificial intelligence to inform teacher education.</p>
+
+{% include project-venn.html %}
 
 <nav class="grid" aria-label="Explore the project">
   <a class="card" href="{{ '/en/project/#metodologia' | relative_url }}">How we research</a>

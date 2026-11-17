@@ -173,124 +173,16 @@
   }
 }
 
-.concept-figure {
-  width: min(100%, 35rem);
-  margin: 1.5rem auto 0;
-  --sector: #234b67;
-  --sector-active: #1b6470;
+.research-method .participant-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: .85rem;
+  list-style: none;
+  padding: 0;
 }
-
-.concept-radial {
-  display: block;
-  width: 100%;
-  height: auto;
-  font-family: inherit;
+.research-method .participant-cards li {
+  border-inline-start: 3px solid var(--brand);
+  padding-inline-start: .75rem;
 }
-
-.concept-frame {
-  fill: color-mix(in srgb, var(--bg) 92%, var(--brand));
-  stroke: var(--sector);
-  stroke-width: 2;
-  stroke-dasharray: 8 6;
-}
-
-.concept-field {
-  fill: color-mix(in srgb, var(--bg) 85%, var(--brand));
-  stroke: color-mix(in srgb, var(--bg) 55%, var(--brand));
-  stroke-width: 2;
-}
-
-.concept-hub {
-  fill: var(--sector-active);
-  stroke: var(--sector);
-  stroke-width: 2;
-}
-
-.concept-logo-disc {
-  fill: #fff;
-  stroke: var(--sector);
-  stroke-width: 2;
-}
-
-.concept-title,
-.concept-label {
-  fill: var(--text);
-  text-anchor: middle;
-  font-weight: 600;
-}
-
-.concept-title {
-  font-size: 24px;
-  paint-order: stroke fill;
-  stroke: color-mix(in srgb, var(--bg) 92%, var(--brand));
-  stroke-width: 9px;
-  stroke-linejoin: round;
-}
-
-.concept-label {
-  font-size: 20px;
-}
-
-.concept-sector {
-  cursor: pointer;
-}
-
-.concept-sector-shape {
-  fill: var(--sector);
-  stroke: var(--brand);
-  stroke-width: 1.5;
-}
-
-.concept-symbol {
-  fill: none;
-  stroke: #b8efeb;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-
-.concept-sector:hover .concept-sector-shape,
-.concept-sector:focus-visible .concept-sector-shape {
-  fill: var(--sector-active);
-  stroke-width: 4;
-}
-
-.concept-sector:focus-visible .concept-label {
-  text-decoration: underline;
-}
-
-.concept-figure figcaption {
-  text-align: center;
-  margin-top: .6rem;
-  color: var(--muted);
-  font-size: .9rem;
-}
-
-.concept-figure dialog {
-  width: min(28rem, calc(100% - 2rem));
-  padding: 1.4rem;
-  color: var(--text);
-  background: var(--bg);
-  border: 2px solid var(--brand);
-  border-radius: var(--radius);
-}
-
-.concept-figure dialog::backdrop {
-  background: rgb(0 0 0 / 50%);
-}
-
-.concept-figure dialog h3 {
-  margin-top: 0;
-}
-
-.concept-figure dialog button {
-  padding: .35rem .85rem;
-  color: var(--text);
-  background: color-mix(in srgb, var(--bg) 85%, var(--brand));
-  border: 1px solid var(--brand);
-  border-radius: .4rem;
-  font: inherit;
-  cursor: pointer;
-}
+.research-method .participant-cards p { margin: .25rem 0 0; }
 </style>

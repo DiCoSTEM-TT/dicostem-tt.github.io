@@ -32,6 +32,11 @@ Desde el punto de vista metodológico, el proyecto combina diseños exploratorio
       <p>Realizamos pruebas piloto y, cuando procede, comparamos grupos para estudiar el aprendizaje, las competencias y las emociones.</p>
     </li>
   </ol>
+  <h3>Quién participa</h3>
+  <ul class="participant-cards">
+    <li><strong>Futuros docentes de Primaria</strong><p>Estudiantes del Grado en Educación Primaria de la UEx, con prácticas en centros de Primaria.</p></li>
+    <li><strong>Futuros docentes de Secundaria</strong><p>Estudiantes del Máster en Formación del Profesorado de la UEx, con prácticas en centros de Secundaria.</p></li>
+  </ul>
   {% include research-figure.html %}
 </section>
 

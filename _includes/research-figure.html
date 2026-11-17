@@ -1,5 +1,11 @@
 {% assign text = site.data.research_domains[page.lang] %}
+{% assign figure_controls = site.data.concept_figures[page.lang] %}
+{% include concept-figure-styles.html %}
 <figure class="concept-figure">
+  <details class="concept-disclosure">
+    <summary aria-label="{{ figure_controls.toggle | escape }}" title="{{ figure_controls.toggle | escape }}">
+      <img src="{{ '/assets/img/logos/DiCoSTEM-TT.svg' | relative_url }}" alt="" width="64" height="64">
+    </summary>
   <svg class="concept-radial" viewBox="0 0 620 646" role="group" aria-labelledby="concept-title" xmlns="http://www.w3.org/2000/svg">
     <rect class="concept-frame" x="2" y="28" width="616" height="616" rx="106"/>
     <rect class="concept-field" x="30" y="57" width="560" height="555" rx="90"/>
@@ -80,6 +86,7 @@
       </text>
     </a>
   </svg>
+  </details>
   <figcaption>{{ text.instruction | escape }}</figcaption>
   <dialog id="concept-dialog" aria-labelledby="concept-dialog-title" aria-describedby="concept-dialog-description">
     <h3 id="concept-dialog-title"></h3>
