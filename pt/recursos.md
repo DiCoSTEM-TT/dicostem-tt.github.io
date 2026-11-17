@@ -4,7 +4,7 @@ title: Recursos
 permalink: /pt/recursos/
 ---
 
-<p>Os recursos didáticos desenvolvidos no projeto serão publicados nesta secção. Estamos a rever e a organizar os materiais para facilitar a sua consulta, reutilização e transferência.</p>
+<p>O H5PDF já está disponível. Converta ficheiros PDF em apresentações interativas H5P diretamente no navegador.</p>
 
 <div class="grid">
   <div class="card resource-card resource-card--h5pdf">

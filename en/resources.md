@@ -3,7 +3,7 @@ layout: page
 title: Resources
 permalink: /en/resources/
 ---
-<p>The project resources will be published in this section shortly. At present, we are reviewing and organising the materials in order to make them available in the most appropriate format for consultation, reuse and transfer.</p>
+<p>H5PDF is now available. Convert PDF files into interactive H5P presentations in your browser.</p>
 
 <div class="grid">
   <div class="card resource-card resource-card--h5pdf">
