@@ -4,7 +4,7 @@ title: Resultados
 permalink: /pt/resultados/
 ---
 
-<p>Até 16 de novembro de 2026, o projeto publicou <strong>{{ site.data.results | size }} artigos em revistas científicas</strong>. Consulte também as <a href="{{ '/pt/divulgacao/' | relative_url }}">comunicações em congressos</a>.</p>
+<p><span data-current-date="Até {date}, o" data-date-locale="pt-PT">O</span> projeto publicou <strong>{{ site.data.results | size }} artigos em revistas científicas</strong>. Consulte também as <a href="{{ '/pt/divulgacao/' | relative_url }}">comunicações em congressos</a>.</p>
 
 {% assign years = site.data.results | sort: 'published' | reverse | group_by: 'year' %}
 {% for year in years %}
@@ -28,3 +28,5 @@ permalink: /pt/resultados/
 </details>
 
 {% endfor %}
+
+<script src="{{ '/assets/js/current-date.js' | relative_url }}" defer></script>

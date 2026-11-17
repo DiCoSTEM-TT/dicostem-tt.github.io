@@ -4,7 +4,7 @@ title: Outputs
 permalink: /en/outputs/
 ---
 
-<p>As of 16 November 2026, the project has published <strong>{{ site.data.results | size }} journal articles</strong>. See also the project’s <a href="{{ '/en/dissemination/' | relative_url }}">conference contributions</a>.</p>
+<p><span data-current-date="As of {date}, the" data-date-locale="en-GB">The</span> project has published <strong>{{ site.data.results | size }} journal articles</strong>. See also the project’s <a href="{{ '/en/dissemination/' | relative_url }}">conference contributions</a>.</p>
 
 {% assign years = site.data.results | sort: 'published' | reverse | group_by: 'year' %}
 {% for year in years %}
@@ -28,3 +28,5 @@ permalink: /en/outputs/
 </details>
 
 {% endfor %}
+
+<script src="{{ '/assets/js/current-date.js' | relative_url }}" defer></script>
