@@ -12,16 +12,16 @@
       Scopus
     </a>
   {% endif %}
-  {% if member.uex_profile %}
-    <a href="{{ member.uex_profile | escape }}">
-      <img src="https://uex.thegecocompany.com/wp-content/uploads/2026/07/uex-logotipo-entornos-digitales-color.svg" alt="" width="24" height="24" referrerpolicy="no-referrer">
-      UEx
-    </a>
-  {% endif %}
   {% if member.scholar_profile %}
     <a href="{{ member.scholar_profile | escape }}">
       <img src="https://scholar.google.com/favicon.ico" alt="" width="24" height="24" referrerpolicy="no-referrer">
       Google Scholar
+    </a>
+  {% endif %}
+  {% if member.uex_profile %}
+    <a href="{{ member.uex_profile | escape }}">
+      <img src="https://uex.thegecocompany.com/wp-content/uploads/2026/07/uex-logotipo-entornos-digitales-color.svg" alt="" width="24" height="24" referrerpolicy="no-referrer">
+      UEx
     </a>
   {% endif %}
 </span>
