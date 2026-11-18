@@ -1,3 +1,7 @@
+---
+layout: null
+permalink: /h5pdf/
+---
 <!doctype html>
 <html lang="es" data-theme="light">
   <head>
@@ -6,6 +10,7 @@
     <title>H5PDF</title>
     <link rel="icon" href="icon.png" />
     <link rel="stylesheet" href="style.css?v=0.2.0-1794939332" />
+    <link rel="stylesheet" href="{{ '/assets/css/footer-identity.css' | relative_url }}" />
     <script>
       try {
         if (localStorage.getItem("h5pdf-theme") === "dark") {
@@ -76,6 +81,7 @@
       </section>
       <p class="version">H5PDF 0.2.0</p>
     </main>
+    {% include footer-identity.html %}
     <footer class="site-footer">
       <div class="container footer-bar">
         <img class="footer-brand" id="funding-logo" src="logos/MICIU-Cofinanciado-AEI.svg" alt="" />

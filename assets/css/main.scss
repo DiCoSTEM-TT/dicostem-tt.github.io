@@ -275,112 +275,6 @@ img { max-width: 100%; height: auto; }
 :root{ --footer-brand-bg: #ffffff; }
 [data-theme="dark"]{ --footer-brand-bg: #e6e9ee; } /* gris suave en dark */
 
-/* =============== Pre-footer: logos laterales + onda centrada =============== */
-.prefooter{
-  margin-top: 2rem;
-  margin-bottom: 0; /* la onda queda pegada al footer */
-}
-
-/* Rejilla dentro de .container para alinear con el contenido */
-.pf-grid{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) min(48%, 23rem) minmax(0, 1fr);
-  align-items: end;
-  gap: 1rem 2rem;
-}
-
-/* Mostrar onda clara por defecto; en dark, la versión oscura */
-.pf-wave .wave-dark{ display: none; }
-[data-theme="dark"] .pf-wave .wave-light{ display: none; }
-[data-theme="dark"] .pf-wave .wave-dark{ display: block; }
-
-/* Onda contenida y sin huecos “tipográficos” */
-.pf-wave{
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  line-height: 0; /* evita espacio bajo el SVG inline */
-}
-.pf-wave .wave{
-  width: 100%;
-}
-
-.pf-wave .wave > svg{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Logos laterales: wrapper con variantes claro/oscuro */
-.pf-logo{
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-}
-.pf-logo .logo-dark{ display: none; }
-[data-theme="dark"] .pf-logo .logo-light{ display: none; }
-[data-theme="dark"] .pf-logo .logo-dark{ display: block; }
-
-/* Tamaño de los logos laterales (más grandes y responsivos) */
-.pf-logo img{
-  display: block;
-  width: auto;
-  height: auto;
-  max-height: clamp(48px, 8vw, 84px);
-  object-fit: contain;
-}
-
-.pf-logo.uex{
-  container-name: uex-logo;
-  container-type: inline-size;
-  justify-content: flex-start;
-}
-
-.pf-logo.faculty{
-  justify-content: flex-end;
-}
-
-.pf-logo img{
-  max-width: 100%;
-}
-
-.pf-logo.uex img{
-  width: clamp(120px, 19vw, 190px);
-  max-height: none;
-}
-
-.pf-logo.uex .uex-compact,
-[data-theme="dark"] .pf-logo.uex .uex-compact{
-  display: none;
-}
-
-@container uex-logo (max-width: 119px){
-  .pf-logo.uex .uex-horizontal,
-  [data-theme="dark"] .pf-logo.uex .uex-horizontal{
-    display: none;
-  }
-
-  .pf-logo.uex .uex-compact{
-    width: 60px;
-  }
-
-  .pf-logo.uex .uex-compact.logo-light,
-  [data-theme="dark"] .pf-logo.uex .uex-compact.logo-dark{
-    display: block;
-  }
-
-  [data-theme="dark"] .pf-logo.uex .uex-compact.logo-light{
-    display: none;
-  }
-}
-
-/* Extra en pantallas muy anchas */
-@media (min-width: 1400px){
-  .pf-logo img{ max-height: 96px; }
-}
-
 /* =============== Footer: logo institucional izq + texto der =============== */
 .site-footer {
   background: color-mix(in srgb, var(--brand-2) 8%, var(--bg));
@@ -427,15 +321,6 @@ img { max-width: 100%; height: auto; }
   }
   .fineprint{
     text-align: center;
-  }
-
-  .pf-grid{
-    column-gap: .75rem;
-  }
-
-  /* Pre-footer en móvil: ajustes suaves */
-  .pf-logo img{
-    max-height: clamp(40px, 10vw, 72px);
   }
 }
 

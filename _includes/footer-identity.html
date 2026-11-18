@@ -1,0 +1,58 @@
+{% assign university_label = 'Universidad de Extremadura' %}
+{% assign faculty_label = 'Facultad de Educación y Psicología' %}
+{% if page.lang == 'pt' %}
+  {% assign university_label = 'Universidade da Extremadura' %}
+  {% assign faculty_label = 'Faculdade de Educação e Psicologia' %}
+{% endif %}
+<!-- Pre-footer: logos laterales + onda (clara/oscura) centrada -->
+<div class="prefooter">
+  <div class="container pf-grid">
+    <!-- Logo UEx: claro/oscuro -->
+    <a class="pf-logo uex"
+       href="https://www.unex.es/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="{{ university_label }}">
+      <img class="logo-light uex-horizontal"
+           src="{{ '/assets/img/logos/uex-horizontal-color.svg' | relative_url }}"
+           alt="{{ university_label }}" />
+      <img class="logo-dark uex-horizontal"
+           src="{{ '/assets/img/logos/uex-horizontal-blanco.svg' | relative_url }}"
+           alt=""
+           aria-hidden="true" />
+      <img class="logo-light uex-compact"
+           src="{{ '/assets/img/logos/uex-abreviado-vertical-color.svg' | relative_url }}"
+           alt=""
+           aria-hidden="true" />
+      <img class="logo-dark uex-compact"
+           src="{{ '/assets/img/logos/uex-abreviado-vertical-blanco.svg' | relative_url }}"
+           alt=""
+           aria-hidden="true" />
+    </a>
+
+    <!-- Onda claro/oscuro -->
+    <div class="pf-wave" aria-hidden="true">
+      <span class="wave wave-light">
+        {% include footer-wave.svg %}
+      </span>
+      <span class="wave wave-dark">
+        {% include footer-wave-dark.svg %}
+      </span>
+    </div>
+
+    <!-- Logo Facultad: claro/oscuro -->
+    <a class="pf-logo faculty"
+       href="https://educacion.unex.es/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="{{ faculty_label }}">
+      <img class="logo-light"
+           src="{{ '/assets/img/logos/facultad.svg' | relative_url }}"
+           alt="{{ faculty_label }}" />
+      <img class="logo-dark"
+           src="{{ '/assets/img/logos/facultad-dark.svg' | relative_url }}"
+           alt=""
+           aria-hidden="true" />
+    </a>
+  </div>
+</div>
