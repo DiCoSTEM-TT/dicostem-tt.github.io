@@ -1,7 +1,7 @@
 // Uso sin conexión: red primero y, si no hay red, la copia guardada. Guarda cada archivo de
 // la propia web que se usa (también los modelos de OCR cuando hacen falta). Nunca
 // intercepta peticiones a otros sitios.
-const CACHE = "h5pdf-web-0.2.0-1794939332-footer";
+const CACHE = "h5pdf-web-0.2.0-1794939332-footer-links";
 const CORE = [
   "./",
   "index.html",
@@ -12,6 +12,7 @@ const CORE = [
   "template.json",
   "icon.png",
   "logos/MICIU-Cofinanciado-AEI.svg",
+  "../assets/js/external-links.js",
   "../assets/css/footer-identity.css",
   "../assets/img/logos/uex-horizontal-color.svg",
   "../assets/img/logos/uex-horizontal-blanco.svg",
