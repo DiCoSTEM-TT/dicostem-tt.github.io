@@ -7,13 +7,6 @@ permalink: /pt/divulgacao/
 <details class="year-group" open>
   <summary><h2>2026</h2></summary>
 <div class="dissemination-grid">
-  {% comment %}
-  <article class="dissemination-card">
-    <h3>Construir para aprender: aprendizagem e emoções em cinco projetos STEM no ensino básico</h3>
-    <p class="dissemination-meta">32.º Encontro de Didática das Ciências Experimentais, Bilbao</p>
-    <p>Francisco Luis Naranjo Correa, Guadalupe Martínez Borreguero, Rosa Corral de la Torre, Milagros Mateos Núñez</p>
-  </article>
-  {% endcomment %}
   <article class="dissemination-card">
     <h3>Bioconstrução e aprendizagem-serviço em educação STEM: impacto cognitivo e afetivo de um projeto de superadobe no ensino secundário e na diversificação curricular</h3>
     <p class="dissemination-meta">32.º Encontro de Didática das Ciências Experimentais, Bilbao</p>
