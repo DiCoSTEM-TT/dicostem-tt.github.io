@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Test de detección de preconcepciones respecto al color. Recurso educativo de DiCoSTEM-TT basado en el test del Grupo Orión."><title>El test de las manzanas · DiCoSTEM-TT</title><link rel="stylesheet" href="site.css?v=20261121-question-rows"><link rel="stylesheet" href="styles.css?v=20261121-vectorial-default"><script src="locale.js" defer></script><script src="theme.js"></script><link rel="stylesheet" href="footer-identity.css"><script src="data.js" defer></script><script src="graphics.js?v=20261121-question-rows" defer></script><script src="graphics-vectorial.js?v=20261121-filament-ray" defer></script><script src="scenes.js" defer></script><script src="header.js?v=20261121-question-rows" defer></script><script src="app.js?v=20261121-vectorial-default" defer></script><link rel="canonical" href="https://dicostem-tt.github.io/recursos/luz-y-color/clasico.html"></head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container topbar">
+    <a class="logo" href="https://dicostem-tt.github.io/es/" target="_blank" rel="noopener noreferrer">
+      <img class="logo-img logo-light" src="logos/DiCoSTEM-TT.svg" alt="DiCoSTEM-TT">
+      <img class="logo-img logo-dark" src="logos/DiCoSTEM-TT_N.svg" alt="" aria-hidden="true">
+      <span class="brand"><span class="project">DiCoSTEM-TT</span><span class="claim">Competencia Digital y Educación STEM en la Formación del Profesorado</span></span>
+    </a>
+    <span class="spacer"></span><nav class="language-switch" aria-label="Idioma"><a href="clasico.html" lang="es" aria-current="page">Español</a><a href="clasico-pt.html" lang="pt-PT">Português</a><a href="clasico-en.html" lang="en">English</a></nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
+  </div>
+  <nav class="subnav"><div class="container"><a href="https://dicostem-tt.github.io/es/proyecto/" target="_blank" rel="noopener noreferrer">El Proyecto</a><a href="https://dicostem-tt.github.io/es/equipo/" target="_blank" rel="noopener noreferrer">Equipo</a><a href="https://dicostem-tt.github.io/es/objetivos/" target="_blank" rel="noopener noreferrer">Objetivos</a><a href="https://dicostem-tt.github.io/es/resultados/" target="_blank" rel="noopener noreferrer">Resultados</a><a href="https://dicostem-tt.github.io/es/difusion/" target="_blank" rel="noopener noreferrer">Difusión</a><a href="https://dicostem-tt.github.io/es/recursos/" target="_blank" rel="noopener noreferrer" class="active">Recursos</a><a href="https://dicostem-tt.github.io/es/contacto/" target="_blank" rel="noopener noreferrer">Contacto</a></div></nav>
+</header>
+<main id="contenido" class="container">
+<header class="hero"><h1>Test de las manzanas · Versión clásica</h1><p class="subtitle">Lo que vemos depende de la luz que llega a nuestros ojos. Explora tus ideas con el test de las manzanas.</p></header>
+<section class="intro-grid" aria-labelledby="instrucciones"><div class="instructions"><h2 id="instrucciones">Antes de empezar</h2><p>En cada figura se presenta una manzana iluminada por un potente foco de luz blanca y por una bombilla de luz tenue. Para simplificar, considera la luz blanca compuesta solo por los tres colores primarios: rojo, verde y azul.</p><p>Cada manzana aparece del color que se ve con ambas luces encendidas. <strong>¿Qué pasa cuando se apaga el foco y queda únicamente la bombilla?</strong></p>
+<div class="intro-actions"><a class="button" href="#test">Responder al test</a><p class="muted">9 preguntas · Sin registro · Corrección al finalizar</p></div></div><article class="example card">
+  <div class="example-heading"><h3>Comprobar el ejemplo</h3><button id="example-toggle" type="button" class="secondary" aria-pressed="false" data-off="Apagar el foco" data-on="Encender el foco">Apagar el foco</button></div>
+  <div id="example-scene"></div><p>Al apagar el foco, la manzana seguirá viéndose <strong>verde</strong>: sigue iluminada por la luz blanca de la bombilla.</p></article></section><details><summary>Consultar las imágenes de apoyo</summary><div class="supports"><figure><div data-diagram="prism"></div><figcaption>La luz blanca</figcaption></figure><figure><div data-diagram="additive"></div><figcaption>Mezcla aditiva de colores primarios</figcaption></figure></div></details>
+<section id="test" aria-labelledby="test-title"><h2 id="test-title" tabindex="-1">Preguntas</h2><p>En todas las preguntas: ¿de qué color verá el ojo la manzana si se apaga el foco de luz blanca?</p><div class="test-progress"><p id="progress" role="status">0 de 9 preguntas respondidas</p><progress id="progress-meter" value="0" max="9" aria-label="Progreso del test"></progress></div><form id="quiz"><div id="questions"></div><div class="actions"><button type="submit">Ver resultados</button><button type="reset" class="secondary">Volver a empezar</button></div></form><noscript>Activa JavaScript para responder y corregir el test.</noscript>
+<section id="result" hidden tabindex="-1" aria-labelledby="result-title"><h2 id="result-title">Tus resultados</h2><p id="score" class="score"></p><p id="pattern"></p><details><summary>Interpretación del estudio original</summary><p id="historical"></p><p class="muted">Adaptación de la devolución del Grupo Orión, con las cifras contrastadas con el artículo de 2016. Los porcentajes se refieren a la muestra histórica de ese estudio.</p></details><p>La interpretación describe patrones de respuesta del instrumento original y sirve como punto de partida para la reflexión.</p><button id="show-solutions" type="button">Revisar soluciones y actividad final</button></section></section>
+<section id="solutions" hidden aria-labelledby="solutions-title"><h2 id="solutions-title" tabindex="-1">¿Qué ocurre al apagar el foco?</h2><p>En el modelo simplificado del test, vemos la luz que el objeto refleja y llega al ojo. Si la manzana no refleja la luz de la bombilla, deja de verse.</p><div id="solution-list"></div><details><summary>¿Negra o invisible? El caso de la pregunta 2</summary><p>El original utiliza un fondo gris para distinguir el ojo, la bombilla y el foco. La manzana negra contrasta con ese fondo. La siguiente imagen repite la solución con un fondo negro.</p><div id="contrast-scene" class="contrast-scene"></div></details><h2>Construye un mapa conceptual</h2><p>Ahora que has revisado las respuestas, elabora un mapa conceptual con estos conceptos:</p><p class="map-words">Colores · Luz del sol · Cuerpos</p><details><summary>Consultar la propuesta de mapa conceptual original</summary><p>El original compara un mapa con ideas previas y otro que propone un cambio conceptual.</p><div class="concept-maps"><div><h3>Ideas previas</h3><p class="map-node">Los cuerpos</p><p>tienen</p><p class="map-node">Colores</p><p>que se ven cuando les da</p><p class="map-node">La luz del sol</p></div><div><h3>Propuesta de cambio conceptual</h3><p class="map-node">La luz del sol</p><p>tiene</p><p class="map-node">Colores</p><p>que se ven cuando interactúa con</p><p class="map-node">Los cuerpos</p></div></div></details></section>
+</main><footer class="resource-credit container"><strong>DiCoSTEM-TT</strong><p>Adaptación web del <a href="http://grupoorion.unex.es/orion/index.php/materiales/81-test-manzanas" target="_blank" rel="noopener noreferrer">test de detección de preconcepciones respecto al color del Grupo Orión</a> (Universidad de Extremadura). Se conservan las nueve preguntas, las opciones y las reglas de corrección originales, con una nueva representación gráfica.</p><p>Las respuestas se procesan en este dispositivo y no se envían ni se guardan.</p><details class="scientific-reference">
+  <summary>Sobre el test y su referencia científica</summary>
+  <p>El artículo original describe el instrumento y cuatro patrones de preconcepciones sobre la percepción del color.</p>
+  <p>El artículo explica que se evitaron opciones como «gris» o «gris oscuro»: en las pruebas piloto tendían a elegirse como una respuesta de «no sé», dificultando identificar las ideas previas. Por eso se mantiene un conjunto sencillo de opciones de color.</p>
+  <p>El test pregunta por el color que se ve bajo una iluminación determinada. Utiliza un modelo idealizado de luces y objetos de colores primarios; en situaciones reales pueden intervenir la luz ambiental y la constancia del color.</p>
+  <p>PRE1, PRE2 y PRE3 representan explicaciones alternativas entre sí. PRE4 puede aparecer junto a cualquiera de ellas. Por eso, la interpretación considera la secuencia de respuestas además del número de aciertos.</p>
+  <p>Naranjo Correa, F. L., Martinez Borreguero, G., Perez Rodriguez, A. L., Suero Lopez, M. I., &amp; Pardo Fernandez, P. J. (2016). <cite>A new online tool to detect color misconceptions</cite>. Color Research &amp; Application, 41(3), 325–329.</p>
+  <a class="article-reference" href="https://doi.org/10.1002/col.22017" target="_blank" rel="noopener noreferrer" aria-label="Abrir el artículo · DOI 10.1002/col.22017"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+  <path d="M24 12c0 6.633-5.367 12-12 12S0 18.633 0 12 5.367 0 12 0s12 5.367 12 12ZM7.588 6.097v4.471c-.663-.925-1.403-1.373-2.406-1.373-2.046 0-3.244 1.441-3.244 3.847 0 2.357 1.325 3.848 3.166 3.848 1.12 0 1.88-.4 2.445-1.325l-.039 1.042h2.045V6.097Zm-1.763 8.942c-1.12 0-1.802-.76-1.802-2.045 0-1.325.682-2.085 1.802-2.085 1.081 0 1.802.76 1.802 2.085 0 1.285-.672 2.045-1.802 2.045Zm12.253-1.948c0-2.172-1.578-3.789-3.906-3.789-2.328 0-3.945 1.695-3.945 3.789 0 2.133 1.578 3.789 3.945 3.789 2.289 0 3.906-1.656 3.906-3.789Zm-2.094-.01c0 1.14-.711 1.89-1.851 1.89-1.139 0-1.851-.75-1.851-1.89 0-1.139.712-1.89 1.851-1.89 1.149 0 1.861.751 1.851 1.89Zm2.6-5.795c0 .633.517 1.227 1.189 1.227.633 0 1.188-.555 1.188-1.227a1.17 1.17 0 0 0-1.188-1.189c-.672 0-1.179.556-1.189 1.189Zm.166 9.341h2.055V9.604H18.75Z"/>
+</svg>
+<span>DOI 10.1002/col.22017</span></a>
+</details></footer>
+<!-- Pre-footer: logos laterales + onda (clara/oscura) centrada -->
+<div class="prefooter">
+  <div class="container pf-grid">
+    <!-- Logo UEx: claro/oscuro -->
+    <a class="pf-logo uex"
+       href="https://www.unex.es/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Universidad de Extremadura">
+      <img class="logo-light uex-horizontal"
+           src="logos/uex-horizontal-color.svg"
+           alt="Universidad de Extremadura" />
+      <img class="logo-dark uex-horizontal"
+           src="logos/uex-horizontal-blanco.svg"
+           alt=""
+           aria-hidden="true" />
+      <img class="logo-light uex-compact"
+           src="logos/uex-abreviado-vertical-color.svg"
+           alt=""
+           aria-hidden="true" />
+      <img class="logo-dark uex-compact"
+           src="logos/uex-abreviado-vertical-blanco.svg"
+           alt=""
+           aria-hidden="true" />
+    </a>
+
+    <!-- Onda claro/oscuro -->
+    <div class="pf-wave" aria-hidden="true">
+      <span class="wave wave-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 397 1320 297.55" overflow="hidden" aria-hidden="true" focusable="false">
+  <path fill="#c5bed5" d="m984.1 488.8-21.1 21.1 185.4 185.4-185.3 185.3 21 21 206.6-206.4z"/>
+  <path fill="#e6bfc7" d="m1356.4 489.4v40.2c39.7 43.7 63.9 101.8 63.9 165.6s-24.2 121.9-63.9 165.6v40.2c56.8-50.4 92.7-124 92.7-205.8s-35.9-155.4-92.7-205.8z"/>
+  <path fill="#c4e1de" d="m799.3 972.5c71.4 0 136.5-27.2 185.5-71.9l-21.1-21.1c-43.5 39.2-101.1 63-164.4 63-63.3 0-120.9-23.8-164.4-63h-.1l-21.1 21.1c49 44.7 114.2 71.9 185.6 71.9z"/>
+  <path fill="#bed2e5" d="m798.7 416.6c-71.4 0-136.5 27.2-185.5 71.9l21.1 21.1c43.5-39.2 101.1-63 164.4-63 63.3 0 120.9 23.8 164.4 63h.1l21.1-21.1c-49-44.7-114.2-71.9-185.6-71.9z"/>
+  <path fill="#c3dcc6" d="m613.3 488.4-206.6 206.4 206.6 206.4 21.2-21.2-55.9-55.9-129.5-129.3 110.1-110 75.2-75.2z"/>
+  <path fill="#e6bfc7" d="m1355.8 488.8-206.6 206.4 1.2 1.2h42.4l-1.2-1.2 164.1-164 .6.6v-42.4z"/>
+  <path fill="#f3d1c1" d="m242.9 489.2v42.4l163.6 163.5h42.4l-206-205.9z"/>
+  <path fill="#e6bfc7" d="m1149.2 695.1-.1.1 206.6 206.4.6-.6v-42.4l-.6.6-164.1-164 .1-.1z"/>
+  <path fill="#f3d1c1" d="m405.9 694.5.7.7-163.7 163.5v42.4L449 695.2l-.7-.7z"/>
+  <path fill="#f3d1c1" d="m243 488.5c-57.5 50.4-93.8 124.4-93.8 206.7S185.5 851.5 243 901.9V862c-40.3-43.8-65-102.4-65-166.8s24.7-123 65-166.7z"/>
+</svg>
+
+      </span>
+      <span class="wave wave-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="140 397 1320 297.55" overflow="hidden" aria-hidden="true" focusable="false">
+  <path fill="#5a3f8b" d="m984.1 488.8-21.1 21.1 185.4 185.4-185.3 185.3 21 21 206.6-206.4z"/>
+  <path fill="#ca3960" d="m1356.4 489.4v40.2c39.7 43.7 63.9 101.8 63.9 165.6s-24.2 121.9-63.9 165.6v40.2c56.8-50.4 92.7-124 92.7-205.8s-35.9-155.4-92.7-205.8z"/>
+  <path fill="#00a59f" d="m799.3 972.5c71.4 0 136.5-27.2 185.5-71.9l-21.1-21.1c-43.5 39.2-101.1 63-164.4 63-63.3 0-120.9-23.8-164.4-63h-.1l-21.1 21.1c49 44.7 114.2 71.9 185.6 71.9z"/>
+  <path fill="#2a7eba" d="m798.7 416.6c-71.4 0-136.5 27.2-185.5 71.9l21.1 21.1c43.5-39.2 101.1-63 164.4-63 63.3 0 120.9 23.8 164.4 63h.1l21.1-21.1c-49-44.7-114.2-71.9-185.6-71.9z"/>
+  <path fill="#309f52" d="m613.3 488.4-206.6 206.4 206.6 206.4 21.2-21.2-55.9-55.9-129.5-129.3 110.1-110 75.2-75.2z"/>
+  <path fill="#ca3960" d="m1355.8 488.8-206.6 206.4 1.2 1.2h42.4l-1.2-1.2 164.1-164 .6.6v-42.4z"/>
+  <path fill="#ee763a" d="m242.9 489.2v42.4l163.6 163.5h42.4l-206-205.9z"/>
+  <path fill="#ca3960" d="m1149.2 695.1-.1.1 206.6 206.4.6-.6v-42.4l-.6.6-164.1-164 .1-.1z"/>
+  <path fill="#ee763a" d="m405.9 694.5.7.7-163.7 163.5v42.4L449 695.2l-.7-.7z"/>
+  <path fill="#ee763a" d="m243 488.5c-57.5 50.4-93.8 124.4-93.8 206.7S185.5 851.5 243 901.9V862c-40.3-43.8-65-102.4-65-166.8s24.7-123 65-166.7z"/>
+</svg>
+
+      </span>
+    </div>
+
+    <!-- Logo Facultad: claro/oscuro -->
+    <a class="pf-logo faculty"
+       href="https://educacion.unex.es/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facultad de Educación y Psicología">
+      <img class="logo-light"
+           src="logos/facultad.svg"
+           alt="Facultad de Educación y Psicología" />
+      <img class="logo-dark"
+           src="logos/facultad-dark.svg"
+           alt=""
+           aria-hidden="true" />
+    </a>
+  </div>
+</div>
+<footer class="site-footer"><div class="container footer-bar"><img class="footer-brand" src="logos/MICIU-Cofinanciado-AEI.svg" alt="Ministerio de Ciencia, Innovación y Universidades · Agencia Estatal de Investigación · Cofinanciado por la Unión Europea"><p class="fineprint">Proyecto de I+D+i PID2022-140601OA-I00, financiado por MCIN/AEI/10.13039/501100011033/ y por FEDER «Una manera de hacer Europa».</p></div></footer>
+</body></html>
