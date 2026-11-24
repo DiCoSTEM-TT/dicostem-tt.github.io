@@ -14,7 +14,7 @@ permalink: /es/recursos/
     <p><a href="{{ '/h5pdf/' | relative_url }}?lang=es" target="_blank" rel="noopener noreferrer">Abrir recurso</a></p>
   </div>
   <div class="card resource-card">
-    <img src="{{ '/recursos/luz-y-color/presentation.svg' | relative_url }}" alt="" loading="lazy" style="width:100%;height:auto;border-radius:.6rem" />
+    <img src="{{ '/recursos/luz-y-color/presentation.svg' | relative_url }}" alt="" loading="lazy" class="resource-illustration" />
     <h3>Luz y color</h3>
     <p>Test de las manzanas con preguntas aleatorias, interpretación orientativa e informe PDF. Incluye el laboratorio de filtros y la versión clásica.</p>
     <p><a href="{{ '/recursos/luz-y-color/' | relative_url }}" target="_blank" rel="noopener noreferrer">Explorar luz y color</a></p>

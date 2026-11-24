@@ -182,11 +182,22 @@ img { max-width: 100%; height: auto; }
   content: none;
 }
 
+.resource-logo,
+.resource-illustration{
+  height: 240px;
+  object-fit: contain;
+  margin: 0 0 .6rem;
+}
+
+.resource-illustration{
+  display: block;
+  width: 100%;
+  border-radius: .6rem;
+}
+
 .resource-logo{
   display: block;
   width: min(100%, 240px);
-  height: auto;
-  margin: 0 0 .6rem;
 }
 
 .resource-logo-dark,

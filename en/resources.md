@@ -14,7 +14,7 @@ permalink: /en/resources/
     <p><a href="{{ '/h5pdf/' | relative_url }}?lang=en" target="_blank" rel="noopener noreferrer">Open resource</a></p>
   </div>
   <div class="card resource-card">
-    <img src="{{ '/recursos/luz-y-color/presentation.svg' | relative_url }}" alt="" loading="lazy" style="width:100%;height:auto;border-radius:.6rem" />
+    <img src="{{ '/recursos/luz-y-color/presentation.svg' | relative_url }}" alt="" loading="lazy" class="resource-illustration" />
     <h3>Light and colour</h3>
     <p>A randomised apple test with an indicative interpretation and a PDF report. Includes the filter laboratory and the classic version.</p>
     <p><a href="{{ '/recursos/luz-y-color/en.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Explore light and colour</a></p>

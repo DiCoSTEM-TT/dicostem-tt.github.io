@@ -15,7 +15,7 @@ permalink: /pt/recursos/
     <p><a href="{{ '/h5pdf/' | relative_url }}?lang=pt" target="_blank" rel="noopener noreferrer">Abrir recurso</a></p>
   </div>
   <div class="card resource-card">
-    <img src="{{ '/recursos/luz-y-color/presentation.svg' | relative_url }}" alt="" loading="lazy" style="width:100%;height:auto;border-radius:.6rem" />
+    <img src="{{ '/recursos/luz-y-color/presentation.svg' | relative_url }}" alt="" loading="lazy" class="resource-illustration" />
     <h3>Luz e cor</h3>
     <p>Teste das maçãs com perguntas aleatórias, interpretação indicativa e relatório PDF. Inclui o laboratório de filtros e a versão clássica.</p>
     <p><a href="{{ '/recursos/luz-y-color/pt.html' | relative_url }}" target="_blank" rel="noopener noreferrer">Explorar luz e cor</a></p>
