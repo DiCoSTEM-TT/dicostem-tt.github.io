@@ -556,4 +556,4 @@ img { max-width: 100%; height: auto; }
 }
 
 /* New resources share the established ribbon placement. */
-.resource-card.is-new::after{ background: var(--brand, #176ba0); color: #fff; }
+.resource-card.is-new::after{ background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 48%, var(--brand-3) 100%); color: #fff; }
