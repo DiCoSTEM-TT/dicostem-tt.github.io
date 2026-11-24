@@ -30,14 +30,14 @@ const ColourAnswersPDF=(()=>{
   ctx.fillStyle='#204c66';ctx.font='600 30px Barlow';ctx.fillText('O que sugerem as tuas respostas?',60,180);
   ctx.font='600 28px Barlow';let y=wrap(ctx,main?main.title:'Sem um padrão predominante',60,224,1480,35);
   ctx.fillStyle='#182d3a';ctx.font='400 24px Barlow';y=wrap(ctx,main?main.explain:'As respostas não mostram uma tendência suficientemente clara para um dos raciocínios comparados.',60,y+10,1480,31);
-  y=wrap(ctx,'Orientação provisória sobre esta partida, não uma característica fixa da pessoa. Esta versão ainda não tem validação própria.',60,y+8,1480,31);
+  y=wrap(ctx,'Orientação provisória sobre esta tentativa, não uma característica fixa da pessoa. Esta versão ainda não tem validação própria.',60,y+8,1480,31);
   if(diagnosis.contrast.plausible)y=wrap(ctx,'Conceção prévia adicional plausível: falta de contraste. Em '+diagnosis.contrast.supporting.map(id=>'P'+id).join(', ')+' foi escolhida a opção «Não se distinguirá do ambiente» com luz e superfície coincidentes (critério provisório: 2 de 3). Pode coexistir com outras tendências.',60,y+8,1480,31);
   ctx.fillStyle='#204c66';ctx.font='600 24px Barlow';y+=18;
   if(main){ctx.fillText(`Coincidências RGB: ${main.supporting.length}/${diagnosis.coreCount} · Perguntas: ${main.supporting.map(id=>'P'+id).join(', ')}`,60,y);y+=30;}
   ctx.fillStyle='#182d3a';ctx.font='400 21px Barlow';y=wrap(ctx,'Critério provisório: pelo menos 4 de 6 coincidências RGB e uma vantagem de 2. As perguntas de extensão não decidem a classificação.',60,y+4,1480,27);
   const top=Math.max(530,y+12);ctx.fillStyle='#204c66';ctx.fillRect(60,top,1480,39);ctx.fillStyle='#fff';ctx.font='600 22px Barlow';ctx.fillText('Pergunta',75,top+27);ctx.fillText('A tua resposta confirmada',235,top+27);ctx.fillText('Resposta do modelo',880,top+27);
   items.forEach((q,i)=>{const row=top+40+i*32;ctx.fillStyle=i%2?'#fff':'#eef4f7';ctx.fillRect(60,row,1480,32);ctx.fillStyle='#182d3a';ctx.font='400 21px Barlow';ctx.fillText(String(i+1),85,row+23);ctx.fillText(names[answers[i]],235,row+23);ctx.fillText(names[q.answer],880,row+23);});
-  ctx.fillStyle='#526570';ctx.font='400 19px Barlow';ctx.fillText(`${version} · Partida ${seed} · ${items.filter((q,i)=>q.answer===answers[i]).length}/12 respostas corretas no modelo`,60,1075);
+  ctx.fillStyle='#526570';ctx.font='400 19px Barlow';ctx.fillText(`${version} · Tentativa ${seed} · ${items.filter((q,i)=>q.answer===answers[i]).length}/12 respostas corretas no modelo`,60,1075);
   const coverBlob=await new Promise(resolve=>cover.toBlob(resolve,'image/jpeg',.94));if(!coverBlob)throw Error('Não foi possível gerar o resumo.');pages.push({width:cover.width,height:cover.height,bytes:new Uint8Array(await coverBlob.arrayBuffer())});
   for(let i=0;i<items.length;i++){
    const q=items[i],canvas=document.createElement('canvas');canvas.width=1600;canvas.height=1131;const c=canvas.getContext('2d');
@@ -46,7 +46,7 @@ const ColourAnswersPDF=(()=>{
    const [left,right]=await Promise.all([svgImage(scene(q,true)),svgImage(scene(q,false))]);c.drawImage(left,60,220,710,532.5);c.drawImage(right,830,220,710,532.5);
    c.fillStyle='#182d3a';c.font='600 27px Barlow';wrap(c,'A tua resposta: '+names[answers[i]],60,802,710,34);wrap(c,'Resposta do modelo: '+names[q.answer],830,802,710,34);
    c.font='400 25px Barlow';wrap(c,'Quando o foco branco for desligado e ficar ligada apenas a lâmpada, como se verá a maçã?',60,885,710,33);wrap(c,`Chega: ${channels(q.light)}. Reflete-se: ${channels(q.answer)}. A superfície não acrescenta luz própria.`,830,885,710,33);
-   c.fillStyle='#526570';c.font='400 20px Barlow';c.fillText(`Modelo RGB idealizado · Atividade experimental · ${version} · Partida ${seed}`,60,1040);c.fillText('Baseada em trabalhos anteriores · Naranjo Correa et al. (2016) · DOI: 10.1002/col.22017',60,1075);
+   c.fillStyle='#526570';c.font='400 20px Barlow';c.fillText(`Modelo RGB idealizado · Atividade experimental · ${version} · Tentativa ${seed}`,60,1040);c.fillText('Baseada em trabalhos anteriores · Naranjo Correa et al. (2016) · DOI: 10.1002/col.22017',60,1075);
    const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.94));if(!blob)throw Error('Não foi possível gerar a página.');pages.push({width:canvas.width,height:canvas.height,bytes:new Uint8Array(await blob.arrayBuffer())});
   }
   const blob=new Blob([assemble(pages)],{type:'application/pdf'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`DiCoSTEM-TT-respostas-${seed}.pdf`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);

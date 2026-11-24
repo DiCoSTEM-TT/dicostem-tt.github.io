@@ -4,7 +4,7 @@
   function mount() {
     const lang = document.documentElement.lang.slice(0, 2);
     const labels = {
-      es: ['Recursos de DiCoSTEM-TT', 'Navegación entre recursos', 'Inicio', 'Test de las manzanas', 'Laboratorio de filtros', 'Test original', 'Hay una partida en curso. Si sales, perderás las respuestas. ¿Quieres continuar?'],
+      es: ['Recursos de DiCoSTEM-TT', 'Navegación entre recursos', 'Inicio', 'Test de las manzanas', 'Laboratorio de filtros', 'Test original', 'Hay un intento en curso. Si sales, perderás las respuestas. ¿Quieres continuar?'],
       pt: ['Recursos do DiCoSTEM-TT', 'Navegação entre recursos', 'Início', 'Teste das maçãs', 'Laboratório de filtros', 'Teste original', 'Há um teste em curso. Se saíres, perderás as respostas. Queres continuar?'],
       en: ['DiCoSTEM-TT resources', 'Resource navigation', 'Home', 'Apple test', 'Filter laboratory', 'Original test', 'A test is in progress. Leaving will discard your answers. Do you want to continue?']
     };

@@ -10,7 +10,7 @@ const ColourReasoning=(()=>{
   {id:'light',title:'Tendency to assign the bulb’s colour to the object',predict:q=>q.light,explain:'Several answers match the bulb’s light. The surface does not necessarily return all of that light: it may absorb some components.'}
  ];
  function analyse(items,answers){
-  if(items.length!==12||answers.length!==12||answers.some((a,i)=>!items[i].options.includes(a)))throw Error('A complete valid session is required.');
+  if(items.length!==12||answers.length!==12||answers.some((a,i)=>!items[i].options.includes(a)))throw Error('A complete valid attempt is required.');
   const core=items.map((q,i)=>({...q,index:i})).filter(q=>q.block==='primary'&&q.surface!==q.light);
   const evidence=models.map(m=>{const supporting=[],contradicting=[],extendedSupporting=[],extendedContradicting=[];
    core.forEach(q=>(answers[q.index]===m.predict(q)?supporting:contradicting).push(q.id));

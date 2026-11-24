@@ -30,14 +30,14 @@ const ColourAnswersPDF=(()=>{
   ctx.fillStyle='#204c66';ctx.font='600 30px Barlow';ctx.fillText('What do your answers suggest?',60,180);
   ctx.font='600 28px Barlow';let y=wrap(ctx,main?main.title:'No predominant pattern',60,224,1480,35);
   ctx.fillStyle='#182d3a';ctx.font='400 24px Barlow';y=wrap(ctx,main?main.explain:'The answers do not show a sufficiently clear tendency towards one of the reasoning patterns compared.',60,y+10,1480,31);
-  y=wrap(ctx,'Provisional interpretation of this session, not a fixed characteristic of the person. This version has not yet been validated.',60,y+8,1480,31);
+  y=wrap(ctx,'Provisional interpretation of this attempt, not a fixed characteristic of the person. This version has not yet been validated.',60,y+8,1480,31);
   if(diagnosis.contrast.plausible)y=wrap(ctx,'Additional plausible misconception: lack of contrast. In '+diagnosis.contrast.supporting.map(id=>'P'+id).join(', ')+' the choice was “It will be indistinguishable from its surroundings” with matching light and surface colours (provisional criterion: 2 of 3). This may coexist with other tendencies.',60,y+8,1480,31);
   ctx.fillStyle='#204c66';ctx.font='600 24px Barlow';y+=18;
   if(main){ctx.fillText(`RGB matches: ${main.supporting.length}/${diagnosis.coreCount} · Questions: ${main.supporting.map(id=>'P'+id).join(', ')}`,60,y);y+=30;}
   ctx.fillStyle='#182d3a';ctx.font='400 21px Barlow';y=wrap(ctx,'Provisional criterion: at least 4 of 6 RGB matches and a lead of 2. Extension questions do not determine the classification.',60,y+4,1480,27);
   const top=Math.max(530,y+12);ctx.fillStyle='#204c66';ctx.fillRect(60,top,1480,39);ctx.fillStyle='#fff';ctx.font='600 22px Barlow';ctx.fillText('Question',75,top+27);ctx.fillText('Your confirmed answer',235,top+27);ctx.fillText('Model answer',880,top+27);
   items.forEach((q,i)=>{const row=top+40+i*32;ctx.fillStyle=i%2?'#fff':'#eef4f7';ctx.fillRect(60,row,1480,32);ctx.fillStyle='#182d3a';ctx.font='400 21px Barlow';ctx.fillText(String(i+1),85,row+23);ctx.fillText(names[answers[i]],235,row+23);ctx.fillText(names[q.answer],880,row+23);});
-  ctx.fillStyle='#526570';ctx.font='400 19px Barlow';ctx.fillText(`${version} · Session ${seed} · ${items.filter((q,i)=>q.answer===answers[i]).length}/12 answers correct in the model`,60,1075);
+  ctx.fillStyle='#526570';ctx.font='400 19px Barlow';ctx.fillText(`${version} · Attempt ${seed} · ${items.filter((q,i)=>q.answer===answers[i]).length}/12 answers correct in the model`,60,1075);
   const coverBlob=await new Promise(resolve=>cover.toBlob(resolve,'image/jpeg',.94));if(!coverBlob)throw Error('Could not generate the summary.');pages.push({width:cover.width,height:cover.height,bytes:new Uint8Array(await coverBlob.arrayBuffer())});
   for(let i=0;i<items.length;i++){
    const q=items[i],canvas=document.createElement('canvas');canvas.width=1600;canvas.height=1131;const c=canvas.getContext('2d');
@@ -46,7 +46,7 @@ const ColourAnswersPDF=(()=>{
    const [left,right]=await Promise.all([svgImage(scene(q,true)),svgImage(scene(q,false))]);c.drawImage(left,60,220,710,532.5);c.drawImage(right,830,220,710,532.5);
    c.fillStyle='#182d3a';c.font='600 27px Barlow';wrap(c,'Your answer: '+names[answers[i]],60,802,710,34);wrap(c,'Model answer: '+names[q.answer],830,802,710,34);
    c.font='400 25px Barlow';wrap(c,'When the white spotlight is switched off and only the bulb remains on, how will the apple look?',60,885,710,33);wrap(c,`Incoming: ${channels(q.light)}. Reflected: ${channels(q.answer)}. The surface does not add light of its own.`,830,885,710,33);
-   c.fillStyle='#526570';c.font='400 20px Barlow';c.fillText(`Idealised RGB model · Experimental activity · ${version} · Session ${seed}`,60,1040);c.fillText('Based on previous work · Naranjo Correa et al. (2016) · DOI: 10.1002/col.22017',60,1075);
+   c.fillStyle='#526570';c.font='400 20px Barlow';c.fillText(`Idealised RGB model · Experimental activity · ${version} · Attempt ${seed}`,60,1040);c.fillText('Based on previous work · Naranjo Correa et al. (2016) · DOI: 10.1002/col.22017',60,1075);
    const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.94));if(!blob)throw Error('Could not generate the page.');pages.push({width:canvas.width,height:canvas.height,bytes:new Uint8Array(await blob.arrayBuffer())});
   }
   const blob=new Blob([assemble(pages)],{type:'application/pdf'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`DiCoSTEM-TT-answers-${seed}.pdf`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);

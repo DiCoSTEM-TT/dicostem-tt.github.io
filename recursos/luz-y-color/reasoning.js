@@ -10,7 +10,7 @@ const ColourReasoning=(()=>{
   {id:'light',title:'Tendencia a atribuir al objeto el color de la bombilla',predict:q=>q.light,explain:'Varias respuestas coinciden con la luz de la bombilla. La superficie no devuelve necesariamente toda esa luz: puede absorber algunos componentes.'}
  ];
  function analyse(items,answers){
-  if(items.length!==12||answers.length!==12||answers.some((a,i)=>!items[i].options.includes(a)))throw Error('Se requiere una partida completa válida.');
+  if(items.length!==12||answers.length!==12||answers.some((a,i)=>!items[i].options.includes(a)))throw Error('Se requiere un intento completo válido.');
   const core=items.map((q,i)=>({...q,index:i})).filter(q=>q.block==='primary'&&q.surface!==q.light);
   const evidence=models.map(m=>{const supporting=[],contradicting=[],extendedSupporting=[],extendedContradicting=[];
    core.forEach(q=>(answers[q.index]===m.predict(q)?supporting:contradicting).push(q.id));
