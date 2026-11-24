@@ -20,6 +20,5 @@ permalink: /en/resources/
   <div class="card resource-card is-coming-soon" data-ribbon="Coming soon">
     <h3>Teaching guide — digital competences (draft)</h3>
     <p>PDF · CC BY 4.0</p>
-    <p><a href="#">Download</a></p>
   </div>
 </div>

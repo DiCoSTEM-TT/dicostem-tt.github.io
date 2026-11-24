@@ -20,6 +20,5 @@ permalink: /es/recursos/
   <div class="card resource-card is-coming-soon" data-ribbon="Próximamente">
     <h3>Guía docente — competencias digitales (borrador)</h3>
     <p>PDF · CC BY 4.0</p>
-    <p><a href="#">Descargar</a></p>
   </div>
 </div>
