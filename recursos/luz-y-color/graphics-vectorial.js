@@ -59,7 +59,7 @@ const ColourGraphicsVector = (() => {
   // ---------- Geometría compartida (sistema de coordenadas 800 × 600) ----------
   const APPLE_BODY = 'M170 372C140 350 82 352 62 400C42 448 60 520 100 552C126 572 150 568 170 562C190 568 214 572 240 552C280 520 298 448 278 400C258 352 200 350 170 372Z';
   // Haz del foco tangente a la manzana: termina dentro de ella y la manzana lo tapa.
-  const BEAM = 'M375 84 439 145 264 526 170 462 76 398Z';
+  const BEAM = 'M449.186 146.840 L377.578 95.691 L76.421 395.158 L263.579 528.842Z';
   // Sombra proyectada hacia la izquierda, en sentido contrario al foco.
   const CAST_SHADOW = 'M232 566C200 576 120 582 60 580C20 579 -10 574 -10 568C-10 560 40 556 110 556C170 556 230 558 232 566Z';
   const BULB_OFFSET_Y = 40;
@@ -90,7 +90,7 @@ const ColourGraphicsVector = (() => {
       <path data-part="beam" d="${BEAM}" fill="url(#${gradientId})"/>`;
     },
     spotlightRay() {
-      return arrow({ name: 'spotlight-ray', x: 362, y: 182, angle: 124, length: 159, half: 14, head: 30, headLength: 64, fill: '#ffffff' });
+      return arrow({ name: 'spotlight-ray', x: 368.6266528793265, y: 183.92268596894291, angle: 125.53767779197439, length: 159, half: 14, head: 30, headLength: 64, fill: '#ffffff' });
     },
     incidentRay(light) {
       // Prolongar el eje hacia atrás debe llevar al filamento, no al casquillo.
@@ -140,7 +140,7 @@ const ColourGraphicsVector = (() => {
       return `<g data-part="spotlight" data-on="${on}">
         <rect x="440" y="0" width="70" height="10" fill="${c.mount}"/>
         <path d="M466 0H478L456 72 444 68Z" fill="${c.yoke}"/>
-        <g transform="translate(450 70) rotate(134)">
+        <g transform="translate(450 70) rotate(125.53767779197439)">
           <rect x="-72" y="-26" width="22" height="52" rx="6" fill="${c.back}"/>
           <rect x="-56" y="-34" width="82" height="68" rx="8" fill="${c.body}"/>
           <rect x="-50" y="-34" width="70" height="12" fill="${c.top}"/>

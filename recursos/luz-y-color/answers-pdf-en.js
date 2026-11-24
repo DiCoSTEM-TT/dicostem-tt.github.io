@@ -1,55 +1,77 @@
 'use strict';
-// PDF local: una página apaisada por pregunta, con escenas rasterizadas a alta resolución.
+// Informe A4 local. Escenas sin alterar y enlaces PDF sobre los logos institucionales.
 const ColourAnswersPDF=(()=>{
  const encode=s=>new TextEncoder().encode(s);
+ const W=595.28,H=841.89;
  function assemble(pages){
-  const parts=[],offsets=[0];let size=0;
+  const parts=[],offsets=[0];let size=0,next=3;
+  const ids=pages.map(p=>({page:next++,image:next++,stream:next++,links:(p.links||[]).map(()=>next++)}));
   const push=value=>{const bytes=typeof value==='string'?encode(value):value;parts.push(bytes);size+=bytes.length;};
   const object=(id,body)=>{offsets[id]=size;push(`${id} 0 obj\n`);push(body);push('\nendobj\n');};
-  push('%PDF-1.4\n');
-  object(1,'<< /Type /Catalog /Pages 2 0 R >>');
-  object(2,`<< /Type /Pages /Count ${pages.length} /Kids [${pages.map((_,i)=>`${3+i*3} 0 R`).join(' ')}] >>`);
-  pages.forEach((p,i)=>{const id=3+i*3;object(id,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 841.89 595.28] /Resources << /XObject << /Im${i} ${id+1} 0 R >> >> /Contents ${id+2} 0 R >>`);
-   offsets[id+1]=size;push(`${id+1} 0 obj\n<< /Type /XObject /Subtype /Image /Width ${p.width} /Height ${p.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${p.bytes.length} >>\nstream\n`);push(p.bytes);push('\nendstream\nendobj\n');
-   const stream=`q 841.89 0 0 595.28 0 0 cm /Im${i} Do Q\n`;object(id+2,`<< /Length ${encode(stream).length} >>\nstream\n${stream}endstream`);
+  const literal=s=>s.replace(/([\\()])/g,'\\$1');
+  push('%PDF-1.4\n');object(1,'<< /Type /Catalog /Pages 2 0 R >>');
+  object(2,`<< /Type /Pages /Count ${pages.length} /Kids [${ids.map(i=>`${i.page} 0 R`).join(' ')}] >>`);
+  pages.forEach((p,i)=>{const id=ids[i];object(id.page,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /XObject << /Im${i} ${id.image} 0 R >> >> /Contents ${id.stream} 0 R /Annots [${id.links.map(n=>`${n} 0 R`).join(' ')}] >>`);
+   offsets[id.image]=size;push(`${id.image} 0 obj\n<< /Type /XObject /Subtype /Image /Width ${p.width} /Height ${p.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${p.bytes.length} >>\nstream\n`);push(p.bytes);push('\nendstream\nendobj\n');
+   const stream=`q ${W} 0 0 ${H} 0 0 cm /Im${i} Do Q\n`;object(id.stream,`<< /Length ${encode(stream).length} >>\nstream\n${stream}endstream`);
+   (p.links||[]).forEach((link,j)=>{const {x,y,w,h,url}=link;object(id.links[j],`<< /Type /Annot /Subtype /Link /Rect [${x} ${H-y-h} ${x+w} ${H-y}] /Border [0 0 0] /A << /S /URI /URI (${literal(url)}) >> >>`);});
   });
   const xref=size;push(`xref\n0 ${offsets.length}\n0000000000 65535 f \n`);offsets.slice(1).forEach(o=>push(`${String(o).padStart(10,'0')} 00000 n \n`));push(`trailer\n<< /Size ${offsets.length} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`);
   const result=new Uint8Array(size);let pos=0;parts.forEach(p=>{result.set(p,pos);pos+=p.length;});return result;
  }
- async function svgImage(svg){const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));try{return await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Could not prepare a scene.'));img.src=url;});}finally{URL.revokeObjectURL(url);}}
- function wrap(ctx,text,x,y,width,lineHeight){let line='';for(const word of text.split(' ')){const next=line?line+' '+word:word;if(ctx.measureText(next).width>width&&line){ctx.fillText(line,x,y);y+=lineHeight;line=word;}else line=next;}ctx.fillText(line,x,y);return y+lineHeight;}
+ async function svgImage(svg){const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));try{return await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('No se pudo preparar una escena.'));img.src=url;});}finally{URL.revokeObjectURL(url);}}
+ const UI={
+ es:{report:'Luz y color · Informe de respuestas',summary:'RESUMEN DE TU INTENTO',title:'Comprender cómo vemos el color',attempt:'Intento',questions:'preguntas',result:'TU RESULTADO EN ESTE MODELO',correct:'respuestas correctas',rgb:'LUZ RGB',extra:'AMPLIACIÓN',suggest:'QUÉ SUGIEREN TUS RESPUESTAS',plausible:'INTERPRETACIÓN MÁS PLAUSIBLE',none:'Sin un patrón predominante',mixed:'Las respuestas no muestran una tendencia suficientemente clara hacia uno de los razonamientos comparados.',matches:'Coincidencias RGB',criterion:'Criterio provisional: al menos 4 de 6 coincidencias RGB y ventaja mínima de 2. La ampliación no decide la clasificación.',contrast:'Preconcepción adicional plausible: confusión entre iluminación y falta de contraste.',note:'Interpretación orientativa. Describe las respuestas de este intento; no es una característica fija de la persona. Esta versión experimental todavía no tiene validación propia.',idea:'UNA IDEA PARA SEGUIR EXPLORANDO',insight:'La apariencia depende de la luz que llega a la superficie y de la parte que esta refleja hacia el ojo.',next:'En las páginas siguientes puedes revisar cada escena, recuperar tu respuesta y compararla con la explicación del modelo.',review:'REVISIÓN DE RESPUESTAS',question:'Pregunta',prompt:'Al apagar el foco blanco y quedar solo la bombilla, ¿cómo se verá la manzana?',yours:'TU RESPUESTA',solution:'SOLUCIÓN DEL MODELO',on:'Foco blanco encendido',off:'Foco blanco apagado',chose:'Elegiste',answer:'Respuesta',why:'POR QUÉ OCURRE',incoming:'LUZ QUE LLEGA',absorbed:'SE ABSORBE',reflected:'SE REFLEJA',explain:'La superficie selecciona qué componentes de la luz incidente refleja hacia el ojo y cuáles absorbe. No añade luz propia.',black:'En este modelo no refleja ningún componente hacia el ojo: se representa negra. Su silueta puede distinguirse sobre el fondo gris.',simplified:'Representación RGB idealizada: la actividad no es un test de visión cromática.',based:'Basado en trabajos previos sobre luz y color',funding:'Proyecto de I+D+i PID2022-140601OA-I00, financiado por MCIN/AEI/10.13039/501100011033/ y por FEDER «Una manera de hacer Europa».'},
+ pt:{report:'Luz e cor · Relatório de respostas',summary:'RESUMO DA TUA TENTATIVA',title:'Compreender como vemos a cor',attempt:'Tentativa',questions:'perguntas',result:'O TEU RESULTADO NESTE MODELO',correct:'respostas corretas',rgb:'LUZ RGB',extra:'EXTENSÃO',suggest:'O QUE SUGEREM AS TUAS RESPOSTAS',plausible:'INTERPRETAÇÃO MAIS PLAUSÍVEL',none:'Sem um padrão predominante',mixed:'As respostas não mostram uma tendência suficientemente clara para um dos raciocínios comparados.',matches:'Coincidências RGB',criterion:'Critério provisório: pelo menos 4 de 6 coincidências RGB e uma vantagem mínima de 2. A extensão não decide a classificação.',contrast:'Preconceção adicional plausível: confusão entre iluminação e falta de contraste.',note:'Interpretação indicativa. Descreve as respostas desta tentativa; não é uma característica fixa da pessoa. Esta versão experimental ainda não tem validação própria.',idea:'UMA IDEIA PARA CONTINUAR A EXPLORAR',insight:'A aparência depende da luz que chega à superfície e da parte que esta reflete para o olho.',next:'Nas páginas seguintes podes rever cada cena, recuperar a tua resposta e compará-la com a explicação do modelo.',review:'REVISÃO DAS RESPOSTAS',question:'Pergunta',prompt:'Ao desligar o foco branco e ficar apenas a lâmpada acesa, como se verá a maçã?',yours:'A TUA RESPOSTA',solution:'SOLUÇÃO DO MODELO',on:'Foco branco ligado',off:'Foco branco desligado',chose:'Escolheste',answer:'Resposta',why:'PORQUE ACONTECE',incoming:'LUZ QUE CHEGA',absorbed:'É ABSORVIDA',reflected:'É REFLETIDA',explain:'A superfície seleciona quais os componentes da luz incidente que reflete para o olho e quais absorve. Não acrescenta luz própria.',black:'Neste modelo não reflete nenhum componente para o olho: é representada a preto. A sua silhueta pode distinguir-se sobre o fundo cinzento.',simplified:'Representação RGB idealizada: a atividade não é um teste de visão cromática.',based:'Baseado em trabalhos anteriores sobre luz e cor',funding:'Projeto de I&D&I PID2022-140601OA-I00, financiado pelo MCIN/AEI/10.13039/501100011033/ e pelo FEDER «Uma maneira de fazer a Europa».'},
+ en:{report:'Light and colour · Answer report',summary:'YOUR ATTEMPT AT A GLANCE',title:'Understanding how we see colour',attempt:'Attempt',questions:'questions',result:'YOUR RESULT IN THIS MODEL',correct:'correct answers',rgb:'RGB LIGHT',extra:'EXTENSION',suggest:'WHAT YOUR ANSWERS SUGGEST',plausible:'MOST PLAUSIBLE INTERPRETATION',none:'No predominant pattern',mixed:'The answers do not show a sufficiently clear tendency towards one of the reasoning patterns compared.',matches:'RGB matches',criterion:'Provisional criterion: at least 4 of 6 RGB matches and a lead of at least 2. The extension does not determine the classification.',contrast:'Additional plausible misconception: confusing illumination with a lack of contrast.',note:'Indicative interpretation. Describes the answers in this attempt, not a fixed characteristic of the person. This experimental version has not yet been validated.',idea:'AN IDEA TO KEEP EXPLORING',insight:'Appearance depends on the light reaching a surface and the part it reflects towards the eye.',next:'On the following pages you can review each scene, retrieve your answer and compare it with the explanation of the model.',review:'REVIEW YOUR ANSWERS',question:'Question',prompt:'When the white spotlight is switched off and only the bulb remains on, what will the apple look like?',yours:'YOUR ANSWER',solution:'MODEL SOLUTION',on:'White spotlight on',off:'White spotlight off',chose:'You chose',answer:'Answer',why:'WHY IT HAPPENS',incoming:'INCOMING LIGHT',absorbed:'ABSORBED',reflected:'REFLECTED',explain:'The surface selects which components of the incident light it reflects towards the eye and which it absorbs. It does not add its own light.',black:'In this model it reflects no component towards the eye, so it is shown black. Its outline may still be visible against the grey background.',simplified:'Idealised RGB representation: this activity is not a colour vision test.',based:'Based on previous work on light and colour',funding:'R&D&I project PID2022-140601OA-I00, funded by MCIN/AEI/10.13039/501100011033/ and by ERDF “A way of making Europe”.'}
+ };
  async function download({items,answers,names,scene,seed,version,channels}){
-  await document.fonts.ready;await document.fonts.load('600 26px Barlow');
-  const pages=[];
-  // El mismo análisis que se muestra en pantalla, calculado sobre estas respuestas.
-  const diagnosis=ColourReasoning.analyse(items,answers);
-  const main=diagnosis.evidence.find(e=>e.id===diagnosis.predominant);
-  const cover=document.createElement('canvas');cover.width=1600;cover.height=1131;
-  const ctx=cover.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,1600,1131);
-  ctx.fillStyle='#204c66';ctx.fillRect(0,0,1600,130);ctx.fillStyle='#fff';ctx.font='700 40px Barlow';ctx.fillText('DiCoSTEM-TT · My light and colour report',60,65);ctx.font='400 26px Barlow';ctx.fillText('Indicative interpretation and record of answers',60,108);
-  ctx.fillStyle='#204c66';ctx.font='600 30px Barlow';ctx.fillText('What do your answers suggest?',60,180);
-  ctx.font='600 28px Barlow';let y=wrap(ctx,main?main.title:'No predominant pattern',60,224,1480,35);
-  ctx.fillStyle='#182d3a';ctx.font='400 24px Barlow';y=wrap(ctx,main?main.explain:'The answers do not show a sufficiently clear tendency towards one of the reasoning patterns compared.',60,y+10,1480,31);
-  y=wrap(ctx,'Provisional interpretation of this attempt, not a fixed characteristic of the person. This version has not yet been validated.',60,y+8,1480,31);
-  if(diagnosis.contrast.plausible)y=wrap(ctx,'Additional plausible misconception: lack of contrast. In '+diagnosis.contrast.supporting.map(id=>'P'+id).join(', ')+' the choice was “It will be indistinguishable from its surroundings” with matching light and surface colours (provisional criterion: 2 of 3). This may coexist with other tendencies.',60,y+8,1480,31);
-  ctx.fillStyle='#204c66';ctx.font='600 24px Barlow';y+=18;
-  if(main){ctx.fillText(`RGB matches: ${main.supporting.length}/${diagnosis.coreCount} · Questions: ${main.supporting.map(id=>'P'+id).join(', ')}`,60,y);y+=30;}
-  ctx.fillStyle='#182d3a';ctx.font='400 21px Barlow';y=wrap(ctx,'Provisional criterion: at least 4 of 6 RGB matches and a lead of 2. Extension questions do not determine the classification.',60,y+4,1480,27);
-  const top=Math.max(530,y+12);ctx.fillStyle='#204c66';ctx.fillRect(60,top,1480,39);ctx.fillStyle='#fff';ctx.font='600 22px Barlow';ctx.fillText('Question',75,top+27);ctx.fillText('Your confirmed answer',235,top+27);ctx.fillText('Model answer',880,top+27);
-  items.forEach((q,i)=>{const row=top+40+i*32;ctx.fillStyle=i%2?'#fff':'#eef4f7';ctx.fillRect(60,row,1480,32);ctx.fillStyle='#182d3a';ctx.font='400 21px Barlow';ctx.fillText(String(i+1),85,row+23);ctx.fillText(names[answers[i]],235,row+23);ctx.fillText(names[q.answer],880,row+23);});
-  ctx.fillStyle='#526570';ctx.font='400 19px Barlow';ctx.fillText(`${version} · Attempt ${seed} · ${items.filter((q,i)=>q.answer===answers[i]).length}/12 answers correct in the model`,60,1075);
-  const coverBlob=await new Promise(resolve=>cover.toBlob(resolve,'image/jpeg',.94));if(!coverBlob)throw Error('Could not generate the summary.');pages.push({width:cover.width,height:cover.height,bytes:new Uint8Array(await coverBlob.arrayBuffer())});
+  const lang=document.documentElement.lang.slice(0,2),t=UI[lang]||UI.es,code=UI[lang]?lang:'es';
+  await document.fonts.ready;await Promise.all([400,500,600,700].map(w=>document.fonts.load(`${w} 16px Barlow`)));
+  const asset=async name=>{const r=await fetch(new URL('logos/'+name,document.baseURI));if(!r.ok)throw Error('No se pudo cargar el logo.');return svgImage(await r.text());};
+  const [logo,wave,uex,faculty,funding]=await Promise.all(['DiCoSTEM-TT.svg','report-wave.svg','uex-horizontal-color.svg','facultad.svg','MICIU-Cofinanciado-AEI.svg'].map(asset));
+  const project=`https://dicostem-tt.github.io/${code}/`,pages=[],M=42,CW=W-84,navy='#204c66',blue='#0a7ac8',muted='#536777',teal='#248a80';
+  const diagnosis=ColourReasoning.analyse(items,answers),main=diagnosis.evidence.find(e=>e.id===diagnosis.predominant);
+  const score=items.filter((q,i)=>q.answer===answers[i]).length;
+  const date=new Intl.DateTimeFormat(code==='pt'?'pt-PT':code==='en'?'en-GB':'es-ES',{day:'numeric',month:'long',year:'numeric'}).format(new Date());
+  function page(){const canvas=document.createElement('canvas');canvas.width=Math.round(W*2.5);canvas.height=Math.round(H*2.5);const c=canvas.getContext('2d');c.scale(canvas.width/W,canvas.height/H);c.fillStyle='#fff';c.fillRect(0,0,W,H);return {canvas,c,links:[]};}
+  function text(p,s,x,y,size=11,weight=400,color=navy){p.c.font=`${weight} ${size}px Barlow`;p.c.fillStyle=color;p.c.textBaseline='top';p.c.fillText(s,x,y);}
+  function lines(p,s,width,size,weight){p.c.font=`${weight} ${size}px Barlow`;const out=[];let line='';for(const word of s.split(/\s+/)){const next=line?line+' '+word:word;if(line&&p.c.measureText(next).width>width){out.push(line);line=word;}else line=next;}if(line)out.push(line);return out;}
+  function paragraph(p,s,x,y,width,size=11,weight=400,color=navy,maxHeight=1000){let a;while(true){a=lines(p,s,width,size,weight);if(a.length*size*1.35<=maxHeight||size<=8)break;size-=.25;}if(a.length*size*1.35>maxHeight)throw Error('El texto del informe no cabe en la página.');for(const line of a){text(p,line,x,y,size,weight,color);y+=size*1.35;}return y;}
+  function box(p,x,y,w,h,fill,stroke){const c=p.c;c.beginPath();c.roundRect(x,y,w,h,10);c.fillStyle=fill;c.fill();if(stroke){c.strokeStyle=stroke;c.lineWidth=.7;c.stroke();}}
+  function picture(p,img,x,y,w,h,url){const ratio=Math.min(w/img.naturalWidth,h/img.naturalHeight),dw=img.naturalWidth*ratio,dh=img.naturalHeight*ratio,dx=x+(w-dw)/2,dy=y+(h-dh)/2;p.c.drawImage(img,dx,dy,dw,dh);if(url)p.links.push({x:dx,y:dy,w:dw,h:dh,url});}
+  function line(p,y){p.c.strokeStyle='#d9e4ea';p.c.lineWidth=.7;p.c.beginPath();p.c.moveTo(M,y);p.c.lineTo(W-M,y);p.c.stroke();}
+  function header(p,label){picture(p,logo,M,27,59,59,project);text(p,'DiCoSTEM-TT',114,37,13,700,blue);text(p,t.report,114,57,10,400,muted);line(p,101);text(p,label,M,119,9,600,teal);}
+  function footer(p,number,cover=false){if(cover){p.c.save();p.c.globalAlpha=.32;picture(p,wave,W/2-77,H-45-154*wave.naturalHeight/wave.naturalWidth,154,154*wave.naturalHeight/wave.naturalWidth);p.c.restore();}line(p,H-45);text(p,'DiCoSTEM-TT · '+t.based,M,807,8,400,muted);text(p,`${number} / ${items.length+1}`,W-M-29,807,8,600,muted);}
+  async function save(p){const blob=await new Promise(resolve=>p.canvas.toBlob(resolve,'image/jpeg',.95));if(!blob)throw Error('No se pudo generar la página.');pages.push({width:p.canvas.width,height:p.canvas.height,bytes:new Uint8Array(await blob.arrayBuffer()),links:p.links});}
+  const cover=page();header(cover,t.summary);paragraph(cover,t.title,M,147,CW,25,700,navy,35);text(cover,`${date} · ${t.attempt} ${seed} · ${items.length} ${t.questions}`,M,184,10,400,muted);text(cover,version,M,201,7,400,muted);
+  box(cover,M,216,CW,142,'#eaf5fc');text(cover,t.result,M+18,232,9,600,blue);text(cover,String(score),M+18,250,63,700,blue);text(cover,'/ '+items.length,M+96,282,23,500,blue);text(cover,t.correct,M+18,325,11,500);
+  for(const [x,label,value,total] of [[262,t.rgb,items.slice(0,9).filter((q,i)=>q.answer===answers[i]).length,9],[409,t.extra,items.slice(9).filter((q,i)=>q.answer===answers[i+9]).length,3]]){text(cover,label,x,239,9,600,muted);text(cover,String(value),x,263,36,700,teal);text(cover,'/ '+total,x+30,282,16,500,teal);}
+  for(let i=0;i<items.length;i++)box(cover,262+i*21,326,16,6,i<score?'#2ec4b6':'#cddfea');
+  text(cover,t.suggest,M,382,9,600,teal);box(cover,M,403,CW,190,'#edf9f6','#b5ded5');
+  text(cover,main?t.plausible:({es:'INTERPRETACIÓN ORIENTATIVA',pt:'INTERPRETAÇÃO INDICATIVA',en:'INDICATIVE INTERPRETATION'}[code]),M+18,419,8,700,teal);
+  const titleBottom=paragraph(cover,main?main.title:t.none,M+18,441,CW-36,18,700,navy,44);
+  const evidence=[main?main.explain:t.mixed,main?`${t.matches}: ${main.supporting.length}/${diagnosis.coreCount} (${main.supporting.map(i=>'P'+i).join(', ')}).`:'',diagnosis.contrast.plausible?t.contrast+' '+diagnosis.contrast.supporting.map(i=>'P'+i).join(', '):''].filter(Boolean).join(' ');
+  paragraph(cover,evidence,M+18,titleBottom+9,CW-36,10.5,400,navy,584-titleBottom-9);
+  paragraph(cover,t.criterion,M,603,CW,8.5,400,muted,25);
+  text(cover,t.idea,M,640,9,600,blue);paragraph(cover,t.insight,M,660,CW,15,600,navy,44);
+  box(cover,M,716,CW,45,'#f5f8fa');paragraph(cover,t.note+' Naranjo Correa et al. (2016) · DOI: 10.1002/col.22017.',M+12,723,CW-24,8.5,400,muted,32);footer(cover,1,true);await save(cover);
   for(let i=0;i<items.length;i++){
-   const q=items[i],canvas=document.createElement('canvas');canvas.width=1600;canvas.height=1131;const c=canvas.getContext('2d');
-   c.fillStyle='#ffffff';c.fillRect(0,0,1600,1131);c.fillStyle='#204c66';c.fillRect(0,0,1600,130);c.fillStyle='#ffffff';c.font='700 40px Barlow';c.fillText('DiCoSTEM-TT · Light and colour',60,65);c.font='400 26px Barlow';c.fillText(`My answers · Question ${i+1} of ${items.length}`,60,108);
-   c.fillStyle='#204c66';c.font='600 30px Barlow';c.fillText('Question · Spotlight on',60,190);c.fillText('Answer · Spotlight off',830,190);
-   const [left,right]=await Promise.all([svgImage(scene(q,true)),svgImage(scene(q,false))]);c.drawImage(left,60,220,710,532.5);c.drawImage(right,830,220,710,532.5);
-   c.fillStyle='#182d3a';c.font='600 27px Barlow';wrap(c,'Your answer: '+names[answers[i]],60,802,710,34);wrap(c,'Model answer: '+names[q.answer],830,802,710,34);
-   c.font='400 25px Barlow';wrap(c,'When the white spotlight is switched off and only the bulb remains on, how will the apple look?',60,885,710,33);wrap(c,`Incoming: ${channels(q.light)}. Reflected: ${channels(q.answer)}. The surface does not add light of its own.`,830,885,710,33);
-   c.fillStyle='#526570';c.font='400 20px Barlow';c.fillText(`Idealised RGB model · Experimental activity · ${version} · Attempt ${seed}`,60,1040);c.fillText('Based on previous work · Naranjo Correa et al. (2016) · DOI: 10.1002/col.22017',60,1075);
-   const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.94));if(!blob)throw Error('Could not generate the page.');pages.push({width:canvas.width,height:canvas.height,bytes:new Uint8Array(await blob.arrayBuffer())});
+   const q=items[i],p=page();header(p,t.review);text(p,`${t.question} ${String(i+1).padStart(2,'0')}`,M,147,27,700);
+   paragraph(p,t.prompt,M,186,CW,15,500,navy,45);
+   const col=(CW-16)/2,right=M+col+16;box(p,M,250,col,290,'#f5f8fa','#d9e4ea');box(p,right,250,col,290,'#eaf5fc','#bfdbef');
+   text(p,t.yours,M+14,265,10,700,muted);text(p,t.solution,right+14,265,10,700,blue);text(p,t.on,M+14,290,10,400,muted);text(p,t.off,right+14,290,10,400,muted);
+   const [leftImg,rightImg]=await Promise.all([svgImage(scene(q,true)),svgImage(scene(q,false))]);picture(p,leftImg,M+10,312,col-20,166);picture(p,rightImg,right+10,312,col-20,166);
+   box(p,M+14,490,col-28,36,answers[i]===q.answer?'#d5eee7':'#fdecd9');paragraph(p,t.chose+': '+names[answers[i]],M+24,498,col-48,11,600,answers[i]===q.answer?teal:'#7a4f18',25);
+   box(p,right+14,490,col-28,36,'#d5ebf8');paragraph(p,t.answer+': '+names[q.answer],right+24,498,col-48,11,600,navy,25);
+   text(p,t.why,M,559,9,600,teal);
+   const absorbed=ColourRandom.keys.find(k=>ColourRandom.bits[k]===(ColourRandom.bits[q.light]&~ColourRandom.bits[q.surface]));
+   [[t.incoming,channels(q.light),'#fbe1e5'],[t.absorbed,channels(absorbed),'#fdecd9'],[t.reflected,channels(q.answer),'#e7eef3']].forEach(([label,value,fill],n)=>{const w=(CW-24)/3,x=M+n*(w+12);box(p,x,580,w,62,fill);text(p,label,x+12,592,8,600,muted);paragraph(p,value,x+12,610,w-24,11,700,navy,27);});
+   paragraph(p,q.answer==='black'?t.black:t.explain,M,655,CW,11,400,navy,44);text(p,t.simplified,M,709,8.5,400,muted);
+   picture(p,uex,M,733,104,27,'https://www.unex.es/');picture(p,funding,W/2-117.5,733,235,27,project);picture(p,faculty,W-M-45,733,45,27,'https://educacion.unex.es/');
+   paragraph(p,t.funding,M,768,CW,8.5,400,muted,25);footer(p,i+2);await save(p);
   }
-  const blob=new Blob([assemble(pages)],{type:'application/pdf'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`DiCoSTEM-TT-answers-${seed}.pdf`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);
+  const blob=new Blob([assemble(pages)],{type:'application/pdf'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`DiCoSTEM-TT-respuestas-${seed}.pdf`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);
  }
  return {download,assemble};
 })();
