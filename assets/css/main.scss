@@ -214,7 +214,8 @@ img { max-width: 100%; height: auto; }
   z-index: 1;
 }
 
-.resource-card.is-coming-soon::after{
+.resource-card.is-coming-soon::after,
+.resource-card.is-new::after{
   content: attr(data-ribbon);
   position: absolute;
   top: 1.2rem;
@@ -553,3 +554,6 @@ img { max-width: 100%; height: auto; }
   height: 1.1rem;
   color: var(--link);
 }
+
+/* New resources share the established ribbon placement. */
+.resource-card.is-new::after{ background: var(--brand, #176ba0); color: #fff; }

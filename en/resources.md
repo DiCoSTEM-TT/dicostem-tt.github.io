@@ -3,10 +3,8 @@ layout: page
 title: Resources
 permalink: /en/resources/
 ---
-<p>H5PDF is now available. Convert PDF files into interactive H5P presentations in your browser.</p>
-
 <div class="grid">
-  <div class="card resource-card resource-card--h5pdf">
+  <div class="card resource-card resource-card--h5pdf is-new" data-ribbon="New">
     <img class="resource-logo resource-logo-light" src="{{ '/assets/img/resources/h5pdf-logo.webp' | relative_url }}" alt="H5PDF" />
     <img class="resource-logo resource-logo-dark" src="{{ '/assets/img/resources/h5pdf-logo-dark.webp' | relative_url }}?v=2" alt="H5PDF" />
     <h3>H5PDF</h3>
